@@ -3,7 +3,7 @@
   margin: 0px;
 }
 body {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .header {
   position: absolute;
@@ -14,12 +14,14 @@ body {
   color: white;
   max-height: 8vh;
   min-height: 8vh;
+  max-width: 100vw;
 
   &__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px;
+    min-height: 8vh;
+    overflow: hidden;
   }
   &__list {
     list-style: none;
@@ -28,23 +30,15 @@ body {
     width: 35%;
     letter-spacing: 2px;
     text-transform: uppercase;
+    margin-left: 25px;
     li {
       cursor: pointer;
       margin-left: 15px;
+      position: relative;
+      padding: 15 0;
     }
   }
-  &__navitem {
-    padding-bottom: 3px;
-    position: relative;
-    margin: 30px 30px;
-    margin-bottom: 10px;
-    margin-top: 15px;
-    padding-bottom: 5px;
-    text-decoration: none;
-    list-style: none;
-    text-align: center;
-    letter-spacing: 3px;
-  }
+
   &__navitem::before {
     content: "";
     position: absolute;
@@ -62,6 +56,7 @@ body {
   }
   &__burger {
     display: none;
+    padding: 5px;
     div {
       width: 25px;
       height: 3px;
@@ -72,7 +67,6 @@ body {
   }
   &__logo {
     img {
-      // margin-top: 10px;
       height: 30px;
     }
   }
@@ -81,7 +75,7 @@ body {
     width: 35%;
     justify-content: flex-end;
     padding: 10px;
-    margin-right: 10px;
+    margin-right: 40px;
     i {
       cursor: pointer;
     }
@@ -90,22 +84,41 @@ body {
     position: absolute;
     right: 0;
     top: 8vh;
-    height: 80vh;
-    background-color: rgb(231, 231, 231);
-    width: 30vw;
+    height: 100vh;
+    background-color: #f4f3ee;
+    width: 400px;
     transform: translateX(100%);
-    margin-right: 0;
     transition: transform 0.5s ease-in;
+    // display: none;
+    overflow: hidden;
   }
   &__shop.active {
+    // display: flex;
     transform: translateX(0%);
+
+    transition: transform 0.5s ease-in;
+  }
+  &__shopheading {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-size: 20px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+    color: black;
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
   .header {
     &__list {
       position: absolute;
@@ -127,7 +140,7 @@ body {
 
     &__burger {
       display: block;
-      margin-left: 10px;
+      margin-left: 35px;
       width: 35%;
       cursor: pointer;
     }

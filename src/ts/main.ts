@@ -5,6 +5,9 @@ let burger: HTMLDivElement = document.getElementById(
 let nav: HTMLUListElement = document.getElementById("nav") as HTMLUListElement;
 let cart: HTMLLIElement = document.getElementById("cart") as HTMLLIElement;
 let shop: HTMLDivElement = document.getElementById("shop") as HTMLDivElement;
+let closebutton: HTMLButtonElement = document.getElementById(
+  "closebutton"
+) as HTMLButtonElement;
 
 burger.addEventListener("click", () => {
   nav.classList.toggle("active");
@@ -13,4 +16,8 @@ burger.addEventListener("click", () => {
 
 cart.addEventListener("click", () => {
   shop.classList.toggle("active");
+});
+
+closebutton.addEventListener("click", () => {
+  shop.classList.remove("active");
 });
