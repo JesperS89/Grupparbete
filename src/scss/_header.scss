@@ -72,6 +72,7 @@ body {
   }
   &__logo {
     img {
+      // margin-top: 10px;
       height: 30px;
     }
   }
@@ -147,6 +148,11 @@ body {
     }
     &__shop {
       width: 50vw;
+    }
+    &__logo {
+      img {
+        margin-top: 10px;
+      }
     }
   }
 }
