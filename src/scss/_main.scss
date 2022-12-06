@@ -33,7 +33,7 @@
     &__text {
         padding: 20px 40px;
         font-size: 20px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         line-height: 1.5;
         text-align: center;
         color: black;
@@ -43,8 +43,9 @@
         width: 30%;
         padding: 10px 0;
         font-size: 16px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         text-decoration: none;
+        border: none;
         background-color: #4A5240;
         color: white;
         transition-duration: 0.4s;
@@ -52,6 +53,7 @@
         &:hover {
             background-color: transparent;
             color: #4A5240;
+            border: 2px solid #4A5240;
         }
     }
 }
