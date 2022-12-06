@@ -1,0 +1,59 @@
+@use "mixins" as m;
+
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+
+    &::after {
+        content: "";
+        height: 90vh;
+        background-image: url(../images/the-ordinary.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.4;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1; 
+    }
+
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__text {
+        padding: 20px 40px;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        line-height: 1.5;
+        text-align: center;
+        color: black;
+    }
+
+    &__button {
+        width: 30%;
+        padding: 10px 0;
+        font-size: 16px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+        background-color: #4A5240;
+        color: white;
+        transition-duration: 0.4s;
+
+        &:hover {
+            background-color: transparent;
+            color: #4A5240;
+        }
+    }
+}
+
+
