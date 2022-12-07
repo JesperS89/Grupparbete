@@ -6,3 +6,11 @@ $background: #F4F2F2;
 // Font
 
 // Button
+
+// Breakpoints
+
+@mixin desktop {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
