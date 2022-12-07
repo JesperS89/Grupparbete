@@ -12,10 +12,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./scss/style.scss" />
-    <link
-      href="https://fonts.googleapis.com/css?family=DM Sans"
-      rel="stylesheet"
-    />
+
     <script src="ts/main.ts" defer type="module"></script>
     <link
       href="https://fonts.googleapis.com/css?family=DM Sans"
@@ -23,13 +20,35 @@
     />
   </head>
   <body>
-    <main class="hero">
-      <div class="hero__container">
-        <p class="hero__text">
-          Torr, känslig eller oljig hy? Vi har produkter för alla hudtyper.
-        </p>
-        <button class="hero__button">Köp nu</button>
-      </div>
-    </main>
+    <header class="header">
+      <nav class="header__nav">
+        <div class="header__burger" id="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="header__list" id="nav">
+          <li class="header__navitem"><a href=""></a>Shop</li>
+          <li class="header__navitem"><a href=""></a>Kontakt</li>
+          <li class="header__navitem"><a href=""></a>FAQ</li>
+        </ul>
+
+        <div class="header__logo">
+          <img src="./assets/logo-no-background.svg" alt="logo" />
+        </div>
+        <div class="header__shopcart">
+          <i id="cart" class="fa fa-shopping-cart" style="font-size: 30px"></i>
+        </div>
+
+        <div id="shop" class="header__shop">
+          <div class="header__shopheading">
+            <h4>Varukorg</h4>
+            <button id="closebutton">
+              <i class="fa fa-close" style="font-size: 28px"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
   </body>
 </html>
