@@ -1,6 +1,7 @@
 @use "mixins" as m;
 
 .hero {
+    height: 100vh;
     display: flex;
     justify-content: center;
 
