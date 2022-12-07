@@ -1,0 +1,74 @@
+.main {
+  max-width: 1400px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  justify-content: center;
+  margin: auto;
+  &__menu {
+    border: 1px solid blue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    li {
+      list-style: none;
+    }
+  }
+  &__products {
+    border: 1px solid red;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__daycreamcontainer {
+    border: 1px solid red;
+    height: 50px;
+  }
+  &__bodycontainer {
+    border: 1px solid blue;
+    height: 50px;
+  }
+  &__list {
+    display: none;
+  }
+  &__list.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.product {
+  &__headingcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid red;
+    height: 150px;
+    width: 100%;
+  }
+  &__innercontainer {
+    border: 1px solid pink;
+    height: 76%;
+    width: 100%;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  &__image {
+    height: 200px;
+  }
+  &__button {
+    border: none;
+    background-color: #4a5240;
+    color: white;
+    padding: 10px;
+  }
+}
