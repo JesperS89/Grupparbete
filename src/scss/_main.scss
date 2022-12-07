@@ -33,7 +33,7 @@
     &__text {
         padding: 20px 40px;
         font-size: 20px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'DM Sans';
         line-height: 1.5;
         text-align: center;
         color: black;
@@ -43,10 +43,10 @@
         width: 30%;
         padding: 10px 0;
         font-size: 16px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'DM Sans';
         text-decoration: none;
         border: none;
-        background-color: #4A5240;
+        background-color: m.$green;
         color: white;
         transition-duration: 0.4s;
 
