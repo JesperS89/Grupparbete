@@ -12,8 +12,8 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./scss/style.scss" />
-
-    <script src="ts/header.ts" defer type="module"></script>
+<script src="./ts/shop.ts" defer type="module"></script>
+    <script src="./ts/header.ts" defer type="module"></script>
     <link
       href="https://fonts.googleapis.com/css?family=DM Sans"
       rel="stylesheet"
@@ -50,13 +50,27 @@
         </div>
       </nav>
     </header>
-    <main class="hero">
-      <div class="hero__container">
-        <p class="hero__text">
-          Torr, känslig eller oljig hy? Vi har produkter för alla hudtyper.
-        </p>
-        <button class="hero__button">Köp nu</button>
-      </div>
+    <main class="main">
+        <div class="main__menu" id="menu">
+            <div class="main__daycreamcontainer">
+            <h4 id="face">Ansiktsvård</h4>
+        <ul class="main__list" id="list">
+            <li id="daycream">Dagkräm</li>
+            <li id="serum">Serum</li>
+        </ul>
+        </div>
+        <div class="main__bodycontainer">
+            <h5 id="body">Kroppsvård</h5>
+    <ul class="main__list" id="list2">
+        <li>Dusch</li>
+        <li>Lotion</li>
+      
+    </ul></div>
+        </div>
+        
+        
+
+
+        <div class="products" id="products"></div>
     </main>
-  </body>
-</html>
+    </html>
