@@ -1,7 +1,7 @@
 // Colors
 
-$green: #4A5240;
-$background: #F4F2F2;
+$green: #4a5240;
+$background: #f4f2f2;
 
 // Font
 
@@ -10,7 +10,7 @@ $background: #F4F2F2;
 // Breakpoints
 
 @mixin desktop {
-    @media screen and (min-width: 1200px) {
-        @content;
-    }
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
 }
