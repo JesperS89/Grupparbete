@@ -1,4 +1,4 @@
-import { headingList, productList } from "./models/ptlist";
+import { headingList, productList } from "./models/productlist";
 // let a = productList;
 // let b = headingList;
 let menuContainer: HTMLDivElement = document.getElementById(
