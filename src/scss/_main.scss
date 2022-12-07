@@ -1,13 +1,12 @@
 @use "mixins" as m;
 
 .hero {
-    height: 90vh;
     display: flex;
     justify-content: center;
 
     &::after {
         content: "";
-        height: 90vh;
+        height: 100vh;
         background-image: url(../images/the-ordinary.jpeg);
         background-size: cover;
         background-position: center;
