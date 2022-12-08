@@ -10,31 +10,54 @@ export const productList: Product[] = [
     "Cleansing Oil Gel",
     "No Make Up",
     1,
+    2,
     "En djuprengörande olja som återfuktar och rengör",
     149,
-    "https://kdiary.se/wp-content/uploads/2020/10/Purito_from_green_cleansing_oil.png",
+    "https://www.rgdaily.com/wp-content/uploads/2019/08/no-makeup-cosmetics-beauty-product-photography-rebecca-goddard-rgdaily-blog-15.jpg",
     1
   ),
   new Product(
     "Beauty Oil",
     "No Make up",
-    2,
+    1,
+    1,
     "En olja som gör dig vacker",
     99,
-    "../assets/images/beauty-oil-2.jpg",
+    "https://www.rgdaily.com/wp-content/uploads/2019/08/no-makeup-cosmetics-beauty-product-photography-rebecca-goddard-rgdaily-blog-9.jpg",
     2
   ),
   new Product(
     "Pore Refining Serum",
     "No Make Up",
-    3,
+    1,
+    2,
     "Ett serum som tar bort porer",
     79,
-    "../assets/images/face-serum.jpg",
+    "https://www.rgdaily.com/wp-content/uploads/2019/08/no-makeup-cosmetics-beauty-product-photography-rebecca-goddard-rgdaily-blog-7.jpg",
     3
   ),
-  //   new Product("NAMN", "MÄRKE", 0, "BESKRIVNING", 79, "IMGURL", 3),
-];
+
+  new Product(
+    "Cleansing oil", 
+    "No Make Up", 
+    1, 
+    1,
+    "Ansiktskräm som rengör på djupet", 
+    129, 
+    "https://www.rgdaily.com/wp-content/uploads/2019/08/no-makeup-cosmetics-beauty-product-photography-rebecca-goddard-rgdaily-blog-5.jpg",
+    4 
+  ),
+  new Product(
+    "Serum", 
+    "No Make Up", 
+    1, 
+    2,
+    "Serum som återfuktar", 
+    99, 
+    "https://www.rgdaily.com/wp-content/uploads/2019/08/no-makeup-cosmetics-beauty-product-photography-rebecca-goddard-rgdaily-blog-14.jpg", 
+    5
+  ),
+]
 
 export const headingList: Heading[] = [
   new Heading(

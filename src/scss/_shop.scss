@@ -42,33 +42,44 @@
 .product {
   &__headingcontainer {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: 1px solid red;
     height: 150px;
     width: 100%;
   }
   &__innercontainer {
     border: 1px solid pink;
-    height: 76%;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50;
   }
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
+  width: 220px;
+
   &__image {
-    height: 200px;
+    
   }
+
   &__button {
     border: none;
     background-color: #4a5240;
     color: white;
     padding: 10px;
+    margin-top: 5px;
+    font-family: 'DM Sans';
+    font-size: 16px;
   }
+
+  &__h5, h6 {
+    padding: 5px 0;
+    font-family: 'DM Sans';
+    font-size: 12px;
+  }
+
 }
