@@ -90,6 +90,39 @@ function printProducts(x: number): void {
       productCard.appendChild(productBrand);
       productCard.appendChild(productPrice);
       productCard.appendChild(buyButton);
+
+      let id = productList[i].id - 1;
+      productImage.addEventListener("click", () => productDisplay(id));
     }
   }
 }
+
+function productDisplay(id: number): void {
+  productContainer.innerHTML = "";
+  let productCard: HTMLDivElement = document.createElement("div");
+  let productImage: HTMLImageElement = document.createElement("img");
+  let productName: HTMLHeadingElement = document.createElement("h5");
+  let productBrand: HTMLHeadingElement = document.createElement("h6");
+  let productPrice: HTMLHeadingElement = document.createElement("h5");
+  let buyButton: HTMLButtonElement = document.createElement("button");
+  
+  productCard.className = "card";
+  productImage.className = "card__image";
+  productName.className = "card__name";
+  productBrand.className = "card__brand";
+  productPrice.className = "card__price";
+  buyButton.className = "card__button";
+
+  productImage.src = productList[id].img;
+  productName.innerHTML = productList[id].name;
+  productBrand.innerHTML = productList[id].brandName;
+  productPrice.innerHTML = productList[id].price.toString() + " kr";
+  buyButton.innerHTML = "Lägg i Varukorg";
+
+  productContainer.appendChild(productCard);
+  productCard.appendChild(productImage);
+  productCard.appendChild(productName);
+  productCard.appendChild(productBrand);
+  productCard.appendChild(productPrice);
+  productCard.appendChild(buyButton);
+    }
