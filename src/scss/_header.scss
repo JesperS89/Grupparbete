@@ -91,6 +91,47 @@
     display: none;
     overflow: hidden;
   }
+  &__shopcontainer {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    max-height: 72%;
+  }
+  &__shop__card {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    align-items: center;
+    width: 80%;
+  }
+  &__shop__image {
+    height: 50px;
+  }
+  &__shop__deletebutton {
+    border: none;
+    cursor: pointer;
+  }
+  &__shop__checkoutcontainer {
+    display: flex;
+    border-top: 1px solid grey;
+    justify-content: center;
+    height: 100px;
+    position: absolute;
+    bottom: 10;
+    left: 10;
+    right: 10;
+  }
+  &__shop__checkoutbutton {
+    width: 80%;
+    height: 80%;
+    margin-top: 10px;
+    border: none;
+    background-color: #4a5240;
+    color: white;
+  }
   &__shop.active {
     display: flex;
     transform: translateX(0%);

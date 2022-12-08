@@ -1,4 +1,5 @@
 import { categoryList } from "./models/categorylist";
+import { Product } from "./models/Product";
 import { headingList, productList } from "./models/productlist";
 
 let menuContainer: HTMLDivElement = document.getElementById(
@@ -7,6 +8,8 @@ let menuContainer: HTMLDivElement = document.getElementById(
 let productContainer: HTMLDivElement = document.getElementById(
   "products"
 ) as HTMLDivElement;
+
+// Funktionen skriver ut menyn
 
 function printMenu(): void {
   for (let i = 0; i < categoryList.length; i++) {
@@ -21,8 +24,6 @@ function printMenu(): void {
       printProducts(categoryList[i].id);
     });
     for (let j = 0; j < categoryList[i].subCategories.length; j++) {
-      console.log(categoryList[i].subCategories.length);
-
       let subCategories: HTMLHeadingElement = document.createElement("h5");
 
       subCategories.className = "main__menu__item";
@@ -37,6 +38,8 @@ function printMenu(): void {
     }
   }
 }
+
+// Funktionen skriver ut produkter
 
 function printProducts(x: number): void {
   productContainer.innerHTML = "";
@@ -60,7 +63,7 @@ function printProducts(x: number): void {
   let productInnerContainer: HTMLDivElement = document.createElement("div");
   productInnerContainer.className = "product__innercontainer";
   productContainer.appendChild(productInnerContainer);
-
+  // || x === productList[i].subCategory
   for (let i = 0; i < productList.length; i++) {
     if (x === productList[i].category) {
       let productCard: HTMLDivElement = document.createElement("div");
@@ -89,7 +92,71 @@ function printProducts(x: number): void {
       productCard.appendChild(productBrand);
       productCard.appendChild(productPrice);
       productCard.appendChild(buyButton);
+
+      buyButton.addEventListener("click", () => {
+        cart.push(productList[i]);
+        printCart();
+        console.log(cart);
+      });
     }
   }
 }
+
+export const cart: Product[] = [];
+let shop: HTMLDivElement = document.getElementById("shop") as HTMLDivElement;
+let itemContainer: HTMLDivElement = document.createElement("div");
+let checkoutContainer: HTMLDivElement = document.createElement("div");
+itemContainer.className = "header__shopcontainer";
+checkoutContainer.className = "header__shop__checkoutcontainer";
+shop.appendChild(itemContainer);
+shop.appendChild(checkoutContainer);
+let checkoutButton: HTMLButtonElement = document.createElement("button");
+checkoutContainer.appendChild(checkoutButton);
+checkoutButton.className = "header__shop__checkoutbutton";
+let sum: number = 0;
+
+checkoutButton.innerHTML = "Gå till kassan " + sum.toString() + " " + " kr";
+
+// Funktionen skriver ut varukorgen
+
+export function printCart(): void {
+  itemContainer.innerHTML = "";
+  checkoutButton.innerHTML = "";
+  sum = 0;
+  for (let i = 0; i < cart.length; i++) {
+    let productCard: HTMLDivElement = document.createElement("div");
+    let productImage: HTMLImageElement = document.createElement("img");
+    let productName: HTMLHeadingElement = document.createElement("h5");
+    let productPrice: HTMLHeadingElement = document.createElement("h6");
+    let deleteButton: HTMLButtonElement = document.createElement("button");
+
+    productCard.className = "header__shop__card";
+    productImage.className = "header__shop__image";
+    productName.className = "header__shop__name";
+    productPrice.className = "header__shop__price";
+    deleteButton.className = "header__shop__deletebutton";
+
+    productImage.src = cart[i].img;
+    productName.innerHTML = cart[i].name;
+    productPrice.innerHTML = cart[i].price.toString() + "kr";
+    deleteButton.innerHTML =
+      "<i class='fa fa-trash-o' style='font-size:25px;color:red'></i>";
+    checkoutButton.innerHTML += cart[i].price.toString();
+
+    itemContainer.appendChild(productCard);
+    productCard.appendChild(productImage);
+    productCard.appendChild(productName);
+    productCard.appendChild(productPrice);
+    productCard.appendChild(deleteButton);
+
+    sum += cart[i].price;
+    checkoutButton.innerHTML = "Gå till kassan " + sum.toString() + " " + " kr";
+
+    deleteButton.addEventListener("click", () => {
+      cart.splice(i, 1);
+      printCart();
+    });
+  }
+}
+
 printMenu();
