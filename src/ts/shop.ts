@@ -97,6 +97,8 @@ function printProducts(x: number): void {
   }
 }
 
+
+// Funktion för att visa produkten du klickar på för extra beskrivning och information
 function productDisplay(id: number): void {
   productContainer.innerHTML = "";
   let productDisplay: HTMLDivElement = document.createElement("div");
