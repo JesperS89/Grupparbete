@@ -42,24 +42,24 @@
 .product {
   &__headingcontainer {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: 1px solid red;
     height: 150px;
     width: 100%;
   }
   &__innercontainer {
     border: 1px solid pink;
-    height: 76%;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50;
   }
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 220px;
 
   &__image {
