@@ -1,7 +1,7 @@
 import { Heading, Product } from "./Product";
 
 // export class Product {
-//     constructor (public name: string, public brandName: string, public category: number, public description: string, public price: number, public img: string) {
+//     constructor (public name: string, public brandName: string, public category: number, public subCategory:number, public description: string, public price: number, public img: string) {
 //     }
 // }
 
@@ -10,6 +10,7 @@ export const productList: Product[] = [
     "Cleansing Oil Gel",
     "No Make Up",
     1,
+    2,
     "En djuprengörande olja som återfuktar och rengör",
     149,
     "https://www.rgdaily.com/wp-content/uploads/2019/08/no-makeup-cosmetics-beauty-product-photography-rebecca-goddard-rgdaily-blog-15.jpg",
@@ -18,6 +19,7 @@ export const productList: Product[] = [
   new Product(
     "Beauty Oil",
     "No Make up",
+    1,
     1,
     "En olja som gör dig vacker",
     99,
@@ -28,6 +30,7 @@ export const productList: Product[] = [
     "Pore Refining Serum",
     "No Make Up",
     1,
+    2,
     "Ett serum som tar bort porer",
     79,
     "https://www.rgdaily.com/wp-content/uploads/2019/08/no-makeup-cosmetics-beauty-product-photography-rebecca-goddard-rgdaily-blog-7.jpg",
@@ -38,6 +41,7 @@ export const productList: Product[] = [
     "Cleansing oil", 
     "No Make Up", 
     1, 
+    1,
     "Ansiktskräm som rengör på djupet", 
     129, 
     "https://www.rgdaily.com/wp-content/uploads/2019/08/no-makeup-cosmetics-beauty-product-photography-rebecca-goddard-rgdaily-blog-5.jpg",
@@ -47,6 +51,7 @@ export const productList: Product[] = [
     "Serum", 
     "No Make Up", 
     1, 
+    2,
     "Serum som återfuktar", 
     99, 
     "https://www.rgdaily.com/wp-content/uploads/2019/08/no-makeup-cosmetics-beauty-product-photography-rebecca-goddard-rgdaily-blog-14.jpg", 
