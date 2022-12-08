@@ -12,7 +12,7 @@ export const productList: Product[] = [
     1,
     "En djuprengörande olja som återfuktar och rengör",
     149,
-    "https://kdiary.se/wp-content/uploads/2020/10/Purito_from_green_cleansing_oil.png",
+    "https://www.rgdaily.com/wp-content/uploads/2019/08/no-makeup-cosmetics-beauty-product-photography-rebecca-goddard-rgdaily-blog-15.jpg",
     1
   ),
   new Product(
@@ -21,7 +21,7 @@ export const productList: Product[] = [
     2,
     "En olja som gör dig vacker",
     99,
-    "../assets/images/beauty-oil-2.jpg",
+    "https://www.rgdaily.com/wp-content/uploads/2019/08/no-makeup-cosmetics-beauty-product-photography-rebecca-goddard-rgdaily-blog-9.jpg",
     2
   ),
   new Product(

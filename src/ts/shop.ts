@@ -68,7 +68,7 @@ function printProducts(x: number): void {
       let productImage: HTMLImageElement = document.createElement("img");
       let productName: HTMLHeadingElement = document.createElement("h5");
       let productBrand: HTMLHeadingElement = document.createElement("h6");
-      let productPrice: HTMLHeadingElement = document.createElement("h6");
+      let productPrice: HTMLHeadingElement = document.createElement("h5");
       let buyButton: HTMLButtonElement = document.createElement("button");
 
       productCard.className = "card";
