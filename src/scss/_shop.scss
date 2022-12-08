@@ -6,41 +6,37 @@
   justify-content: center;
   margin: auto;
   &__menu {
+    margin-top: 60px;
     border: 1px solid blue;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    li {
-      list-style: none;
-    }
+    align-items: center;
+  }
+  &__menu__heading {
+    font-size: 25px;
+    cursor: pointer;
+  }
+  &__menu__item {
+    font-weight: 400;
+    font-size: 18px;
+    margin: 4px;
+    cursor: pointer;
   }
   &__products {
+    margin-top: 60px;
     border: 1px solid red;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  &__daycreamcontainer {
-    border: 1px solid red;
-    height: 50px;
-  }
-  &__bodycontainer {
-    border: 1px solid blue;
-    height: 50px;
-  }
-  &__list {
-    display: none;
-  }
-  &__list.active {
-    display: flex;
-    flex-direction: column;
   }
 }
 
 .product {
   &__headingcontainer {
+    margin-top: 60px;
     display: flex;
     align-items: center;
     justify-content: center;

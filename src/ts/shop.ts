@@ -1,6 +1,6 @@
+import { categoryList } from "./models/categorylist";
 import { headingList, productList } from "./models/productlist";
-// let a = productList;
-// let b = headingList;
+
 let menuContainer: HTMLDivElement = document.getElementById(
   "menu"
 ) as HTMLDivElement;
@@ -8,36 +8,35 @@ let productContainer: HTMLDivElement = document.getElementById(
   "products"
 ) as HTMLDivElement;
 
-let list: HTMLUListElement = document.getElementById(
-  "list"
-) as HTMLUListElement;
-let list2: HTMLUListElement = document.getElementById(
-  "list2"
-) as HTMLUListElement;
+function printMenu(): void {
+  for (let i = 0; i < categoryList.length; i++) {
+    let category: HTMLHeadingElement = document.createElement("h4");
+    category.className = "main__menu__heading";
 
-let face: HTMLHeadingElement = document.getElementById(
-  "face"
-) as HTMLHeadingElement;
+    category.innerHTML = categoryList[i].category;
 
-let body: HTMLHeadingElement = document.getElementById(
-  "body"
-) as HTMLHeadingElement;
+    menuContainer.appendChild(category);
 
-let daycream: HTMLLIElement = document.getElementById(
-  "daycream"
-) as HTMLLIElement;
+    category.addEventListener("click", () => {
+      printProducts(categoryList[i].id);
+    });
+    for (let j = 0; j < categoryList[i].subCategories.length; j++) {
+      console.log(categoryList[i].subCategories.length);
 
-face.addEventListener("click", () => {
-  list.classList.toggle("active");
-});
+      let subCategories: HTMLHeadingElement = document.createElement("h5");
 
-body.addEventListener("click", () => {
-  list2.classList.toggle("active");
-});
+      subCategories.className = "main__menu__item";
 
-daycream.addEventListener("click", () => {
-  printProducts(1);
-});
+      subCategories.innerHTML = categoryList[i].subCategories[j].category;
+
+      menuContainer.appendChild(subCategories);
+
+      subCategories.addEventListener("click", () => {
+        printProducts(categoryList[i].subCategories[j].id);
+      });
+    }
+  }
+}
 
 function printProducts(x: number): void {
   productContainer.innerHTML = "";
@@ -93,3 +92,4 @@ function printProducts(x: number): void {
     }
   }
 }
+printMenu();
