@@ -99,30 +99,34 @@ function printProducts(x: number): void {
 
 function productDisplay(id: number): void {
   productContainer.innerHTML = "";
-  let productCard: HTMLDivElement = document.createElement("div");
+  let productDisplay: HTMLDivElement = document.createElement("div");
   let productImage: HTMLImageElement = document.createElement("img");
   let productName: HTMLHeadingElement = document.createElement("h5");
   let productBrand: HTMLHeadingElement = document.createElement("h6");
+  let productDescription: HTMLSpanElement = document.createElement("span")
   let productPrice: HTMLHeadingElement = document.createElement("h5");
   let buyButton: HTMLButtonElement = document.createElement("button");
   
-  productCard.className = "card";
-  productImage.className = "card__image";
-  productName.className = "card__name";
-  productBrand.className = "card__brand";
-  productPrice.className = "card__price";
-  buyButton.className = "card__button";
+  productDisplay.className = "productDisplay";
+  productImage.className = "productDisplay__image";
+  productName.className = "productDisplay__name";
+  productBrand.className = "productDisplay__brand";
+  productDescription.className = "productDisplay__description"
+  productPrice.className = "productDisplay__price";
+  buyButton.className = "productDisplay__button";
 
   productImage.src = productList[id].img;
   productName.innerHTML = productList[id].name;
   productBrand.innerHTML = productList[id].brandName;
+  productDescription.innerHTML = productList[id].description;
   productPrice.innerHTML = productList[id].price.toString() + " kr";
   buyButton.innerHTML = "Lägg i Varukorg";
 
-  productContainer.appendChild(productCard);
-  productCard.appendChild(productImage);
-  productCard.appendChild(productName);
-  productCard.appendChild(productBrand);
-  productCard.appendChild(productPrice);
-  productCard.appendChild(buyButton);
+  productContainer.appendChild(productDisplay);
+  productDisplay.appendChild(productImage);
+  productDisplay.appendChild(productName);
+  productDisplay.appendChild(productBrand);
+  productDisplay.appendChild(productDescription);
+  productDisplay.appendChild(productPrice);
+  productDisplay.appendChild(buyButton);
     }
