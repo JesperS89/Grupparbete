@@ -92,6 +92,11 @@ function printProducts(x: number): void {
       productCard.appendChild(productBrand);
       productCard.appendChild(productPrice);
       productCard.appendChild(buyButton);
+
+      buyButton.addEventListener("click", () => {
+        cart.push(productList[i]);
+        printCart();
+      });
     }
   }
 }
