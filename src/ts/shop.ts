@@ -90,6 +90,45 @@ function printProducts(x: number): void {
       productCard.appendChild(productBrand);
       productCard.appendChild(productPrice);
       productCard.appendChild(buyButton);
+
+      let id = productList[i].id - 1;
+      productImage.addEventListener("click", () => productDisplay(id));
     }
   }
 }
+
+
+// Funktion för att visa produkten du klickar på för extra beskrivning och information
+function productDisplay(id: number): void {
+  productContainer.innerHTML = "";
+  let productDisplay: HTMLDivElement = document.createElement("div");
+  let productImage: HTMLImageElement = document.createElement("img");
+  let productName: HTMLHeadingElement = document.createElement("h3");
+  let productBrand: HTMLHeadingElement = document.createElement("h4");
+  let productDescription: HTMLSpanElement = document.createElement("span")
+  let productPrice: HTMLHeadingElement = document.createElement("h5");
+  let buyButton: HTMLButtonElement = document.createElement("button");
+  
+  productDisplay.className = "productDisplay";
+  productImage.className = "productDisplay__image";
+  productName.className = "productDisplay__name";
+  productBrand.className = "productDisplay__brand";
+  productDescription.className = "productDisplay__description"
+  productPrice.className = "productDisplay__price";
+  buyButton.className = "productDisplay__button";
+
+  productImage.src = productList[id].img;
+  productName.innerHTML = productList[id].name;
+  productBrand.innerHTML = productList[id].brandName;
+  productDescription.innerHTML = productList[id].description;
+  productPrice.innerHTML = productList[id].price.toString() + " kr";
+  buyButton.innerHTML = "Lägg i Varukorg";
+
+  productContainer.appendChild(productDisplay);
+  productDisplay.appendChild(productImage);
+  productDisplay.appendChild(productName);
+  productDisplay.appendChild(productBrand);
+  productDisplay.appendChild(productDescription);
+  productDisplay.appendChild(productPrice);
+  productDisplay.appendChild(buyButton);
+    }

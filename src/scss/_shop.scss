@@ -62,10 +62,6 @@
   flex-direction: column;
   width: 220px;
 
-  &__image {
-    
-  }
-
   &__button {
     border: none;
     background-color: #4a5240;
@@ -82,4 +78,37 @@
     font-size: 12px;
   }
 
+}
+
+.products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+.productDisplay {
+    height: 40%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__image {
+      width: 100%;
+    }
+    &__name {
+      font-size: xx-large;
+    }
+    &__brand {
+      font-size: x-large;
+    }
+    &__description {
+      font-size: large;
+    }
+    &__price {
+      font-size: x-large;
+    }
+    &__button {
+      width: 100px;
+    }
+  }
 }
