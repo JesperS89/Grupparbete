@@ -63,9 +63,9 @@ function printProducts(x: number): void {
   let productInnerContainer: HTMLDivElement = document.createElement("div");
   productInnerContainer.className = "product__innercontainer";
   productContainer.appendChild(productInnerContainer);
-  // || x === productList[i].subCategory
+  
   for (let i = 0; i < productList.length; i++) {
-    if (x === productList[i].category) {
+    if (x === productList[i].category || x === productList[i].subCategory) {
       let productCard: HTMLDivElement = document.createElement("div");
       let productImage: HTMLImageElement = document.createElement("img");
       let productName: HTMLHeadingElement = document.createElement("h5");
