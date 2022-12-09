@@ -93,6 +93,9 @@ function printProducts(x: number): void {
       productCard.appendChild(productPrice);
       productCard.appendChild(buyButton);
 
+      let id = productList[i].id - 1;
+      productImage.addEventListener("click", () => productDisplay(id));
+
       buyButton.addEventListener("click", () => {
         cart.push(productList[i]);
         printCart();
