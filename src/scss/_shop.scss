@@ -16,13 +16,14 @@
     align-items: flex-start;
   }
   &__menu__heading {
+    margin-bottom: 7px;
     font-size: 25px;
     cursor: pointer;
   }
   &__menu__item {
     font-weight: 400;
     font-size: 18px;
-    margin: 4px;
+    margin-bottom: 4px;
     cursor: pointer;
   }
   &__products {
