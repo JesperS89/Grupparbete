@@ -1,3 +1,4 @@
+import { printCart } from "./shop";
 let burger: HTMLDivElement = document.getElementById(
   "burger"
 ) as HTMLDivElement;

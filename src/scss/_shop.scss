@@ -1,48 +1,46 @@
 @use "mixins" as m;
 
 .main {
-  max-width: 1400px;
+  max-width: 1000px;
   height: 100vh;
   display: grid;
   grid-template-columns: 25% 75%;
-  justify-content: center;
+  justify-content: baseline;
+  border: 1px solid pink;
   margin: auto;
   &__menu {
-    border: 1px solid blue;
-    height: 100vh;
+    margin-top: 120px;
+    border-right: 1px solid grey;
+    height: 80vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    li {
-      list-style: none;
-    }
+    align-items: flex-start;
+  }
+  &__menu__heading {
+    margin-bottom: 7px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  &__menu__item {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 4px;
+    cursor: pointer;
   }
   &__products {
-    border: 1px solid red;
-    height: 100vh;
+    margin-top: 60px;
+    border: 1px solid blue;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  &__daycreamcontainer {
-    border: 1px solid red;
-    height: 50px;
-  }
-  &__bodycontainer {
-    border: 1px solid blue;
-    height: 50px;
-  }
-  &__list {
-    display: none;
-  }
-  &__list.active {
-    display: flex;
-    flex-direction: column;
   }
 }
 
 .product {
   &__headingcontainer {
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,12 +69,11 @@
   }
 
   &__image {
-
-  &:hover {
-    opacity: 70%;
-    transition: 0.4s;
+    &:hover {
+      opacity: 70%;
+      transition: 0.4s;
+    }
   }
-}
 
   &__button {
     border: none;
@@ -84,16 +81,16 @@
     color: white;
     padding: 10px;
     margin-top: 5px;
-    font-family: 'DM Sans';
+    font-family: "DM Sans";
     font-size: 16px;
   }
 
-  &__h5, h6 {
+  &__h5,
+  h6 {
     padding: 5px 0;
-    font-family: 'DM Sans';
+    font-family: "DM Sans";
     font-size: 12px;
   }
-
 }
 
 .products {
@@ -101,7 +98,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-.productDisplay {
+  .productDisplay {
     height: 40%;
     width: 40%;
     display: flex;

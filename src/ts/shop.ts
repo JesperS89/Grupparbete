@@ -1,6 +1,7 @@
+import { categoryList } from "./models/categorylist";
+import { Product } from "./models/Product";
 import { headingList, productList } from "./models/productlist";
-// let a = productList;
-// let b = headingList;
+
 let menuContainer: HTMLDivElement = document.getElementById(
   "menu"
 ) as HTMLDivElement;
@@ -8,36 +9,37 @@ let productContainer: HTMLDivElement = document.getElementById(
   "products"
 ) as HTMLDivElement;
 
-let list: HTMLUListElement = document.getElementById(
-  "list"
-) as HTMLUListElement;
-let list2: HTMLUListElement = document.getElementById(
-  "list2"
-) as HTMLUListElement;
+// Funktionen skriver ut menyn
 
-let face: HTMLHeadingElement = document.getElementById(
-  "face"
-) as HTMLHeadingElement;
+function printMenu(): void {
+  for (let i = 0; i < categoryList.length; i++) {
+    let category: HTMLHeadingElement = document.createElement("h4");
+    category.className = "main__menu__heading";
 
-let body: HTMLHeadingElement = document.getElementById(
-  "body"
-) as HTMLHeadingElement;
+    category.innerHTML = categoryList[i].category;
 
-let daycream: HTMLLIElement = document.getElementById(
-  "daycream"
-) as HTMLLIElement;
+    menuContainer.appendChild(category);
 
-face.addEventListener("click", () => {
-  list.classList.toggle("active");
-});
+    category.addEventListener("click", () => {
+      printProducts(categoryList[i].id);
+    });
+    for (let j = 0; j < categoryList[i].subCategories.length; j++) {
+      let subCategories: HTMLHeadingElement = document.createElement("h5");
 
-body.addEventListener("click", () => {
-  list2.classList.toggle("active");
-});
+      subCategories.className = "main__menu__item";
 
-daycream.addEventListener("click", () => {
-  printProducts(1);
-});
+      subCategories.innerHTML = categoryList[i].subCategories[j].category;
+
+      menuContainer.appendChild(subCategories);
+
+      subCategories.addEventListener("click", () => {
+        printProducts(categoryList[i].subCategories[j].id);
+      });
+    }
+  }
+}
+
+// Funktionen skriver ut produkter
 
 function printProducts(x: number): void {
   productContainer.innerHTML = "";
@@ -61,7 +63,7 @@ function printProducts(x: number): void {
   let productInnerContainer: HTMLDivElement = document.createElement("div");
   productInnerContainer.className = "product__innercontainer";
   productContainer.appendChild(productInnerContainer);
-
+  // || x === productList[i].subCategory
   for (let i = 0; i < productList.length; i++) {
     if (x === productList[i].category) {
       let productCard: HTMLDivElement = document.createElement("div");
@@ -90,13 +92,68 @@ function printProducts(x: number): void {
       productCard.appendChild(productBrand);
       productCard.appendChild(productPrice);
       productCard.appendChild(buyButton);
-
-      let id = productList[i].id - 1;
-      productImage.addEventListener("click", () => productDisplay(id));
     }
   }
 }
 
+export const cart: Product[] = [];
+let shop: HTMLDivElement = document.getElementById("shop") as HTMLDivElement;
+let itemContainer: HTMLDivElement = document.createElement("div");
+let checkoutContainer: HTMLDivElement = document.createElement("div");
+itemContainer.className = "header__shopcontainer";
+checkoutContainer.className = "header__shop__checkoutcontainer";
+shop.appendChild(itemContainer);
+shop.appendChild(checkoutContainer);
+let checkoutButton: HTMLButtonElement = document.createElement("button");
+checkoutContainer.appendChild(checkoutButton);
+checkoutButton.className = "header__shop__checkoutbutton";
+let sum: number = 0;
+
+checkoutButton.innerHTML = "Gå till kassan " + sum.toString() + " " + " kr";
+
+// Funktionen skriver ut varukorgen
+
+export function printCart(): void {
+  itemContainer.innerHTML = "";
+  checkoutButton.innerHTML = "";
+  sum = 0;
+  for (let i = 0; i < cart.length; i++) {
+    let productCard: HTMLDivElement = document.createElement("div");
+    let productImage: HTMLImageElement = document.createElement("img");
+    let productName: HTMLHeadingElement = document.createElement("h5");
+    let productPrice: HTMLHeadingElement = document.createElement("h6");
+    let deleteButton: HTMLButtonElement = document.createElement("button");
+
+    productCard.className = "header__shop__card";
+    productImage.className = "header__shop__image";
+    productName.className = "header__shop__name";
+    productPrice.className = "header__shop__price";
+    deleteButton.className = "header__shop__deletebutton";
+
+    productImage.src = cart[i].img;
+    productName.innerHTML = cart[i].name;
+    productPrice.innerHTML = cart[i].price.toString() + "kr";
+    deleteButton.innerHTML =
+      "<i class='fa fa-trash-o' style='font-size:25px;color:red'></i>";
+    checkoutButton.innerHTML += cart[i].price.toString();
+
+    itemContainer.appendChild(productCard);
+    productCard.appendChild(productImage);
+    productCard.appendChild(productName);
+    productCard.appendChild(productPrice);
+    productCard.appendChild(deleteButton);
+
+    sum += cart[i].price;
+    checkoutButton.innerHTML = "Gå till kassan " + sum.toString() + " " + " kr";
+
+    deleteButton.addEventListener("click", () => {
+      cart.splice(i, 1);
+      printCart();
+    });
+  }
+}
+
+printMenu();
 
 // Funktion för att visa produkten du klickar på för extra beskrivning och information
 function productDisplay(id: number): void {
@@ -105,15 +162,15 @@ function productDisplay(id: number): void {
   let productImage: HTMLImageElement = document.createElement("img");
   let productName: HTMLHeadingElement = document.createElement("h3");
   let productBrand: HTMLHeadingElement = document.createElement("h4");
-  let productDescription: HTMLSpanElement = document.createElement("span")
+  let productDescription: HTMLSpanElement = document.createElement("span");
   let productPrice: HTMLHeadingElement = document.createElement("h5");
   let buyButton: HTMLButtonElement = document.createElement("button");
-  
+
   productDisplay.className = "productDisplay";
   productImage.className = "productDisplay__image";
   productName.className = "productDisplay__name";
   productBrand.className = "productDisplay__brand";
-  productDescription.className = "productDisplay__description"
+  productDescription.className = "productDisplay__description";
   productPrice.className = "productDisplay__price";
   buyButton.className = "productDisplay__button";
 
@@ -131,4 +188,4 @@ function productDisplay(id: number): void {
   productDisplay.appendChild(productDescription);
   productDisplay.appendChild(productPrice);
   productDisplay.appendChild(buyButton);
-    }
+}
