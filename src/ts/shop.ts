@@ -92,6 +92,9 @@ function printProducts(x: number): void {
       productCard.appendChild(productBrand);
       productCard.appendChild(productPrice);
       productCard.appendChild(buyButton);
+
+      let id = productList[i].id - 1;
+      productImage.addEventListener("click", () => productDisplay(id));
     }
   }
 }
@@ -188,5 +191,4 @@ function productDisplay(id: number): void {
   productDisplay.appendChild(productDescription);
   productDisplay.appendChild(productPrice);
   productDisplay.appendChild(buyButton);
-  console.log(productPrice);
-}
+    }
