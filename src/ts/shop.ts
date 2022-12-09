@@ -103,8 +103,8 @@ function productDisplay(id: number): void {
   productContainer.innerHTML = "";
   let productDisplay: HTMLDivElement = document.createElement("div");
   let productImage: HTMLImageElement = document.createElement("img");
-  let productName: HTMLHeadingElement = document.createElement("h5");
-  let productBrand: HTMLHeadingElement = document.createElement("h6");
+  let productName: HTMLHeadingElement = document.createElement("h3");
+  let productBrand: HTMLHeadingElement = document.createElement("h4");
   let productDescription: HTMLSpanElement = document.createElement("span")
   let productPrice: HTMLHeadingElement = document.createElement("h5");
   let buyButton: HTMLButtonElement = document.createElement("button");
