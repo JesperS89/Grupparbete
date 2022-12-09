@@ -1,5 +1,6 @@
 import { Heading, Product } from "./Product";
 
+
 export const productList: Product[] = [
   new Product(
     "Natural Moisturiser",
