@@ -188,4 +188,5 @@ function productDisplay(id: number): void {
   productDisplay.appendChild(productDescription);
   productDisplay.appendChild(productPrice);
   productDisplay.appendChild(buyButton);
+  console.log(productPrice);
 }
