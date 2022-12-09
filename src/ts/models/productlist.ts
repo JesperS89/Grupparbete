@@ -16,7 +16,6 @@ export const productList: Product[] = [
     "Beauty Oil",
     "No Make up",
     1,
-    1,
     101,
     "En olja som gör dig vacker",
     99,
