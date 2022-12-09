@@ -1,10 +1,5 @@
 import { Heading, Product } from "./Product";
 
-// export class Product {
-//     constructor (public name: string, public brandName: string, public category: number, public description: string, public price: number, public img: string) {
-//     }
-// }
-
 export const productList: Product[] = [
   new Product(
     "Natural Moisturiser",

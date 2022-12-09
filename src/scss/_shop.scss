@@ -71,13 +71,12 @@
   }
 
   &__image {
-    
 
-    &:hover {
-      opacity: 70%;
-      transition: 0.4s;
-    }
+  &:hover {
+    opacity: 70%;
+    transition: 0.4s;
   }
+}
 
   &__button {
     border: none;
