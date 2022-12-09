@@ -7,8 +7,8 @@ import { Heading, Product } from "./Product";
 
 export const productList: Product[] = [
   new Product(
-    "Cleansing Oil Gel",
-    "No Make Up",
+    "Natural Moisturiser",
+    "The Ordinary",
     1,
     2,
     "En djuprengörande olja som återfuktar och rengör",

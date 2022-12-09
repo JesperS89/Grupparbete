@@ -1,3 +1,5 @@
+@use "mixins" as m;
+
 .main {
   max-width: 1400px;
   height: 100vh;
@@ -48,6 +50,7 @@
     border: 1px solid red;
     height: 150px;
     width: 100%;
+    margin-top: 6%;
   }
   &__innercontainer {
     border: 1px solid pink;
