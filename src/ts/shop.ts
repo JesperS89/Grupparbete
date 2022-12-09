@@ -96,7 +96,6 @@ function printProducts(x: number): void {
       buyButton.addEventListener("click", () => {
         cart.push(productList[i]);
         printCart();
-        console.log(cart);
       });
     }
   }
