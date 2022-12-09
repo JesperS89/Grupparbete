@@ -3,7 +3,7 @@ export class Product {
     public name: string,
     public brandName: string,
     public category: number,
-    public subCategory: number,
+    public subCategory: number
     public description: string,
     public price: number,
     public img: string,
