@@ -63,7 +63,21 @@
 .card {
   display: flex;
   flex-direction: column;
-  width: 220px;
+  width: 150px;
+  margin: 20px 0;
+
+  @include m.desktop {
+    width: 220px;
+  }
+
+  &__image {
+    
+
+    &:hover {
+      opacity: 70%;
+      transition: 0.4s;
+    }
+  }
 
   &__button {
     border: none;
