@@ -174,6 +174,7 @@ export function printCart(): void {
   console.log(cart);
 }
 
+
 printMenu();
 
 // Funktion för att visa produkten du klickar på för extra beskrivning och information
