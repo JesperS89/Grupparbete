@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: 25% 75%;
   justify-content: baseline;
-  border: 1px solid pink;
+  // border: 1px solid pink;
   margin: auto;
   &__menu {
     margin-top: 120px;
@@ -45,25 +45,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    // border: 1px solid red;
     height: 150px;
     width: 100%;
     margin-top: 6%;
   }
   &__innercontainer {
-    border: 1px solid pink;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50;
+    // border: 1px solid pink;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20;
+    justify-content: center;
+    max-height: 80vh;
+    overflow: auto;
+    scro;
   }
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 150px;
   margin: 20px 0;
-
   @include m.desktop {
     width: 220px;
   }
@@ -72,6 +74,7 @@
     &:hover {
       opacity: 70%;
       transition: 0.4s;
+      cursor: pointer;
     }
   }
 
@@ -83,6 +86,7 @@
     margin-top: 5px;
     font-family: "DM Sans";
     font-size: 16px;
+    cursor: pointer;
   }
 
   &__h5,
