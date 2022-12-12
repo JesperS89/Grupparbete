@@ -135,6 +135,7 @@ export function printCart(): void {
     let productName: HTMLHeadingElement = document.createElement("h5");
     let productPrice: HTMLHeadingElement = document.createElement("h6");
     let deleteButton: HTMLButtonElement = document.createElement("button");
+    let addButton: HTMLButtonElement = document.createElement("button");
 
     productCard.className = "header__shop__card";
     productImage.className = "header__shop__image";
@@ -145,6 +146,7 @@ export function printCart(): void {
     productImage.src = cart[i].img;
     productName.innerHTML = cart[i].name;
     productPrice.innerHTML = cart[i].price.toString() + "kr";
+    addButton.innerHTML = "PLUS"
     deleteButton.innerHTML =
       "<i class='fa fa-trash-o' style='font-size:25px;color:red'></i>";
     checkoutButton.innerHTML += cart[i].price.toString();
@@ -154,15 +156,22 @@ export function printCart(): void {
     productCard.appendChild(productName);
     productCard.appendChild(productPrice);
     productCard.appendChild(deleteButton);
+    productCard.appendChild(addButton);
 
     sum += cart[i].price;
     checkoutButton.innerHTML = "Gå till kassan " + sum.toString() + " " + " kr";
+
+    addButton.addEventListener("click", () => {
+      cart.push(cart[i]);
+      printCart();
+    })
 
     deleteButton.addEventListener("click", () => {
       cart.splice(i, 1);
       printCart();
     });
   }
+  console.log(cart);
 }
 
 printMenu();
