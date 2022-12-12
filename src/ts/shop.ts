@@ -22,6 +22,7 @@ function printMenu(): void {
 
     category.addEventListener("click", () => {
       printProducts(categoryList[i].id);
+      window.history.pushState(categoryList[i].category, "", categoryList[i].category)
     });
     for (let j = 0; j < categoryList[i].subCategories.length; j++) {
       let subCategories: HTMLHeadingElement = document.createElement("h5");
@@ -34,6 +35,7 @@ function printMenu(): void {
 
       subCategories.addEventListener("click", () => {
         printProducts(categoryList[i].subCategories[j].id);
+        window.history.pushState(categoryList[i].subCategories[j].category, "", categoryList[i].subCategories[j].category);
       });
     }
   }
@@ -101,6 +103,7 @@ function printProducts(x: number): void {
         printCart();
       });
     }
+    
   }
 }
 
