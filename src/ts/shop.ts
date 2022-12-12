@@ -22,7 +22,7 @@ function printMenu(): void {
 
     category.addEventListener("click", () => {
       printProducts(categoryList[i].id);
-      window.history.pushState(categoryList[i].category, "", categoryList[i].category)
+      window.history.pushState(categoryList[i].id, "", categoryList[i].id.toString())
     });
     for (let j = 0; j < categoryList[i].subCategories.length; j++) {
       let subCategories: HTMLHeadingElement = document.createElement("h5");
@@ -97,7 +97,7 @@ function printProducts(x: number): void {
 
       let id = productList[i].id - 1;
       productImage.addEventListener("click", () => productDisplay(id));
-      productImage.addEventListener("click", () => window.history.pushState(productList[i].name, "", productList[i].name));
+      productImage.addEventListener("click", () => window.history.pushState(productList[i].name, "", "product?name=" + productList[i].name));
 
       buyButton.addEventListener("click", () => {
         cart.push(productList[i]);
