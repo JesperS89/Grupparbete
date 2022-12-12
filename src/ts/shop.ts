@@ -22,20 +22,25 @@ function printMenu(): void {
     menuContainer.appendChild(category);
 
     category.addEventListener("click", () => {
-      printProducts(categoryList[i].id);
+      printProducts();
       // window.history.pushState(categoryList[i].id, "", categoryList[i].id.toString())
     });
     for (let j = 0; j < categoryList[i].subCategories.length; j++) {
       let subCategories: HTMLAnchorElement = document.createElement("a");
 
       subCategories.className = "main__menu__item";
+      subCategories.href =
+        "/shop.html?category=" +
+        categoryList[i].id +
+        "&subcategory=" +
+        categoryList[i].subCategories[j].id;
 
       subCategories.innerHTML = categoryList[i].subCategories[j].category;
 
       menuContainer.appendChild(subCategories);
 
       subCategories.addEventListener("click", () => {
-        printProducts(categoryList[i].subCategories[j].id);
+        printProducts();
         // window.history.pushState(categoryList[i].subCategories[j].category, "", categoryList[i].subCategories[j].category);
       });
     }
@@ -43,12 +48,17 @@ function printMenu(): void {
 }
 
 // Funktionen skriver ut produkter
-
-function printProducts(x: number): void {
+function printProducts(): void {
   productContainer.innerHTML = "";
+
+  let params: URLSearchParams = new URLSearchParams(document.location.search);
+  let id: number =
+    parseInt(params.get("subcategory") || "0") ||
+    parseInt(params.get("category") || "0");
+  console.log(id);
   let headingContainer: HTMLDivElement = document.createElement("div");
   for (let i = 0; i < headingList.length; i++)
-    if (x === headingList[i].category) {
+    if (id === headingList[i].category) {
       let heading: HTMLHeadingElement = document.createElement("h2");
       let text: HTMLParagraphElement = document.createElement("p");
 
@@ -65,9 +75,9 @@ function printProducts(x: number): void {
   let productInnerContainer: HTMLDivElement = document.createElement("div");
   productInnerContainer.className = "product__innercontainer";
   productContainer.appendChild(productInnerContainer);
-  
+
   for (let i = 0; i < productList.length; i++) {
-    if (x === productList[i].category || x === productList[i].subCategory) {
+    if (id === productList[i].category || id === productList[i].subCategory) {
       let productCard: HTMLDivElement = document.createElement("div");
       let productImage: HTMLImageElement = document.createElement("img");
       let productName: HTMLHeadingElement = document.createElement("h5");
@@ -97,14 +107,19 @@ function printProducts(x: number): void {
 
       let id = productList[i].id - 1;
       productImage.addEventListener("click", () => productDisplay(id));
-      productImage.addEventListener("click", () => window.history.pushState(productList[i].name, "", "product?name=" + productList[i].name));
+      productImage.addEventListener("click", () =>
+        window.history.pushState(
+          productList[i].name,
+          "",
+          "product?name=" + productList[i].name
+        )
+      );
 
       buyButton.addEventListener("click", () => {
         cart.push(productList[i]);
         printCart();
       });
     }
-    
   }
 }
 
@@ -146,7 +161,7 @@ export function printCart(): void {
     productImage.src = cart[i].img;
     productName.innerHTML = cart[i].name;
     productPrice.innerHTML = cart[i].price.toString() + "kr";
-    addButton.innerHTML = "PLUS"
+    addButton.innerHTML = "PLUS";
     deleteButton.innerHTML =
       "<i class='fa fa-trash-o' style='font-size:25px;color:red'></i>";
     checkoutButton.innerHTML += cart[i].price.toString();
@@ -164,7 +179,7 @@ export function printCart(): void {
     addButton.addEventListener("click", () => {
       cart.push(cart[i]);
       printCart();
-    })
+    });
 
     deleteButton.addEventListener("click", () => {
       cart.splice(i, 1);
@@ -173,7 +188,6 @@ export function printCart(): void {
   }
   console.log(cart);
 }
-
 
 printMenu();
 
@@ -212,5 +226,4 @@ function productDisplay(id: number): void {
   productDisplay.appendChild(buyButton);
 }
 
-// printProducts();
-console.log(window.location.search.slice(0 7))
+printProducts();
