@@ -13,8 +13,9 @@ let productContainer: HTMLDivElement = document.getElementById(
 
 function printMenu(): void {
   for (let i = 0; i < categoryList.length; i++) {
-    let category: HTMLHeadingElement = document.createElement("h4");
+    let category: HTMLAnchorElement = document.createElement("a");
     category.className = "main__menu__heading";
+    category.href = "/shop.html?category=" + categoryList[i].id;
 
     category.innerHTML = categoryList[i].category;
 
@@ -22,10 +23,10 @@ function printMenu(): void {
 
     category.addEventListener("click", () => {
       printProducts(categoryList[i].id);
-      window.history.pushState(categoryList[i].id, "", categoryList[i].id.toString())
+      // window.history.pushState(categoryList[i].id, "", categoryList[i].id.toString())
     });
     for (let j = 0; j < categoryList[i].subCategories.length; j++) {
-      let subCategories: HTMLHeadingElement = document.createElement("h5");
+      let subCategories: HTMLAnchorElement = document.createElement("a");
 
       subCategories.className = "main__menu__item";
 
@@ -35,7 +36,7 @@ function printMenu(): void {
 
       subCategories.addEventListener("click", () => {
         printProducts(categoryList[i].subCategories[j].id);
-        window.history.pushState(categoryList[i].subCategories[j].category, "", categoryList[i].subCategories[j].category);
+        // window.history.pushState(categoryList[i].subCategories[j].category, "", categoryList[i].subCategories[j].category);
       });
     }
   }
@@ -46,7 +47,6 @@ function printMenu(): void {
 function printProducts(x: number): void {
   productContainer.innerHTML = "";
   let headingContainer: HTMLDivElement = document.createElement("div");
-
   for (let i = 0; i < headingList.length; i++)
     if (x === headingList[i].category) {
       let heading: HTMLHeadingElement = document.createElement("h2");
@@ -211,3 +211,6 @@ function productDisplay(id: number): void {
   productDisplay.appendChild(productPrice);
   productDisplay.appendChild(buyButton);
 }
+
+// printProducts();
+console.log(window.location.search.slice(0 7))
