@@ -77,7 +77,11 @@ function printProducts(): void {
   productContainer.appendChild(productInnerContainer);
 
   for (let i = 0; i < productList.length; i++) {
-    if (id === productList[i].category || id === productList[i].subCategory) {
+    if (
+      id === productList[i].category ||
+      id === productList[i].subCategory ||
+      !id
+    ) {
       let productCard: HTMLDivElement = document.createElement("div");
       let productImage: HTMLImageElement = document.createElement("img");
       let productName: HTMLHeadingElement = document.createElement("h5");

@@ -1,6 +1,5 @@
 import { Heading, Product } from "./Product";
 
-
 export const productList: Product[] = [
   new Product(
     "Natural Moisturiser",
@@ -34,23 +33,23 @@ export const productList: Product[] = [
   ),
 
   new Product(
-    "Cleansing oil", 
-    "No Make Up", 
-    1, 
+    "Cleansing oil",
+    "No Make Up",
+    1,
     101,
-    "Ansiktskräm som rengör på djupet", 
-    129, 
+    "Ansiktskräm som rengör på djupet",
+    129,
     "https://www.rgdaily.com/wp-content/uploads/2019/08/no-makeup-cosmetics-beauty-product-photography-rebecca-goddard-rgdaily-blog-5.jpg",
-    4 
+    4
   ),
   new Product(
-    "Serum", 
-    "No Make Up", 
-    1, 
+    "Serum",
+    "No Make Up",
+    1,
     101,
-    "Serum som återfuktar", 
-    99, 
-    "https://www.rgdaily.com/wp-content/uploads/2019/08/no-makeup-cosmetics-beauty-product-photography-rebecca-goddard-rgdaily-blog-14.jpg", 
+    "Serum som återfuktar",
+    99,
+    "https://www.rgdaily.com/wp-content/uploads/2019/08/no-makeup-cosmetics-beauty-product-photography-rebecca-goddard-rgdaily-blog-14.jpg",
     5
   ),
 
@@ -83,9 +82,8 @@ export const productList: Product[] = [
     129,
     "https://lp.stories.com/app005prod?set=source[/2d/39/2d398e7c6eb67071676c6fb22d850e3820ffe29a.jpg],origin[dam],type[DESCRIPTIVESTILLLIFE],device[hdpi],quality[80],ImageVersion[1]&call=url[file:/product/main]",
     8
-
-  )
-]
+  ),
+];
 
 export const headingList: Heading[] = [
   new Heading(
@@ -93,4 +91,10 @@ export const headingList: Heading[] = [
     "Surfa bland våra premiuprodukter inom ansiktsvård",
     1
   ),
+  new Heading(
+    "Kroppsvård",
+    "Surfa bland våra premiuprodukter för kroppsvård",
+    2
+  ),
+  new Heading("Solskydd", "Surfa bland våra premiuprodukter inom solskydd", 3),
 ];
