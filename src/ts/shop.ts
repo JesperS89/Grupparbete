@@ -1,6 +1,7 @@
 import { categoryList } from "./models/categorylist";
 import { Product } from "./models/Product";
 import { headingList, productList } from "./models/productlist";
+import { CartItem } from "./models/cartItem";
 
 let menuContainer: HTMLDivElement = document.getElementById(
   "menu"
@@ -55,7 +56,6 @@ function printProducts(): void {
   let id: number =
     parseInt(params.get("subcategory") || "0") ||
     parseInt(params.get("category") || "0");
-  console.log(id);
   let headingContainer: HTMLDivElement = document.createElement("div");
   for (let i = 0; i < headingList.length; i++)
     if (id === headingList[i].category) {
@@ -120,14 +120,23 @@ function printProducts(): void {
       );
 
       buyButton.addEventListener("click", () => {
-        cart.push(productList[i]);
+        console.log("When adding from buy button:", cart);
+        
+        if (cart.find((cart, i) =>  productList[i].id === cart.product.id)) {
+          cart[i].amount++;
+          printCart();
+          console.log("If dublicate is found", cart);
+        } else {
+        cart.push(new CartItem(productList[i], 1));
         printCart();
+        console.log("When adding from buy button:", cart);
+        }
       });
     }
   }
 }
 
-export let cart: Product[] = [];
+export let cart: CartItem[] = [];
 let shop: HTMLDivElement = document.getElementById("shop") as HTMLDivElement;
 let itemContainer: HTMLDivElement = document.createElement("div");
 let checkoutContainer: HTMLDivElement = document.createElement("div");
@@ -153,49 +162,60 @@ export function printCart(): void {
     let productImage: HTMLImageElement = document.createElement("img");
     let productName: HTMLHeadingElement = document.createElement("h5");
     let productPrice: HTMLHeadingElement = document.createElement("h6");
-    let deleteButton: HTMLButtonElement = document.createElement("button");
+    let minusButton: HTMLButtonElement = document.createElement("button");
+    let amount: HTMLParagraphElement = document.createElement("p");
     let addButton: HTMLButtonElement = document.createElement("button");
 
     productCard.className = "header__shop__card";
     productImage.className = "header__shop__image";
     productName.className = "header__shop__name";
     productPrice.className = "header__shop__price";
-    deleteButton.className = "header__shop__deletebutton";
+    minusButton.className = "header__shop__minusButton";
 
-    productImage.src = cart[i].img;
-    productName.innerHTML = cart[i].name;
-    productPrice.innerHTML = cart[i].price.toString() + "kr";
-    addButton.innerHTML = "PLUS";
-    deleteButton.innerHTML =
-      "<i class='fa fa-trash-o' style='font-size:25px;color:red'></i>";
-    checkoutButton.innerHTML += cart[i].price.toString();
+    productImage.src = cart[i].product.img
+    productName.innerHTML = cart[i].product.name;
+    productPrice.innerHTML = cart[i].product.price.toString() + "kr";
+    addButton.innerHTML = "<i class='fa fa-plus' style='font-size:24px'></i>";
+    minusButton.innerHTML =
+    "<i class='fa fa-minus' style='font-size:24px'></i>";
+    checkoutButton.innerHTML += cart[i].product.price.toString();
+    amount.innerHTML = cart[i].amount.toString();
 
     itemContainer.appendChild(productCard);
     productCard.appendChild(productImage);
     productCard.appendChild(productName);
     productCard.appendChild(productPrice);
-    productCard.appendChild(deleteButton);
+    productCard.appendChild(minusButton);
+    productCard.appendChild(amount);
     productCard.appendChild(addButton);
+    
 
-    sum += cart[i].price;
+    sum += cart[i].product.price * cart[i].amount;
     checkoutButton.innerHTML = "Gå till kassan " + sum.toString() + " " + " kr";
 
     addButton.addEventListener("click", () => {
-      addCartItem(cart[i].id);
+      cart[i].amount++;
       printCart();
     });
 
-    deleteButton.addEventListener("click", () => {
-      cart.splice(i, 1);
+    minusButton.addEventListener("click", () => {
+      if (cart[i].amount === 1) {
+        cart.splice(i, 1);
+        printCart();
+      } else {
+      cart[i].amount--;
       printCart();
+      }
     });
   }
-  console.log(cart);
+  // console.log(cart);
 }
 
-function addCartItem(i: number): void {
-  let added = cart.find((cart) => i);
-}
+// function addCartItem(i: number): void {
+//   cart[i].amount++;
+//   printCart();
+//   console.log(cart);
+// }
 
 printMenu();
 
