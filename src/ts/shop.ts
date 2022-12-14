@@ -127,7 +127,7 @@ function printProducts(): void {
   }
 }
 
-export const cart: Product[] = [];
+export let cart: Product[] = [];
 let shop: HTMLDivElement = document.getElementById("shop") as HTMLDivElement;
 let itemContainer: HTMLDivElement = document.createElement("div");
 let checkoutContainer: HTMLDivElement = document.createElement("div");
@@ -181,7 +181,7 @@ export function printCart(): void {
     checkoutButton.innerHTML = "Gå till kassan " + sum.toString() + " " + " kr";
 
     addButton.addEventListener("click", () => {
-      cart.push(cart[i]);
+      addCartItem(cart[i].id);
       printCart();
     });
 
@@ -191,6 +191,10 @@ export function printCart(): void {
     });
   }
   console.log(cart);
+}
+
+function addCartItem(i: number): void {
+  let added = cart.find((cart) => i);
 }
 
 printMenu();
