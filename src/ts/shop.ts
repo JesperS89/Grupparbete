@@ -211,11 +211,6 @@ export function printCart(): void {
   // console.log(cart);
 }
 
-// function addCartItem(i: number): void {
-//   cart[i].amount++;
-//   printCart();
-//   console.log(cart);
-// }
 
 printMenu();
 
