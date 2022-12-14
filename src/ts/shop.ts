@@ -121,16 +121,27 @@ function printProducts(): void {
 
       buyButton.addEventListener("click", () => {
         console.log("When adding from buy button:", cart);
-        
-        if (cart.find((cart, i) =>  productList[i].id === cart.product.id)) {
-          cart[i].amount++;
+        let existingItem: CartItem | undefined = cart.find(
+          (cart) => productList[i].id === cart.product.id
+        );
+        if (existingItem) {
+          existingItem.amount++;
           printCart();
-          console.log("If dublicate is found", cart);
+          console.log("When adding from buy button:", cart);
         } else {
-        cart.push(new CartItem(productList[i], 1));
-        printCart();
-        console.log("When adding from buy button:", cart);
+          cart.push(new CartItem(productList[i], 1));
+          printCart();
+          console.log("When adding from buy button:", cart);
         }
+        // if (cart.find((cart) => productList[i].id === cart.product.id)) {
+        //   cart.amount++;
+        //   printCart();
+        //   console.log("If dublicate is found", cart);
+        // } else {
+        //   cart.push(new CartItem(productList[i], 1));
+        //   printCart();
+        //   console.log("When adding from buy button:", cart);
+        // }
       });
     }
   }
@@ -172,12 +183,12 @@ export function printCart(): void {
     productPrice.className = "header__shop__price";
     minusButton.className = "header__shop__minusButton";
 
-    productImage.src = cart[i].product.img
+    productImage.src = cart[i].product.img;
     productName.innerHTML = cart[i].product.name;
     productPrice.innerHTML = cart[i].product.price.toString() + "kr";
     addButton.innerHTML = "<i class='fa fa-plus' style='font-size:24px'></i>";
     minusButton.innerHTML =
-    "<i class='fa fa-minus' style='font-size:24px'></i>";
+      "<i class='fa fa-minus' style='font-size:24px'></i>";
     checkoutButton.innerHTML += cart[i].product.price.toString();
     amount.innerHTML = cart[i].amount.toString();
 
@@ -188,7 +199,6 @@ export function printCart(): void {
     productCard.appendChild(minusButton);
     productCard.appendChild(amount);
     productCard.appendChild(addButton);
-    
 
     sum += cart[i].product.price * cart[i].amount;
     checkoutButton.innerHTML = "Gå till kassan " + sum.toString() + " " + " kr";
@@ -203,14 +213,13 @@ export function printCart(): void {
         cart.splice(i, 1);
         printCart();
       } else {
-      cart[i].amount--;
-      printCart();
+        cart[i].amount--;
+        printCart();
       }
     });
   }
   // console.log(cart);
 }
-
 
 printMenu();
 
