@@ -151,6 +151,8 @@ checkoutButton.innerHTML = "Gå till kassan " + sum.toString() + " " + " kr";
 // Funktionen skriver ut varukorgen
 
 export function printCart(): void {
+  saveToLs();
+
   itemContainer.innerHTML = "";
   checkoutButton.innerHTML = "";
   sum = 0;
@@ -265,6 +267,26 @@ function productDisplay(): void {
 }
 }
 }
+
+function saveToLs() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+  
+}
+
+function getFromLs() {
+  let cartFromLs:string = localStorage.getItem("cart") || "";
+  let cartObject = JSON.parse(cartFromLs);
+  console.log(cartObject);
+  cart = cartObject.map((cart:CartItem) => {return new CartItem(new Product(cart.product.name, cart.product.brandName, cart.product.category, cart.product.subCategory, cart.product.description, cart.product.price, cart.product.img, cart.product.id), cart.amount);
+  }); 
+  printCart(); 
+}
+ 
+
+
+
+getFromLs();
+
 
 productDisplay();
 
