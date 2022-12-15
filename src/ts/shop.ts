@@ -16,7 +16,7 @@ function printMenu(): void {
   for (let i = 0; i < categoryList.length; i++) {
     let category: HTMLAnchorElement = document.createElement("a");
     category.className = "main__menu__heading";
-    category.href = "/shop.html?category=" + categoryList[i].id;
+    category.href = "/shop.html?a=category=" + categoryList[i].id;
 
     category.innerHTML = categoryList[i].category;
 
@@ -24,14 +24,13 @@ function printMenu(): void {
 
     category.addEventListener("click", () => {
       printProducts();
-      // window.history.pushState(categoryList[i].id, "", categoryList[i].id.toString())
     });
     for (let j = 0; j < categoryList[i].subCategories.length; j++) {
       let subCategories: HTMLAnchorElement = document.createElement("a");
 
       subCategories.className = "main__menu__item";
       subCategories.href =
-        "/shop.html?category=" +
+        "/shop.html?a=category=" +
         categoryList[i].id +
         "&subcategory=" +
         categoryList[i].subCategories[j].id;
@@ -42,7 +41,6 @@ function printMenu(): void {
 
       subCategories.addEventListener("click", () => {
         printProducts();
-        // window.history.pushState(categoryList[i].subCategories[j].category, "", categoryList[i].subCategories[j].category);
       });
     }
   }
@@ -76,6 +74,7 @@ function printProducts(): void {
   productInnerContainer.className = "product__innercontainer";
   productContainer.appendChild(productInnerContainer);
 
+
   for (let i = 0; i < productList.length; i++) {
     if (
       id === productList[i].category ||
@@ -88,8 +87,10 @@ function printProducts(): void {
       let productBrand: HTMLHeadingElement = document.createElement("h6");
       let productPrice: HTMLHeadingElement = document.createElement("h5");
       let buyButton: HTMLButtonElement = document.createElement("button");
+      let productLink: HTMLAnchorElement =document.createElement("a");
 
       productCard.className = "card";
+      productLink.className = "card__link";
       productImage.className = "card__image";
       productName.className = "card__name";
       productBrand.className = "card__brand";
@@ -103,45 +104,30 @@ function printProducts(): void {
       buyButton.innerHTML = "Lägg i Varukorg";
 
       productInnerContainer.appendChild(productCard);
-      productCard.appendChild(productImage);
-      productCard.appendChild(productName);
-      productCard.appendChild(productBrand);
-      productCard.appendChild(productPrice);
+      productCard.appendChild(productLink);
+      productLink.appendChild(productImage);
+      productLink.appendChild(productName);
+      productLink.appendChild(productBrand);
+      productLink.appendChild(productPrice);
       productCard.appendChild(buyButton);
 
-      let id = productList[i].id - 1;
-      productImage.addEventListener("click", () => productDisplay(id));
-      productImage.addEventListener("click", () =>
-        window.history.pushState(
-          productList[i].name,
-          "",
-          "product?name=" + productList[i].name
-        )
-      );
+      productLink.href = "/shop.html?category=" + productList[i].category + "&subcategory=" + productList[i].subCategory + "&product=" + productList[i].id;
+
+      productLink.addEventListener("click", () => {
+        productDisplay();
+      });
 
       buyButton.addEventListener("click", () => {
-        console.log("When adding from buy button:", cart);
         let existingItem: CartItem | undefined = cart.find(
           (cart) => productList[i].id === cart.product.id
         );
         if (existingItem) {
           existingItem.amount++;
           printCart();
-          console.log("When adding from buy button:", cart);
         } else {
           cart.push(new CartItem(productList[i], 1));
           printCart();
-          console.log("When adding from buy button:", cart);
         }
-        // if (cart.find((cart) => productList[i].id === cart.product.id)) {
-        //   cart.amount++;
-        //   printCart();
-        //   console.log("If dublicate is found", cart);
-        // } else {
-        //   cart.push(new CartItem(productList[i], 1));
-        //   printCart();
-        //   console.log("When adding from buy button:", cart);
-        // }
       });
     }
   }
@@ -218,14 +204,20 @@ export function printCart(): void {
       }
     });
   }
-  // console.log(cart);
 }
 
 printMenu();
-
+let modal: HTMLDialogElement = document.getElementById("modal") as HTMLDialogElement;
 // Funktion för att visa produkten du klickar på för extra beskrivning och information
-function productDisplay(id: number): void {
+function productDisplay(): void {
   productContainer.innerHTML = "";
+
+  let params: URLSearchParams = new URLSearchParams(document.location.search);
+  let id: number =
+    parseInt(params.get("product") || "0");
+
+    for (let i = 0; i < productList.length; i++) {
+      if (id === productList[i].id) {  
   let productDisplay: HTMLDivElement = document.createElement("div");
   let productImage: HTMLImageElement = document.createElement("img");
   let productName: HTMLHeadingElement = document.createElement("h3");
@@ -242,20 +234,38 @@ function productDisplay(id: number): void {
   productPrice.className = "productDisplay__price";
   buyButton.className = "productDisplay__button";
 
-  productImage.src = productList[id].img;
-  productName.innerHTML = productList[id].name;
-  productBrand.innerHTML = productList[id].brandName;
-  productDescription.innerHTML = productList[id].description;
-  productPrice.innerHTML = productList[id].price.toString() + " kr";
+  productImage.src = productList[i].img;
+  productName.innerHTML = productList[i].name;
+  productBrand.innerHTML = productList[i].brandName;
+  productDescription.innerHTML = productList[i].description;
+  productPrice.innerHTML = productList[i].price.toString() + " kr";
   buyButton.innerHTML = "Lägg i Varukorg";
 
-  productContainer.appendChild(productDisplay);
+  modal.appendChild(productDisplay);
   productDisplay.appendChild(productImage);
   productDisplay.appendChild(productName);
   productDisplay.appendChild(productBrand);
   productDisplay.appendChild(productDescription);
   productDisplay.appendChild(productPrice);
   productDisplay.appendChild(buyButton);
+
+  buyButton.addEventListener("click", () => {
+    let existingItem: CartItem | undefined = cart.find(
+      (cart) => productList[i].id === cart.product.id
+    );
+    if (existingItem) {
+      existingItem.amount++;
+      printCart();
+    } else {
+      cart.push(new CartItem(productList[i], 1));
+      printCart();
+    }});
+
+  modal.showModal();
 }
+}
+}
+
+productDisplay();
 
 printProducts();
