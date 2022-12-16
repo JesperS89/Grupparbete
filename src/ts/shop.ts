@@ -22,9 +22,6 @@ function printMenu(): void {
 
     menuContainer.appendChild(category);
 
-    category.addEventListener("click", () => {
-      printProducts();
-    });
     for (let j = 0; j < categoryList[i].subCategories.length; j++) {
       let subCategories: HTMLAnchorElement = document.createElement("a");
 
@@ -38,10 +35,6 @@ function printMenu(): void {
       subCategories.innerHTML = categoryList[i].subCategories[j].category;
 
       menuContainer.appendChild(subCategories);
-
-      subCategories.addEventListener("click", () => {
-        // printProducts();
-      });
     }
   }
 }
@@ -117,10 +110,6 @@ function printProducts(): void {
         productList[i].subCategory +
         "&product=" +
         productList[i].id;
-
-      productLink.addEventListener("click", () => {
-        // productDisplay();
-      });
 
       buyButton.addEventListener("click", () => {
         let existingItem: CartItem | undefined = cart.find(
