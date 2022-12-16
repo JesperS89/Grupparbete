@@ -24,22 +24,50 @@
     justify-content: space-between;
   }
   &__list {
-    margin-left: 0;
-    list-style: none;
+    position: absolute;
+    left: 0;
+    height: 40vh;
     display: flex;
-    width: 35%;
-    letter-spacing: 2px;
+    top: 50px;
+    background-color: #4a5240;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in;
     text-transform: uppercase;
+
+    list-style: none;
     li {
       cursor: pointer;
       margin-right: 15px;
       position: relative;
       padding: 15 5;
+
       a {
         color: white;
         text-decoration: none;
       }
     }
+
+    @include m.desktop {
+      justify-content: flex-start;
+      height: inherit;
+      top: inherit;
+      transform: translate(0%);
+      margin-left: 0;
+      width: 35%;
+      letter-spacing: 2px;
+      margin: 0;
+      position: static;
+      flex-direction: row;
+      left: auto;
+    }
+  }
+  &__list.active {
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in;
   }
 
   &__navitem::before {
@@ -57,9 +85,22 @@
     left: 0;
     right: auto;
   }
+
+  &__burger.active {
+    .line1 {
+      transform: rotate(-45deg) translate(1px, 5px);
+    }
+    .line2 {
+      display: none;
+    }
+    .line3 {
+      transform: rotate(45deg) translate(-1px, -7px);
+    }
+  }
   &__burger {
-    display: none;
-    padding: 5px;
+    display: block;
+    width: 35%;
+    cursor: pointer;
     div {
       width: 25px;
       height: 3px;
@@ -67,9 +108,15 @@
       background-color: white;
       margin: 5px;
     }
+
+    @include m.desktop {
+      display: none;
+      padding: 5px;
+    }
   }
   &__logo {
     img {
+      margin-top: 10px;
       height: 30px;
     }
   }
@@ -84,14 +131,20 @@
     }
   }
   &__shop {
+    width: 50vw;
+
+    display: none;
+    background-color: #f4f3ee;
     position: absolute;
     right: 0;
     top: 0;
     height: 100vh;
-    background-color: #f4f3ee;
-    width: 400px;
-    transition: transform 0.5s ease-in;
-    display: none;
+    width: 80vw;
+
+    @include m.desktop {
+      width: 400px;
+      transition: transform 0.5s ease-in;
+    }
   }
   &__shop.active {
     display: flex;
@@ -158,56 +211,6 @@
       border: none;
       background: none;
       cursor: pointer;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .header {
-    &__list {
-      position: absolute;
-      left: 0;
-      height: 40vh;
-      top: 50px;
-      background-color: #4a5240;
-      flex-direction: column;
-      width: 100vw;
-      align-items: center;
-      justify-content: center;
-      transform: translateX(-100%);
-      transition: transform 0.5s ease-in;
-      li {
-        margin: 10 0 0 10;
-      }
-    }
-
-    &__burger {
-      display: block;
-      width: 35%;
-      cursor: pointer;
-    }
-    &__burger.active {
-      .line1 {
-        transform: rotate(-45deg) translate(1px, 5px);
-      }
-      .line2 {
-        display: none;
-      }
-      .line3 {
-        transform: rotate(45deg) translate(-1px, -7px);
-      }
-    }
-    &__list.active {
-      transform: translateX(0%);
-      transition: transform 0.5s ease-in;
-    }
-    &__shop {
-      width: 50vw;
-    }
-    &__logo {
-      img {
-        margin-top: 10px;
-      }
     }
   }
 }

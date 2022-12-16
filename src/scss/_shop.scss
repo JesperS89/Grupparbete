@@ -6,21 +6,26 @@ a {
 }
 
 .main {
-  max-width: 1000px;
   height: 100vh;
-  display: grid;
-  grid-template-columns: 25% 75%;
-  justify-content: baseline;
-  // border: 1px solid pink;
-  margin: auto;
+
+  @include m.desktop {
+    grid-template-columns: 15% 85%;
+    display: grid;
+    max-width: 1024px;
+    height: 100vh;
+    margin: auto;
+  }
   &__menu {
-    margin-top: 120px;
-    border-right: 1px solid grey;
-    height: 80vh;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
+    display: none;
+    @include m.desktop {
+      margin-top: 120px;
+      height: 80vh;
+      margin-left: auto;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   &__menu__heading {
     margin-bottom: 7px;
@@ -62,24 +67,28 @@ a {
   &__innercontainer {
     // border: 1px solid pink;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20;
-    justify-content: center;
-    max-height: 80vh;
-    overflow: auto;
+    gap: 10;
+    margin-top: 80px;
+    grid-template-columns: 1fr 1fr;
+
+    @include m.desktop {
+      grid-template-columns: 1fr 1fr 1fr;
+      overflow: auto;
+      gap: 20;
+    }
   }
 }
 
 .card {
   &__link {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0;
-  width: 220px;
-  @include m.desktop {
-    width: 220px;
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    @include m.desktop {
+      width: 220px;
+      margin: 20px 0;
+    }
   }
-}
   &__image {
     &:hover {
       opacity: 70%;
@@ -96,6 +105,7 @@ a {
     margin-top: 5px;
     font-family: "DM Sans";
     font-size: 16px;
+    width: 100%;
     cursor: pointer;
   }
 
@@ -110,55 +120,83 @@ a {
 .products {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
 }
 
 .modal {
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  width: 75vw;
-  height: 800px;
-  margin-left: -37.5vw;
-  margin-top: -40vh;
+  height: 90vh;
+  width: 90vw;
+  margin-top: 5vh;
+  margin-left: 2vw;
   border: 0;
-  box-shadow: 0 0 1em rgb(0 0 0 /.3);
+  box-shadow: 0 0 1em rgb(0 0 0 /0.3);
+
+  @include m.desktop {
+    width: 75vw;
+    height: 800px;
+    margin-left: 10vw;
+    margin-top: 10vh;
+    overflow: hidden;
+  }
   .productDisplay {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include m.desktop {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+    }
     &__closeButton {
       position: absolute;
-      top: 3px;
-      left: 8px;
-      background: none;
       border: none;
+      top: 0px;
+      right: 0px;
+      background: none;
       font-size: 40px;
+      padding: 15px;
       cursor: pointer;
     }
     &__imageContainer {
-      max-width: 100%;
       height: 100%;
+      width: 100%;
       display: flex;
-      justify-content: center;
       align-items: center;
-      min-height: 600px;
+      justify-content: center;
+      padding-top: 40px;
       img {
-        height: 90%;
-        box-shadow: 0 0 1em rgb(0 0 0 /.3);
+        max-height: 70%;
+        max-width: 70%;
+      }
+      @include m.desktop {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        img {
+          max-height: 70%;
+          max-width: 70%;
+          box-shadow: 0 0 1em rgb(0 0 0 /0.3);
+        }
       }
     }
     &__infoContainer {
-      max-width: 100%;
-      height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      margin-top: 300px;
+      align-items: center;
+      text-align: center;
+      @include m.desktop {
+        text-align: start;
+        max-width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 300px;
+      }
       .productDisplay__name {
         font-size: 50px;
       }
