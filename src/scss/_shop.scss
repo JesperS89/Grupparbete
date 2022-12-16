@@ -1,5 +1,10 @@
 @use "mixins" as m;
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .main {
   max-width: 1000px;
   height: 100vh;
@@ -70,6 +75,7 @@
   display: flex;
   flex-direction: column;
   margin: 20px 0;
+  width: 220px;
   @include m.desktop {
     width: 220px;
   }
@@ -109,43 +115,75 @@
 }
 
 .modal {
+  overflow: hidden;
   top: 50%;
   left: 50%;
-  width: 600px;
-  height: 900px;
-  margin-left: -300px;
-  margin-top: -450px;
+  width: 75vw;
+  height: 800px;
+  margin-left: -37.5vw;
+  margin-top: -40vh;
   border: 0;
+  box-shadow: 0 0 1em rgb(0 0 0 /.3);
   .productDisplay {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    &__image {
-      width: 70%;
-    }
-    &__name {
-      font-size: xx-large;
-    }
-    &__brand {
-      font-size: x-large;
-    }
-    &__description {
-      font-size: large;
-    }
-    &__price {
-      font-size: x-large;
-    }
-    &__button {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    &__closeButton {
+      position: absolute;
+      top: 3px;
+      left: 8px;
+      background: none;
       border: none;
-      background-color: #4a5240;
-      color: white;
-      padding: 10px;
-      margin-top: 5px;
-      font-family: "DM Sans";
-      font-size: 16px;
+      font-size: 40px;
       cursor: pointer;
+    }
+    &__imageContainer {
+      max-width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 600px;
+      img {
+        height: 90%;
+        box-shadow: 0 0 1em rgb(0 0 0 /.3);
+      }
+    }
+    &__infoContainer {
+      max-width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-top: 300px;
+      .productDisplay__name {
+        font-size: 50px;
+      }
+      .productDisplay__brand {
+        font-size: 30px;
+      }
+      .productDisplay__description {
+        font-size: large;
+        margin: 20 0 20 0;
+      }
+      .productDisplay__price {
+        font-size: 30px;
+      }
+      .productDisplay__button {
+        border: none;
+        width: 60%;
+        height: 6%;
+        background-color: #4a5240;
+        color: white;
+        padding: 10px;
+        margin-top: 5px;
+        font-family: "DM Sans";
+        font-size: 16px;
+        cursor: pointer;
+      }
     }
   }
 }

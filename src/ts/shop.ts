@@ -216,20 +216,26 @@ function productDisplay(): void {
   for (let i = 0; i < productList.length; i++) {
     if (id === productList[i].id) {
       let productDisplay: HTMLDivElement = document.createElement("div");
+      let imageContainer: HTMLDivElement = document.createElement("div");
+      let infoContainer: HTMLDivElement = document.createElement("div");
       let productImage: HTMLImageElement = document.createElement("img");
       let productName: HTMLHeadingElement = document.createElement("h3");
       let productBrand: HTMLHeadingElement = document.createElement("h4");
       let productDescription: HTMLSpanElement = document.createElement("span");
       let productPrice: HTMLHeadingElement = document.createElement("h5");
       let buyButton: HTMLButtonElement = document.createElement("button");
+      let closeButton: HTMLButtonElement = document.createElement("button");
 
       productDisplay.className = "productDisplay";
+      imageContainer.className = "productDisplay__imageContainer";
+      infoContainer.className = "productDisplay__infoContainer";
       productImage.className = "productDisplay__image";
       productName.className = "productDisplay__name";
       productBrand.className = "productDisplay__brand";
       productDescription.className = "productDisplay__description";
       productPrice.className = "productDisplay__price";
       buyButton.className = "productDisplay__button";
+      closeButton.className ="productDisplay__closeButton";
 
       productImage.src = productList[i].img;
       productName.innerHTML = productList[i].name;
@@ -237,14 +243,22 @@ function productDisplay(): void {
       productDescription.innerHTML = productList[i].description;
       productPrice.innerHTML = productList[i].price.toString() + " kr";
       buyButton.innerHTML = "Lägg i Varukorg";
+      closeButton.innerHTML = "<i class='fa-sharp fa-solid fa-xmark'></i>"
 
       modal.appendChild(productDisplay);
-      productDisplay.appendChild(productImage);
-      productDisplay.appendChild(productName);
-      productDisplay.appendChild(productBrand);
-      productDisplay.appendChild(productDescription);
-      productDisplay.appendChild(productPrice);
-      productDisplay.appendChild(buyButton);
+      modal.appendChild(closeButton);
+      productDisplay.appendChild(imageContainer);
+      productDisplay.appendChild(infoContainer);
+      imageContainer.appendChild(productImage);
+      infoContainer.appendChild(productName);
+      infoContainer.appendChild(productBrand);
+      infoContainer.appendChild(productPrice);
+      infoContainer.appendChild(buyButton);
+      infoContainer.appendChild(productDescription);
+
+      closeButton.addEventListener("click", () => {
+        history.back();
+      });
 
       buyButton.addEventListener("click", () => {
         let existingItem: CartItem | undefined = cart.find(
