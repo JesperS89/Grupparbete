@@ -40,7 +40,7 @@ function printMenu(): void {
       menuContainer.appendChild(subCategories);
 
       subCategories.addEventListener("click", () => {
-        printProducts();
+        // printProducts();
       });
     }
   }
@@ -74,7 +74,6 @@ function printProducts(): void {
   productInnerContainer.className = "product__innercontainer";
   productContainer.appendChild(productInnerContainer);
 
-
   for (let i = 0; i < productList.length; i++) {
     if (
       id === productList[i].category ||
@@ -87,7 +86,7 @@ function printProducts(): void {
       let productBrand: HTMLHeadingElement = document.createElement("h6");
       let productPrice: HTMLHeadingElement = document.createElement("h5");
       let buyButton: HTMLButtonElement = document.createElement("button");
-      let productLink: HTMLAnchorElement =document.createElement("a");
+      let productLink: HTMLAnchorElement = document.createElement("a");
 
       productCard.className = "card";
       productLink.className = "card__link";
@@ -111,10 +110,16 @@ function printProducts(): void {
       productLink.appendChild(productPrice);
       productCard.appendChild(buyButton);
 
-      productLink.href = "/shop.html?category=" + productList[i].category + "&subcategory=" + productList[i].subCategory + "&product=" + productList[i].id;
+      productLink.href =
+        "/shop.html?category=" +
+        productList[i].category +
+        "&subcategory=" +
+        productList[i].subCategory +
+        "&product=" +
+        productList[i].id;
 
       productLink.addEventListener("click", () => {
-        productDisplay();
+        // productDisplay();
       });
 
       buyButton.addEventListener("click", () => {
@@ -209,85 +214,93 @@ export function printCart(): void {
 }
 
 printMenu();
-let modal: HTMLDialogElement = document.getElementById("modal") as HTMLDialogElement;
+let modal: HTMLDialogElement = document.getElementById(
+  "modal"
+) as HTMLDialogElement;
 // Funktion för att visa produkten du klickar på för extra beskrivning och information
 function productDisplay(): void {
   productContainer.innerHTML = "";
 
   let params: URLSearchParams = new URLSearchParams(document.location.search);
-  let id: number =
-    parseInt(params.get("product") || "0");
+  let id: number = parseInt(params.get("product") || "0");
 
-    for (let i = 0; i < productList.length; i++) {
-      if (id === productList[i].id) {  
-  let productDisplay: HTMLDivElement = document.createElement("div");
-  let productImage: HTMLImageElement = document.createElement("img");
-  let productName: HTMLHeadingElement = document.createElement("h3");
-  let productBrand: HTMLHeadingElement = document.createElement("h4");
-  let productDescription: HTMLSpanElement = document.createElement("span");
-  let productPrice: HTMLHeadingElement = document.createElement("h5");
-  let buyButton: HTMLButtonElement = document.createElement("button");
+  for (let i = 0; i < productList.length; i++) {
+    if (id === productList[i].id) {
+      let productDisplay: HTMLDivElement = document.createElement("div");
+      let productImage: HTMLImageElement = document.createElement("img");
+      let productName: HTMLHeadingElement = document.createElement("h3");
+      let productBrand: HTMLHeadingElement = document.createElement("h4");
+      let productDescription: HTMLSpanElement = document.createElement("span");
+      let productPrice: HTMLHeadingElement = document.createElement("h5");
+      let buyButton: HTMLButtonElement = document.createElement("button");
 
-  productDisplay.className = "productDisplay";
-  productImage.className = "productDisplay__image";
-  productName.className = "productDisplay__name";
-  productBrand.className = "productDisplay__brand";
-  productDescription.className = "productDisplay__description";
-  productPrice.className = "productDisplay__price";
-  buyButton.className = "productDisplay__button";
+      productDisplay.className = "productDisplay";
+      productImage.className = "productDisplay__image";
+      productName.className = "productDisplay__name";
+      productBrand.className = "productDisplay__brand";
+      productDescription.className = "productDisplay__description";
+      productPrice.className = "productDisplay__price";
+      buyButton.className = "productDisplay__button";
 
-  productImage.src = productList[i].img;
-  productName.innerHTML = productList[i].name;
-  productBrand.innerHTML = productList[i].brandName;
-  productDescription.innerHTML = productList[i].description;
-  productPrice.innerHTML = productList[i].price.toString() + " kr";
-  buyButton.innerHTML = "Lägg i Varukorg";
+      productImage.src = productList[i].img;
+      productName.innerHTML = productList[i].name;
+      productBrand.innerHTML = productList[i].brandName;
+      productDescription.innerHTML = productList[i].description;
+      productPrice.innerHTML = productList[i].price.toString() + " kr";
+      buyButton.innerHTML = "Lägg i Varukorg";
 
-  modal.appendChild(productDisplay);
-  productDisplay.appendChild(productImage);
-  productDisplay.appendChild(productName);
-  productDisplay.appendChild(productBrand);
-  productDisplay.appendChild(productDescription);
-  productDisplay.appendChild(productPrice);
-  productDisplay.appendChild(buyButton);
+      modal.appendChild(productDisplay);
+      productDisplay.appendChild(productImage);
+      productDisplay.appendChild(productName);
+      productDisplay.appendChild(productBrand);
+      productDisplay.appendChild(productDescription);
+      productDisplay.appendChild(productPrice);
+      productDisplay.appendChild(buyButton);
 
-  buyButton.addEventListener("click", () => {
-    let existingItem: CartItem | undefined = cart.find(
-      (cart) => productList[i].id === cart.product.id
-    );
-    if (existingItem) {
-      existingItem.amount++;
-      printCart();
-    } else {
-      cart.push(new CartItem(productList[i], 1));
-      printCart();
-    }});
+      buyButton.addEventListener("click", () => {
+        let existingItem: CartItem | undefined = cart.find(
+          (cart) => productList[i].id === cart.product.id
+        );
+        if (existingItem) {
+          existingItem.amount++;
+          printCart();
+        } else {
+          cart.push(new CartItem(productList[i], 1));
+          printCart();
+        }
+      });
 
-  modal.showModal();
-}
-}
+      modal.showModal();
+    }
+  }
 }
 
 function saveToLs() {
   localStorage.setItem("cart", JSON.stringify(cart));
-  
 }
 
 function getFromLs() {
-  let cartFromLs:string = localStorage.getItem("cart") || "";
+  let cartFromLs: string = localStorage.getItem("cart") || "";
   let cartObject = JSON.parse(cartFromLs);
   console.log(cartObject);
-  cart = cartObject.map((cart:CartItem) => {return new CartItem(new Product(cart.product.name, cart.product.brandName, cart.product.category, cart.product.subCategory, cart.product.description, cart.product.price, cart.product.img, cart.product.id), cart.amount);
-  }); 
-  printCart(); 
+  cart = cartObject.map((cart: CartItem) => {
+    return new CartItem(
+      new Product(
+        cart.product.name,
+        cart.product.brandName,
+        cart.product.category,
+        cart.product.subCategory,
+        cart.product.description,
+        cart.product.price,
+        cart.product.img,
+        cart.product.id
+      ),
+      cart.amount
+    );
+  });
+  printCart();
 }
- 
-
-
-
-getFromLs();
-
-
 productDisplay();
 
 printProducts();
+getFromLs();
