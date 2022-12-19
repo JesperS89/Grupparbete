@@ -134,6 +134,7 @@
       position: absolute;
       color: white;
       background-color: red;
+      background-color: red;
       padding: 0 6px;
       border-radius: 50%;
       transform: translate(50%, -30%);
@@ -182,6 +183,15 @@
   &__shop__image {
     height: 50px;
   }
+
+  h5 {
+    width: 40%;
+
+  }
+
+  h6 {
+    width: 20%;
+  }
   &__shop__deletebutton {
     border: none;
     cursor: pointer;
@@ -221,6 +231,70 @@
       border: none;
       background: none;
       cursor: pointer;
+    }
+  }
+}
+
+.header__btncontainer {
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+
+ button {
+  border: none;
+  font-size: 14px;
+  background-color: m.$green;
+  color: white;
+  padding: 3px 5px;
+ }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    &__list {
+      position: absolute;
+      left: 0;
+      height: 40vh;
+      top: 50px;
+      background-color: #4a5240;
+      flex-direction: column;
+      width: 100vw;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(-100%);
+      transition: transform 0.5s ease-in;
+      li {
+        margin: 10 0 0 10;
+      }
+    }
+
+    &__burger {
+      display: block;
+      width: 35%;
+      cursor: pointer;
+    }
+    &__burger.active {
+      .line1 {
+        transform: rotate(-45deg) translate(1px, 5px);
+      }
+      .line2 {
+        display: none;
+      }
+      .line3 {
+        transform: rotate(45deg) translate(-1px, -7px);
+      }
+    }
+    &__list.active {
+      transform: translateX(0%);
+      transition: transform 0.5s ease-in;
+    }
+    &__shop {
+      width: 50vw;
+    }
+    &__logo {
+      img {
+        margin-top: 10px;
+      }
     }
   }
 }

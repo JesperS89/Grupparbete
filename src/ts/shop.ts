@@ -167,6 +167,7 @@ export function printCart(): void {
     let productImage: HTMLImageElement = document.createElement("img");
     let productName: HTMLHeadingElement = document.createElement("h5");
     let productPrice: HTMLHeadingElement = document.createElement("h6");
+    let btnContainer: HTMLDivElement = document.createElement("div");
     let minusButton: HTMLButtonElement = document.createElement("button");
     let amount: HTMLParagraphElement = document.createElement("p");
     let addButton: HTMLButtonElement = document.createElement("button");
@@ -176,14 +177,16 @@ export function printCart(): void {
     productImage.className = "header__shop__image";
     productName.className = "header__shop__name";
     productPrice.className = "header__shop__price";
-    minusButton.className = "header__shop__minusButton";
+    minusButton.className = "header__btncontainer__minusButton";
+    btnContainer.className = "header__btncontainer";
+
 
     productImage.src = cart[i].product.img;
     productName.innerHTML = cart[i].product.name;
     productPrice.innerHTML = cart[i].product.price.toString() + "kr";
-    addButton.innerHTML = "<i class='fa fa-plus' style='font-size:24px'></i>";
+    addButton.innerHTML = "<i class='fa fa-plus'</i>";
     minusButton.innerHTML =
-      "<i class='fa fa-minus' style='font-size:24px'></i>";
+      "<i class='fa fa-minus'</i>";
     checkoutButton.innerHTML += cart[i].product.price.toString();
     amount.innerHTML = cart[i].amount.toString();
 
@@ -191,9 +194,10 @@ export function printCart(): void {
     productCard.appendChild(productImage);
     productCard.appendChild(productName);
     productCard.appendChild(productPrice);
-    productCard.appendChild(minusButton);
-    productCard.appendChild(amount);
-    productCard.appendChild(addButton);
+    productCard.appendChild(btnContainer);
+    btnContainer.appendChild(minusButton);
+    btnContainer.appendChild(amount);
+    btnContainer.appendChild(addButton);
     
 
     counter += cart[i].amount;
