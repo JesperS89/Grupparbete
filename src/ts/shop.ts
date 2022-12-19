@@ -145,17 +145,29 @@ let checkoutButton: HTMLButtonElement = document.createElement("button");
 checkoutContainer.appendChild(checkoutButton);
 checkoutButton.className = "header__shop__checkoutbutton";
 let sum: number = 0;
+let counter:number = 0;
 
 checkoutButton.innerHTML = "Gå till kassan " + sum.toString() + " " + " kr";
 
 // Funktionen skriver ut varukorgen
+
+let cartContainer:HTMLDivElement = document.getElementById("header__shopcart") as HTMLDivElement;
+let cartCount:HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
+
+cartContainer.appendChild(cartCount);
 
 export function printCart(): void {
   saveToLs();
 
   itemContainer.innerHTML = "";
   checkoutButton.innerHTML = "";
+  cartCount.innerHTML = "";
   sum = 0;
+  counter = 0;
+  
+
+  
+
   for (let i = 0; i < cart.length; i++) {
     let productCard: HTMLDivElement = document.createElement("div");
     let productImage: HTMLImageElement = document.createElement("img");
@@ -164,6 +176,7 @@ export function printCart(): void {
     let minusButton: HTMLButtonElement = document.createElement("button");
     let amount: HTMLParagraphElement = document.createElement("p");
     let addButton: HTMLButtonElement = document.createElement("button");
+    
 
     productCard.className = "header__shop__card";
     productImage.className = "header__shop__image";
@@ -187,6 +200,11 @@ export function printCart(): void {
     productCard.appendChild(minusButton);
     productCard.appendChild(amount);
     productCard.appendChild(addButton);
+    
+
+    counter += cart[i].amount;
+    cartCount.innerHTML = " " + counter.toString();
+    
 
     sum += cart[i].product.price * cart[i].amount;
     checkoutButton.innerHTML = "Gå till kassan " + sum.toString() + " " + " kr";
@@ -205,8 +223,18 @@ export function printCart(): void {
         printCart();
       }
     });
+
   }
 }
+
+
+
+
+
+   
+
+
+
 
 printMenu();
 let modal: HTMLDialogElement = document.getElementById("modal") as HTMLDialogElement;
