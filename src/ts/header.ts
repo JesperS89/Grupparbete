@@ -22,3 +22,7 @@ cart.addEventListener("click", () => {
 closebutton.addEventListener("click", () => {
   shop.classList.remove("active");
 });
+
+// Funktion som visar antalet produkter i varukorg 
+
+
