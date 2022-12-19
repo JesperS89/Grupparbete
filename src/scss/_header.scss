@@ -129,6 +129,15 @@
   &__shop__image {
     height: 50px;
   }
+
+  h5 {
+    width: 40%;
+
+  }
+
+  h6 {
+    width: 20%;
+  }
   &__shop__deletebutton {
     border: none;
     cursor: pointer;
@@ -174,7 +183,7 @@
 
 .header__btncontainer {
   display: flex;
-  width: 70px;
+  width: 20%;
   justify-content: space-between;
 
  button {
