@@ -48,21 +48,19 @@ function printProducts(): void {
     parseInt(params.get("subcategory") || "0") ||
     parseInt(params.get("category") || "0");
   let headingContainer: HTMLDivElement = document.createElement("div");
-  for (let i = 0; i < headingList.length; i++)
-    if (id === headingList[i].category) {
-      let heading: HTMLHeadingElement = document.createElement("h2");
-      let text: HTMLParagraphElement = document.createElement("p");
 
-      headingContainer.className = "product__headingcontainer";
+  let heading: HTMLHeadingElement = document.createElement("h2");
 
-      heading.innerHTML = headingList[i].heading;
-      text.innerHTML = headingList[i].text;
+  headingContainer.className = "product__headingcontainer";
+  heading.className = "product__heading";
 
-      productContainer.appendChild(headingContainer);
-      headingContainer.appendChild(heading);
-      headingContainer.appendChild(text);
-    } else {
-    }
+  heading.innerHTML = "Visa Kategorier";
+  productContainer.appendChild(headingContainer);
+  headingContainer.appendChild(heading);
+  heading.addEventListener("click", () => {
+    menuContainer.classList.toggle("active");
+  });
+
   let productInnerContainer: HTMLDivElement = document.createElement("div");
   productInnerContainer.className = "product__innercontainer";
   productContainer.appendChild(productInnerContainer);
@@ -315,7 +313,7 @@ function saveToLs() {
 function getFromLs() {
   let cartFromLs: string = localStorage.getItem("cart") || "";
   let cartObject = JSON.parse(cartFromLs);
-  console.log(cartObject);
+
   cart = cartObject.map((cart: CartItem) => {
     return new CartItem(
       new Product(
@@ -332,6 +330,7 @@ function getFromLs() {
     );
   });
   printCart();
+  console.log(cart);
 }
 productDisplay();
 
