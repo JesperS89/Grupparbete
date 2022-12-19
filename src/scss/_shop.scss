@@ -6,13 +6,15 @@ a {
 }
 
 .main {
-  height: 100vh;
+  height: 90vh;
 
   @include m.desktop {
+    margin-top: 60px;
+
     grid-template-columns: 15% 85%;
     display: grid;
     max-width: 1024px;
-    height: 100vh;
+    height: 90vh;
     margin: auto;
   }
   &__menu {
@@ -126,16 +128,14 @@ a {
 .modal {
   height: 90vh;
   width: 90vw;
-  margin-top: 5vh;
-  margin-left: 2vw;
   border: 0;
   box-shadow: 0 0 1em rgb(0 0 0 /0.3);
 
   @include m.desktop {
     width: 75vw;
     height: 800px;
-    margin-left: 10vw;
-    margin-top: 10vh;
+    margin-left: 13%;
+    margin-top: 3%;
     overflow: hidden;
   }
   .productDisplay {

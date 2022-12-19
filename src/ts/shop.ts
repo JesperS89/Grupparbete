@@ -235,7 +235,7 @@ function productDisplay(): void {
       productDescription.className = "productDisplay__description";
       productPrice.className = "productDisplay__price";
       buyButton.className = "productDisplay__button";
-      closeButton.className ="productDisplay__closeButton";
+      closeButton.className = "productDisplay__closeButton";
 
       productImage.src = productList[i].img;
       productName.innerHTML = productList[i].name;
@@ -243,7 +243,7 @@ function productDisplay(): void {
       productDescription.innerHTML = productList[i].description;
       productPrice.innerHTML = productList[i].price.toString() + " kr";
       buyButton.innerHTML = "Lägg i Varukorg";
-      closeButton.innerHTML = "<i class='fa-sharp fa-solid fa-xmark'></i>"
+      closeButton.innerHTML = "<i class='fa-sharp fa-solid fa-xmark'></i>";
 
       modal.appendChild(productDisplay);
       modal.appendChild(closeButton);
@@ -255,7 +255,7 @@ function productDisplay(): void {
       infoContainer.appendChild(productPrice);
       infoContainer.appendChild(buyButton);
       infoContainer.appendChild(productDescription);
-
+      document.title = productList[i].name;
       closeButton.addEventListener("click", () => {
         history.back();
       });
