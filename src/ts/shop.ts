@@ -156,6 +156,8 @@ let cartCount:HTMLParagraphElement = document.createElement("p") as HTMLParagrap
 
 cartContainer.appendChild(cartCount);
 
+cartCount.className = "header__shopcart__counter";
+
 export function printCart(): void {
   saveToLs();
 
