@@ -99,6 +99,7 @@
     font-family: "DM Sans";
     font-size: 12px;
   }
+
 }
 
 .products {
@@ -148,4 +149,11 @@
       cursor: pointer;
     }
   }
+}
+
+.header__btncontainer {
+  display: flex;
+  border: 1px solid black;
+  width: 70px;
+  justify-content: space-between;
 }

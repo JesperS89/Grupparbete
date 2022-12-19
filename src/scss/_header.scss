@@ -86,7 +86,7 @@
     &__counter {
       position: absolute;
       color: white;
-      background-color: rgb(131, 131, 131);
+      background-color: red;
       padding: 0 6px;
       border-radius: 50%;
       transform: translate(50%, -30%);
@@ -170,6 +170,20 @@
       cursor: pointer;
     }
   }
+}
+
+.header__btncontainer {
+  display: flex;
+  width: 70px;
+  justify-content: space-between;
+
+ button {
+  border: none;
+  font-size: 14px;
+  background-color: m.$green;
+  color: white;
+  padding: 5px;
+ }
 }
 
 @media screen and (max-width: 768px) {
