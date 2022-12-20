@@ -12,7 +12,7 @@ function printFAQ(): void {
         questionLine.className = "faq__questionLine";
         answerLine.className = "faq__answerLine";
 
-        questionLine.innerHTML = faqList[i].question + " &#8595";
+        questionLine.innerHTML = faqList[i].question + "<i class='fa-solid fa-angle-down'></i>";
         answerLine.innerHTML = faqList[i].answer;
         
         faq?.appendChild(faqContainer);
