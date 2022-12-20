@@ -1,0 +1,23 @@
+.faq {
+    display: flex;
+    flex-direction: column;
+    justify-items: baseline;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    gap: 25px;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        gap: 10px;
+        border: 2px solid black;
+        .faq__answerLine {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+    }
+}
