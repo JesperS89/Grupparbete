@@ -9,6 +9,7 @@ let sum: number = 0;
 let cartDiv: HTMLDivElement = document.getElementById("checkout__cartcontainer") as HTMLDivElement;
 let totalSum: HTMLHeadingElement = document.createElement("h4");
 
+
 export function printCart ():void {
 saveToLs(); 
 sum = 0;
@@ -34,7 +35,7 @@ for (let i=0; i < cart.length; i++) {
     btnContainer.className = "header__btncontainer";
     minusButton.className = "header__btncontainer__minusButton";
     totalSum.className = "checkout__total";
-
+    
     productImage.src = cart[i].product.img;
     productName.innerHTML = cart[i].product.name;
     productPrice.innerHTML = cart[i].product.price.toString() + "kr";
