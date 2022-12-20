@@ -1,3 +1,4 @@
+@use "mixins" as m;
 .faq {
     display: flex;
     flex-direction: column;
@@ -6,13 +7,17 @@
     align-items: center;
     height: 100vh;
     width: 100%;
-    gap: 25px;
     &__container {
         display: flex;
         flex-direction: column;
-        width: 40%;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
         gap: 10px;
-        border: 2px solid black;
+        border: 1px solid gray;
+        @include m.desktop {
+            width: 40%;
+        }
         .faq__answerLine {
             display: none;
         }
@@ -20,4 +25,13 @@
             display: block;
         }
     }
+}
+
+p {
+    font-size: x-large;
+}
+
+h2 {
+    font-size: xx-large;
+    margin-bottom: 50px;
 }
