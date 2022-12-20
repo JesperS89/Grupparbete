@@ -1,0 +1,9 @@
+@use "mixins" as m;
+
+.footer {
+    height: 40vh;
+    width: 100%;
+    margin-top: 100px;
+    background-color: m.$green;
+    
+}
