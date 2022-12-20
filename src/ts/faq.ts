@@ -1,7 +1,5 @@
 import { faqList } from "./models/qa";
 
-console.log(faqList);
-
 let faq = document.getElementById("faq");
 function printFAQ(): void {
 
