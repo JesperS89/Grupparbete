@@ -79,7 +79,9 @@ export function printCart(): void {
         cart[i].amount--;
         printCart();
       }
-    }); 
+    });
+
+ 
   }
 }
 let checkoutForm: HTMLFormElement = document.getElementById(
