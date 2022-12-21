@@ -1,9 +1,64 @@
 @use "mixins" as m;
 
-.footer {
+footer {
+    display: flex;
+    flex-direction: column;
     height: 40vh;
     width: 100%;
     margin-top: 100px;
     background-color: m.$green;
     
+    @include m.desktop {
+        flex-direction: row;
+       
+       }
+}
+
+.logo {
+    width: 30%;
+    height: 10vh;
+    background-image: url(./../assets/logo-no-background.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+
+    @include m.desktop {
+        width: 12%;
+        height: 10vh;
+       
+    }
+
+    &__image {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__contact {
+        color: white;
+        list-style-type: none;
+        font-size: 16px;
+        padding: 5px 0;
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-top: 10px;
+
+    &__icon {
+        padding: 5px;
+        color: white;
+        font-size: 20px;
+    }
 }
