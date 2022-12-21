@@ -3,12 +3,17 @@
 .checkout {
     max-width: 1024px;
     margin: auto;
-    display: grid;
-    grid-template-columns: 60% 40%;
+    height: 100vh;
+    
+
+    @include m.desktop {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
 
 
     &__formcontainer {
-        height: 100vh;
+        // height: 100vh;
 
 
     }
@@ -17,14 +22,34 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 50vh;
         background-color: #f4f3ee;
-        height: 90vh;
         margin-top: 60px;
-        padding-top: 20px;
+        padding-top: 10px;
+
+        @include m.desktop {
+            height: 90vh;
+        }
+    }
+
+    &__title {
+        border-bottom: 1px solid gray;
+        width: 80%;
+        padding-bottom: 10px;
+        margin: 20px 0;
+        font-size: 20px;
+    }
+
+    &__name {
+        width: 35%;
+    }
+
+    &__price {
+        width: 20%;
     }
 
     &__total {
-        margin-top: 40px;
+        margin: 40px 0;
         font-weight: bolder;
         font-size: 18px;
     }
