@@ -1,3 +1,6 @@
+let checkoutForm: HTMLFormElement = document.getElementById(
+  "checkoutform"
+) as HTMLFormElement;
 import { CartItem } from "./models/cartItem";
 import { Product } from "./models/Product";
 import { productList } from "./models/productlist";
@@ -75,6 +78,9 @@ function saveToLs() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+checkoutForm.addEventListener("submit", (e: SubmitEvent) => {
+  e.preventDefault();
+});
 function getFromLs() {
   let cartFromLs: string = localStorage.getItem("cart") || "";
   let cartObject = JSON.parse(cartFromLs);

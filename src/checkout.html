@@ -58,7 +58,7 @@
     </header>
     <main class="checkout">
       <div class="checkout__formcontainer">
-        <form action="submit" class="checkout__formcontainer__form">
+        <form class="checkout__formcontainer__form" id="checkoutform">
           <div class="checkout__form__namecontainer">
             <input
               type="text"
@@ -98,6 +98,9 @@
             class="checkout__form__email"
             placeholder="E-postadress"
           />
+          <button id="checkoutbutton" class="checkout__form__button">
+            Gå till betalning
+          </button>
         </form>
       </div>
       <div class="checkout__cartcontainer"></div>

@@ -12,6 +12,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./scss/style.scss" />
+    <script src="./ts/contact.ts" defer type="module"></script>
 
     <script src="ts/header.ts" defer type="module"></script>
     <link
@@ -64,14 +65,14 @@
         Har du synpunkter eller frågor? Skicka gärna ett meddelande så svarar vi
         så snart vi kan!
       </p>
-      <form action="submit" class="form">
+      <form class="form" id="form">
         <input type="text" class="form__name" placeholder="Namn" /><input
           type="text"
-          placeholder="Din E-postadress"
+          placeholder="E-postadress"
           class="form__email"
         />
         <input type="text" class="form__message" />
-        <button class="form__submitbutton">Skicka</button>
+        <button class="form__submitbutton" id="submitbutton">Skicka</button>
       </form>
     </main>
   </body>

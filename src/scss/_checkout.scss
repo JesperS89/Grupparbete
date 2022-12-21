@@ -30,7 +30,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid magenta;
     width: 90%;
   }
 
@@ -50,6 +49,17 @@
     justify-content: center;
     @include m.desktop {
       flex-direction: row;
+    }
+  }
+  &__form__button {
+    padding: 15 10 15 10;
+    background-color: m.$green;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    @include m.desktop {
+      padding: 25 40 25 40;
     }
   }
 
