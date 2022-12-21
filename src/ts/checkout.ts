@@ -5,7 +5,9 @@ import { productList } from "./models/productlist";
 let cart: CartItem[] = [];
 
 let sum: number = 0;
-let cartDiv: HTMLDivElement = document.getElementById("checkout__cartcontainer") as HTMLDivElement;
+let cartDiv: HTMLDivElement = document.getElementById(
+  "checkout__cartcontainer"
+) as HTMLDivElement;
 let cartContainer: HTMLDivElement = document.createElement("div");
 let cartTitle: HTMLHeadingElement = document.createElement("h3");
 let totalSum: HTMLHeadingElement = document.createElement("h4");
@@ -19,8 +21,13 @@ export function printCart(): void {
   cartDiv.appendChild(cartContainer);
   cartContainer.appendChild(titleContainer);
   titleContainer.appendChild(cartTitle);
+  if (checked === true) {
+    cartContainer.className = "innercartcontainer active";
+  }
+  if (checked === false) {
+    cartContainer.className = "innercartcontainer";
+  }
 
-  cartContainer.className = "innercartcontainer";
   titleContainer.className = "titlecontainer";
   cartTitle.className = "titlecontainer__title";
 
@@ -80,8 +87,6 @@ export function printCart(): void {
         printCart();
       }
     });
-
- 
   }
 }
 let checkoutForm: HTMLFormElement = document.getElementById(
@@ -90,7 +95,6 @@ let checkoutForm: HTMLFormElement = document.getElementById(
 let openCart: HTMLHeadingElement = document.getElementById(
   "showcart"
 ) as HTMLHeadingElement;
-
 let checked = false;
 
 openCart.addEventListener("click", () => {
@@ -131,6 +135,59 @@ function getFromLs() {
   });
   printCart();
   console.log(cart);
+}
+
+let formButton: HTMLButtonElement = document.getElementById(
+  "checkoutbutton"
+) as HTMLButtonElement;
+let formContainer: HTMLDivElement = document.getElementById(
+  "formcontainer"
+) as HTMLDivElement;
+formButton.addEventListener("click", () => {
+  printCardPay();
+});
+
+function printCardPay(): void {
+  formContainer.innerHTML = "";
+  formContainer.className = "checkout__payment";
+
+  let title: HTMLParagraphElement = document.createElement("p");
+  title.innerHTML = "Betala med kort";
+  let paymentContainer: HTMLDivElement = document.createElement("div");
+  let bottomRowContainer: HTMLDivElement = document.createElement("div");
+
+  let cardNumberContainer: HTMLDivElement = document.createElement("div");
+  let expireContainer: HTMLDivElement = document.createElement("div");
+  let cvcContainer: HTMLDivElement = document.createElement("div");
+
+  let cardIconContainer: HTMLDivElement = document.createElement("div");
+  let calendarIconContainer: HTMLDivElement = document.createElement("div");
+  let lockIconContainer: HTMLDivElement = document.createElement("div");
+
+  let cardNumberInput: HTMLInputElement = document.createElement("input");
+  let dateInput: HTMLInputElement = document.createElement("input");
+  let cvcNumberInput: HTMLInputElement = document.createElement("input");
+
+  paymentContainer.className = "checkout__paymentcontainer";
+  bottomRowContainer.className = "checkout__bottomrowcontainer";
+  cardNumberContainer.className = "checkout__cardnumbercontainer";
+  expireContainer.className = "checkout__expirecontainer";
+  cvcContainer.className = "checkout__cvccontainer";
+
+  formContainer.appendChild(title);
+  formContainer.appendChild(paymentContainer);
+  formContainer.appendChild(bottomRowContainer);
+  paymentContainer.appendChild(cardNumberContainer);
+  paymentContainer.appendChild(expireContainer);
+  paymentContainer.appendChild(cvcContainer);
+  cardNumberContainer.appendChild(cardIconContainer);
+  cardNumberContainer.appendChild(cardNumberInput);
+  bottomRowContainer.appendChild(expireContainer);
+  bottomRowContainer.appendChild(cvcContainer);
+  expireContainer.appendChild(calendarIconContainer);
+  expireContainer.appendChild(dateInput);
+  cvcContainer.appendChild(lockIconContainer);
+  cvcContainer.appendChild(cvcNumberInput);
 }
 
 getFromLs();

@@ -177,7 +177,6 @@
     align-items: center;
     width: 80%;
     margin-bottom: 10px;
-    
   }
   &__shop__image {
     height: 50px;
@@ -185,7 +184,6 @@
 
   h5 {
     width: 30%;
-
   }
 
   h6 {
@@ -236,7 +234,7 @@
 
 .header__btncontainer {
   display: flex;
-  width: 20%;
+  width: 25%;
   justify-content: space-between;
 
   button {
@@ -244,6 +242,7 @@
     font-size: 14px;
     background-color: m.$green;
     color: white;
-    padding: 3px 5px;
+    padding: 3px 8px;
+    border-radius: 50%;
   }
 }

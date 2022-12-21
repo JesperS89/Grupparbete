@@ -1,47 +1,47 @@
 @use "mixins" as m;
 
 .faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  gap: 10px;
+  &__container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-    gap: 10px;
-    &__container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 10px 0 10px;
-        @include m.desktop {
-            width: 40%;
-        }
-        .faq__questionLine {
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-            text-decoration: underline;
-            width: 100%;
-            i {
-                margin-left: 5px;
-            }
-        }
-        .faq__answerLine {
-            display: none;
-            width: 80%;
-        }
-        .visible {
-            display: block;
-        }
+    margin: 0 10px 0 10px;
+    @include m.desktop {
+      width: 40%;
     }
+    .faq__questionLine {
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      text-decoration: underline;
+      width: 100%;
+      i {
+        margin-left: 5px;
+      }
+    }
+    .faq__answerLine {
+      display: none;
+      width: 80%;
+    }
+    .visible {
+      display: block;
+    }
+  }
 }
 
 p {
-    font-size: x-large;
+  font-size: x-large;
 }
 
 h2 {
-    font-size: xx-large;
-    top: 200px;
+  font-size: xx-large;
+  top: 200px;
 }
