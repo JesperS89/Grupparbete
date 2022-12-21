@@ -12,15 +12,18 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./scss/style.scss" />
-<script src="./ts/checkout.ts" defer type="module"></script>
+    <script src="./ts/checkout.ts" defer type="module"></script>
     <script src="./ts/header.ts" defer type="module"></script>
     <link
       href="https://fonts.googleapis.com/css?family=DM Sans"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/131d4698ad.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/131d4698ad.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body>
+  <body class="checkoutbody">
     <header class="header">
       <nav class="header__nav" id="header__nav">
         <div class="header__burger" id="burger">
@@ -35,7 +38,9 @@
         </ul>
 
         <div class="header__logo">
-          <a href="./index.html"><img src="./assets/logo-no-background.svg" alt="logo" /></a>
+          <a href="./index.html"
+            ><img src="./assets/logo-no-background.svg" alt="logo"
+          /></a>
         </div>
         <div class="header__shopcart" id="header__shopcart">
           <i id="cart" class="fa fa-shopping-cart" style="font-size: 30px"></i>
@@ -52,8 +57,50 @@
       </nav>
     </header>
     <main class="checkout">
-        <div class="checkout__formcontainer"></div>
-        <div class="checkout__cartcontainer" id="checkout__cartcontainer"></div>
+      <div class="checkout__formcontainer">
+        <form action="submit" class="checkout__formcontainer__form">
+          <div class="checkout__form__namecontainer">
+            <input
+              type="text"
+              class="checkout__form__name"
+              placeholder="Förnamn"
+            />
+            <input
+              type="text"
+              class="checkout__form__surname"
+              placeholder="Efternamn"
+            />
+          </div>
+          <input
+            type="text"
+            class="checkout__form__adress"
+            placeholder="Adress"
+          />
+          <div class="checkout__form__citycontainer">
+            <input
+              type="text"
+              class="checkout__form__postcode"
+              placeholder="Postnummer"
+            />
+            <input
+              type="text"
+              class="checkout__form__city"
+              placeholder="Stad"
+            />
+          </div>
+          <input
+            type="tel"
+            class="checkout__form__phone"
+            placeholder="Telefon"
+          />
+          <input
+            type="e-mail"
+            class="checkout__form__email"
+            placeholder="E-postadress"
+          />
+        </form>
+      </div>
+      <div class="checkout__cartcontainer"></div>
     </main>
-    </body>
-    </html>
+  </body>
+</html>

@@ -1,32 +1,71 @@
 @use "mixins" as m;
 
 .checkout {
-    max-width: 1024px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 60% 40%;
+  max-width: 1024px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 60% 40%;
 
+  &__formcontainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    input {
+      width: 100%;
+      background-color: rgb(250, 249, 249);
+      border: 0.3px solid grey;
 
-    &__formcontainer {
-        height: 100vh;
-
-
+      border-radius: 25px;
+      text-align: center;
+      height: 35px;
+      margin-bottom: 6px;
+      @include m.desktop {
+        height: 50px;
+        font-size: 22;
+      }
     }
+  }
+  &__formcontainer__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid magenta;
+    width: 90%;
+  }
 
-    &__cartcontainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #f4f3ee;
-        height: 90vh;
-        margin-top: 60px;
-        padding-top: 20px;
+  &__form__namecontainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @include m.desktop {
+      flex-direction: row;
     }
+  }
+  &__form__citycontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include m.desktop {
+      flex-direction: row;
+    }
+  }
 
-    &__total {
-        margin-top: 40px;
-        font-weight: bolder;
-        font-size: 18px;
-    }
+  &__cartcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f3ee;
+    height: 90vh;
+    margin-top: 60px;
+    padding-top: 20px;
+  }
+
+  &__total {
+    margin-top: 40px;
+    font-weight: bolder;
+    font-size: 18px;
+  }
 }
-

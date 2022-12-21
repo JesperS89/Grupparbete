@@ -12,32 +12,39 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./scss/style.scss" />
-<script src="./ts/shop.ts" defer type="module"></script>
-    <script src="./ts/header.ts" defer type="module"></script>
+
+    <script src="ts/header.ts" defer type="module"></script>
     <link
       href="https://fonts.googleapis.com/css?family=DM Sans"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/131d4698ad.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/131d4698ad.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="header">
-      <nav class="header__nav" id="header__nav">
+      <nav class="header__nav">
         <div class="header__burger" id="burger">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
         </div>
         <ul class="header__list" id="nav">
-          <li class="header__navitem"><a href="">Shop</a></li>
-          <li class="header__navitem"><a href="./contact.html">Kontakt</a></li>
+          <li class="header__navitem">
+            <a href="./shop.html">Shop</a>
+          </li>
+          <li class="header__navitem"><a href="">Kontakt</a></li>
           <li class="header__navitem"><a href="">FAQ</a></li>
         </ul>
 
         <div class="header__logo">
-          <a href="./index.html"><img src="./assets/logo-no-background.svg" alt="logo" /></a>
+          <a href="./index.html"
+            ><img src="./assets/logo-no-background.svg" alt="logo"
+          /></a>
         </div>
-        <div class="header__shopcart" id="header__shopcart">
+        <div class="header__shopcart">
           <i id="cart" class="fa fa-shopping-cart" style="font-size: 30px"></i>
         </div>
 
@@ -51,16 +58,21 @@
         </div>
       </nav>
     </header>
-    <dialog id="modal" class="modal">
-          
-    </dialog>
-    <main class="main">
-        <div class="main__menu" id="menu">
-
-        
-        
-        </div>
-
-        <div class="products" id="products"></div>
+    <main class="contactmain">
+      <h1>Kundtjänst</h1>
+      <p>
+        Har du synpunkter eller frågor? Skicka gärna ett meddelande så svarar vi
+        så snart vi kan!
+      </p>
+      <form action="submit" class="form">
+        <input type="text" class="form__name" placeholder="Namn" /><input
+          type="text"
+          placeholder="Din E-postadress"
+          class="form__email"
+        />
+        <input type="text" class="form__message" />
+        <button class="form__submitbutton">Skicka</button>
+      </form>
     </main>
-    </html>
+  </body>
+</html>
