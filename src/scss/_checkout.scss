@@ -1,3 +1,22 @@
+@use "mixins" as m;
+
+.checkoutbody {
+  &::after {
+    content: "";
+    height: 100vh;
+    background-image: url(../images/the-ordinary.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+}
 .checkout {
   max-width: 1024px;
   margin: auto;
@@ -9,11 +28,18 @@
     display: flex;
     justify-content: center;
     input {
-      background-color: rgb(209, 209, 209);
-      border: 0.5px solid rgb(175, 175, 175);
-      border-radius: 50px;
+      width: 100%;
+      background-color: rgb(250, 249, 249);
+      border: 0.3px solid grey;
+
+      border-radius: 25px;
       text-align: center;
-      height: 20px;
+      height: 35px;
+      margin-bottom: 6px;
+      @include m.desktop {
+        height: 50px;
+        font-size: 22;
+      }
     }
   }
   &__formcontainer__form {
@@ -24,40 +50,28 @@
     border: 1px solid magenta;
     width: 90%;
   }
-  &__form__name {
-    width: 100%;
-  }
-  &__form__surname {
-    width: 100%;
-  }
-  &__form__adress {
-    width: 100%;
-  }
-  &__form__postcode {
-    width: 45%;
-  }
-  &__form__city {
-    width: 45%;
-  }
-  &__form__phone {
-  }
-  &__form__email {
-  }
+
   &__form__namecontainer {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    @include m.desktop {
+      flex-direction: row;
+    }
   }
   &__form__citycontainer {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include m.desktop {
+      flex-direction: row;
+    }
   }
 
   &__cartcontainer {
-    background-color: gray;
+    // background-color: gray;
     height: 100vh;
   }
 }

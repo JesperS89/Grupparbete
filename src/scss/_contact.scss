@@ -1,0 +1,73 @@
+@use "mixins" as m;
+.contactmain {
+  max-width: 1024px;
+  height: 93vh;
+  margin: auto;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    margin-top: 40px;
+  }
+  p {
+    margin: 10 0 10 0;
+    text-align: center;
+    @include m.desktop {
+      margin: 20 0 20 0;
+    }
+  }
+}
+.form {
+  width: 80%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  input {
+    border: 0.2px solid lightgrey;
+    margin: 0 0 2 0;
+    @include m.desktop {
+      margin: 0 0 10 0;
+    }
+  }
+  &__name {
+    text-align: center;
+    width: 250px;
+    border-radius: 10px;
+    height: 25px;
+    @include m.desktop {
+      width: 250px;
+      height: 40px;
+    }
+  }
+  &__email {
+    text-align: center;
+    width: 250px;
+    height: 25px;
+    border-radius: 10px;
+    @include m.desktop {
+      width: 250px;
+      height: 40px;
+    }
+  }
+  &__message {
+    text-align: initial;
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+    @include m.desktop {
+      width: 500px;
+    }
+  }
+  &__submitbutton {
+    border: none;
+    background: m.$green;
+    color: white;
+    padding: 20 40 20 40px;
+    border-radius: 10px;
+    @include m.desktop {
+      padding: 20 60 20 60;
+    }
+  }
+}
