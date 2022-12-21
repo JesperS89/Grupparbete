@@ -7,18 +7,27 @@ let cart: CartItem[] = [];
 
 let sum: number = 0;
 let cartDiv: HTMLDivElement = document.getElementById("checkout__cartcontainer") as HTMLDivElement;
+let cartContainer: HTMLDivElement = document.createElement("div");
 let cartTitle: HTMLHeadingElement = document.createElement("h3");
 let totalSum: HTMLHeadingElement = document.createElement("h4");
-
+let titleContainer:HTMLDivElement = document.createElement("div");
 
 
 
 export function printCart ():void {
 saveToLs(); 
 totalSum.innerHTML = "";
-cartDiv.innerHTML = "";
+cartContainer.innerHTML = "";
 
-cartDiv.appendChild(cartTitle);
+
+cartDiv.appendChild(cartContainer);
+cartContainer.appendChild(titleContainer);
+titleContainer.appendChild(cartTitle);
+
+cartContainer.className = ("innercartcontainer");
+titleContainer.className =("titlecontainer");
+cartTitle.className = "titlecontainer__title";
+
 cartTitle.innerHTML = "Varukorg";
 
 
@@ -35,14 +44,14 @@ for (let i=0; i < cart.length; i++) {
     let amount: HTMLParagraphElement = document.createElement("p");
     let addButton: HTMLButtonElement = document.createElement("button");
     
-    cartTitle.className = "checkout__title";
-    productCard.className = "header__shop__card";
-    productImage.className = "header__shop__image";
-    productName.className = "checkout__name";
-    productPrice.className = "checkout__price";
-    btnContainer.className = "header__btncontainer";
-    minusButton.className = "header__btncontainer__minusButton";
-    totalSum.className = "checkout__total";
+    
+    productCard.className = "innercartcontainer__prodcard";
+    productImage.className = "innercartcontainer__prodcard__image";
+    productName.className = "innercartcontainer__prodcard__name";
+    productPrice.className = "innercartcontainer__prodcard__price";
+    btnContainer.className = "innercartcontainer__btncontainer";
+    minusButton.className = "innercartcontainer__btncontainer__minusbutton";
+    totalSum.className = "innercartcontainer__total";
     
     productImage.src = cart[i].product.img;
     productName.innerHTML = cart[i].product.name;
@@ -52,11 +61,11 @@ for (let i=0; i < cart.length; i++) {
       "<i class='fa fa-minus'</i>";
     amount.innerHTML = cart[i].amount.toString();  
 
-    cartDiv.appendChild(productCard);
+    cartContainer.appendChild(productCard);
     productCard.appendChild(productImage);
     productCard.appendChild(productName);
     productCard.appendChild(productPrice); 
-    cartDiv.appendChild(totalSum);
+    cartContainer.appendChild(totalSum);
     productCard.appendChild(btnContainer);
     btnContainer.appendChild(minusButton);
     btnContainer.appendChild(amount);
@@ -79,8 +88,33 @@ for (let i=0; i < cart.length; i++) {
         printCart();
       }
     });
+
+
+    
   }
 }
+
+let openCart:HTMLHeadingElement = document.getElementById("showcart") as HTMLHeadingElement;
+
+let checked = false;
+
+openCart.addEventListener("click", () => {
+  cartContainer.classList.toggle("active");
+  checked = !checked;
+  if (checked === false) {
+    openCart.innerHTML = "Visa varukorg <i class='fa fa-chevron-down'></i>" ;
+  } else {
+    openCart.innerHTML = "Dölj varukorg <i class='fa fa-chevron-up'></i>";
+  }
+});
+
+
+
+
+
+
+
+
 
 
 
