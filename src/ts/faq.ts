@@ -21,6 +21,11 @@ function printFAQ(): void {
 
         questionLine.addEventListener("click", () => {
             answerLine.classList.toggle("visible");
+            if (answerLine.className === "faq__answerLine visible") {
+                questionLine.innerHTML = faqList[i].question + "<i class='fa-solid fa-angle-up'></i>";
+            } else {
+                questionLine.innerHTML = faqList[i].question + "<i class='fa-solid fa-angle-down'></i>";
+            }
         })
         };
 }
