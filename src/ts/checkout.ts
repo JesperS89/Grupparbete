@@ -1,6 +1,3 @@
-let checkoutForm: HTMLFormElement = document.getElementById(
-  "checkoutform"
-) as HTMLFormElement;
 import { CartItem } from "./models/cartItem";
 import { Product } from "./models/Product";
 import { productList } from "./models/productlist";
@@ -8,35 +5,32 @@ import { productList } from "./models/productlist";
 let cart: CartItem[] = [];
 
 let sum: number = 0;
-let cartDiv: HTMLDivElement = document.getElementById("checkout__cartcontainer") as HTMLDivElement;
+let cartDiv: HTMLDivElement = document.getElementById(
+  "checkout__cartcontainer"
+) as HTMLDivElement;
 let cartContainer: HTMLDivElement = document.createElement("div");
 let cartTitle: HTMLHeadingElement = document.createElement("h3");
 let totalSum: HTMLHeadingElement = document.createElement("h4");
-let titleContainer:HTMLDivElement = document.createElement("div");
+let titleContainer: HTMLDivElement = document.createElement("div");
 
+export function printCart(): void {
+  saveToLs();
+  totalSum.innerHTML = "";
+  cartContainer.innerHTML = "";
 
+  cartDiv.appendChild(cartContainer);
+  cartContainer.appendChild(titleContainer);
+  titleContainer.appendChild(cartTitle);
 
-export function printCart ():void {
-saveToLs(); 
-totalSum.innerHTML = "";
-cartContainer.innerHTML = "";
+  cartContainer.className = "innercartcontainer";
+  titleContainer.className = "titlecontainer";
+  cartTitle.className = "titlecontainer__title";
 
+  cartTitle.innerHTML = "Varukorg";
 
-cartDiv.appendChild(cartContainer);
-cartContainer.appendChild(titleContainer);
-titleContainer.appendChild(cartTitle);
+  sum = 0;
 
-cartContainer.className = ("innercartcontainer");
-titleContainer.className =("titlecontainer");
-cartTitle.className = "titlecontainer__title";
-
-cartTitle.innerHTML = "Varukorg";
-
-
-sum = 0;
-
-for (let i=0; i < cart.length; i++) {
-    
+  for (let i = 0; i < cart.length; i++) {
     let productCard: HTMLDivElement = document.createElement("div");
     let productImage: HTMLImageElement = document.createElement("img");
     let productName: HTMLHeadingElement = document.createElement("h5");
@@ -45,8 +39,7 @@ for (let i=0; i < cart.length; i++) {
     let minusButton: HTMLButtonElement = document.createElement("button");
     let amount: HTMLParagraphElement = document.createElement("p");
     let addButton: HTMLButtonElement = document.createElement("button");
-    
-    
+
     productCard.className = "innercartcontainer__prodcard";
     productImage.className = "innercartcontainer__prodcard__image";
     productName.className = "innercartcontainer__prodcard__name";
@@ -54,7 +47,7 @@ for (let i=0; i < cart.length; i++) {
     btnContainer.className = "innercartcontainer__btncontainer";
     minusButton.className = "innercartcontainer__btncontainer__minusbutton";
     totalSum.className = "innercartcontainer__total";
-    
+
     productImage.src = cart[i].product.img;
     productName.innerHTML = cart[i].product.name;
     productPrice.innerHTML = cart[i].product.price.toString() + "kr";
@@ -65,7 +58,7 @@ for (let i=0; i < cart.length; i++) {
     cartContainer.appendChild(productCard);
     productCard.appendChild(productImage);
     productCard.appendChild(productName);
-    productCard.appendChild(productPrice); 
+    productCard.appendChild(productPrice);
     cartContainer.appendChild(totalSum);
     productCard.appendChild(btnContainer);
     btnContainer.appendChild(minusButton);
@@ -89,13 +82,14 @@ for (let i=0; i < cart.length; i++) {
         printCart();
       }
     });
-
-
-    
   }
 }
-
-let openCart:HTMLHeadingElement = document.getElementById("showcart") as HTMLHeadingElement;
+let checkoutForm: HTMLFormElement = document.getElementById(
+  "checkoutform"
+) as HTMLFormElement;
+let openCart: HTMLHeadingElement = document.getElementById(
+  "showcart"
+) as HTMLHeadingElement;
 
 let checked = false;
 
@@ -103,21 +97,11 @@ openCart.addEventListener("click", () => {
   cartContainer.classList.toggle("active");
   checked = !checked;
   if (checked === false) {
-    openCart.innerHTML = "Visa varukorg <i class='fa fa-chevron-down'></i>" ;
+    openCart.innerHTML = "Visa varukorg <i class='fa fa-chevron-down'></i>";
   } else {
     openCart.innerHTML = "Dölj varukorg <i class='fa fa-chevron-up'></i>";
   }
 });
-
-
-
-
-
-
-
-
-
-
 
 function saveToLs() {
   localStorage.setItem("cart", JSON.stringify(cart));
