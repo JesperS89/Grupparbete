@@ -8,6 +8,10 @@
     width: 100%;
     margin-top: 200px;
     gap: 10px;
+    h2 {
+        font-size: xx-large;
+        margin-bottom: 15px;
+    }
     &__container {
         display: flex;
         flex-direction: column;
@@ -37,9 +41,4 @@
             margin-bottom: 10px;
         }
     }
-}
-
-h2 {
-    font-size: xx-large;
-    top: 200px;
 }
