@@ -5,9 +5,7 @@ import { productList } from "./models/productlist";
 let cart: CartItem[] = [];
 
 let sum: number = 0;
-let cartDiv: HTMLDivElement = document.getElementById(
-  "checkout__cartcontainer"
-) as HTMLDivElement;
+let cartDiv: HTMLDivElement = document.getElementById("checkout__cartcontainer") as HTMLDivElement;
 let cartContainer: HTMLDivElement = document.createElement("div");
 let cartTitle: HTMLHeadingElement = document.createElement("h3");
 let totalSum: HTMLHeadingElement = document.createElement("h4");
