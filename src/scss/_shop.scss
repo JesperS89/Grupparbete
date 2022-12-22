@@ -6,7 +6,7 @@ a {
 }
 
 .main {
-  height: 90vh;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 
   @include m.desktop {
     margin-top: 60px;
@@ -14,8 +14,8 @@ a {
     grid-template-columns: 15% 85%;
     display: grid;
     max-width: 1024px;
-    height: 90vh;
     margin: auto;
+    overflow: auto;
   }
   &__menu {
     margin: 0;
@@ -88,7 +88,6 @@ a {
     }
   }
   &__innercontainer {
-    // border: 1px solid pink;
     display: grid;
     gap: 10;
     grid-template-columns: 1fr 1fr;
@@ -96,7 +95,6 @@ a {
     @include m.desktop {
       margin-top: 100px;
       grid-template-columns: 1fr 1fr 1fr;
-      overflow: auto;
       gap: 20;
     }
   }
@@ -156,7 +154,7 @@ a {
   height: 90vh;
   width: 90vw;
   border: 0;
-  box-shadow: 0 0 1em rgb(0 0 0 /0.3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 
   @include m.desktop {
     width: 75vw;

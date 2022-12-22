@@ -9,6 +9,7 @@ let shop: HTMLDivElement = document.getElementById("shop") as HTMLDivElement;
 let closebutton: HTMLButtonElement = document.getElementById(
   "closebutton"
 ) as HTMLButtonElement;
+let burgerActive = false;
 
 burger.addEventListener("click", () => {
   nav.classList.toggle("active");
@@ -23,6 +24,4 @@ closebutton.addEventListener("click", () => {
   shop.classList.remove("active");
 });
 
-// Funktion som visar antalet produkter i varukorg 
-
-
+// Funktion som visar antalet produkter i varukorg

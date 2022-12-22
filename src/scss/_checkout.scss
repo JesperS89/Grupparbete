@@ -4,114 +4,84 @@
   max-width: 1024px;
   display: flex;
   margin: auto;
+  margin-top: 60px;
   flex-direction: column-reverse;
   @include m.desktop {
     display: grid;
     grid-template-columns: 60% 40%;
   }
-  &__payment {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    border: 1px solid red;
-  }
-  &__bottomrowcontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-  }
-  &__paymentcontainer {
-    border: 1px solid red;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  &__cardnumbercontainer {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    input {
-      width: 50%;
-    }
-  }
-  &__expirecontainer {
-    width: 25%;
-    input {
-      width: 100%;
-    }
-  }
-  &__cvccontainer {
-    width: 25%;
-    input {
-      width: 100%;
-    }
-  }
 
-  &__formcontainer {
-    height: 100vh;
+  &__container {
     display: flex;
-    align-items: start;
     justify-content: center;
-    margin-top: 15px;
-    @include m.desktop {
-      align-items: center;
-    }
-    input {
-      align-items: start;
-      width: 60%;
-      margin: auto;
-      background-color: rgb(250, 249, 249);
-      border: 0.3px solid grey;
-
-      border-radius: 10px;
-      text-align: center;
-      height: 35px;
-      margin-bottom: 6px;
-      @include m.desktop {
-        height: 50px;
-        font-size: 22;
+    align-items: center;
+    padding: 25px;
+    padding-bottom: 70px;
+    * {
+      border: none;
+      transition: all 0.2s linear;
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
       }
     }
-  }
-  &__formcontainer__form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
+    form {
+      padding: 20px;
+      width: 100%;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    h3 {
+      margin-top: 10px;
+      font-size: 20px;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+    }
+    button {
+      width: 250px;
+      height: 50px;
+      background-color: m.$green;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
   }
 
-  &__form__namecontainer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    @include m.desktop {
-      flex-direction: row;
+  &__container__inputcontainer {
+    margin: 10px 0;
+    span {
+      margin-bottom: 5px;
+      display: block;
+    }
+    input {
+      border-radius: 10px;
+      width: 90%;
+      border: 1px solid #ccc;
+      padding: 10px 15px;
+      font-size: 15px;
+    }
+    input:focus {
+      border: 1px solid #000;
+    }
+    img {
+      height: 34px;
+      margin-top: 5px;
     }
   }
-  &__form__citycontainer {
-    width: 100%;
+  &__container__flex {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    @include m.desktop {
-      flex-direction: row;
+    gap: 10px;
+    input {
+      width: 70%;
     }
-  }
-  &__form__button {
-    padding: 15 10 15 10;
-    background-color: m.$green;
-    color: white;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    @include m.desktop {
-      padding: 25 40 25 40;
+    select {
+      width: 100%;
+      padding: 10px 15px;
+      font-size: 15px;
+    }
+    &__inputcontainer {
+      margin-top: 5px;
     }
   }
 }
