@@ -2,15 +2,12 @@
 
 footer {
     display: flex;
-    flex-direction: column;
     height: 40vh;
     width: 100%;
-    margin-top: 100px;
     background-color: m.$green;
     
     @include m.desktop {
         flex-direction: row;
-       
        }
 }
 
@@ -35,17 +32,33 @@ footer {
     }
 }
 
-.container {
+.contacts {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin-top: 20px;
 
-    &__contact {
+    @include m.desktop {
+        flex-direction: row;
+        text-align: left;
+       
+    }
+
+    &__list {
         color: white;
         list-style-type: none;
         font-size: 16px;
         padding: 5px 0;
+
+        @include m.desktop {
+            margin: 0 40px;
+        }
+    }
+
+    &__item {
+        padding-top: 10px;
     }
 }
 

@@ -58,4 +58,31 @@
     }
 }
 
+.collage {
+    height: 65vh;
+    border: 1px solid gray;
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    &__imagecontainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+       
+
+        &__image {
+            border: 1px solid gray;
+            width: 15%;
+            height: 25vh;
+           
+            
+        }
+    }
+}
+
 
