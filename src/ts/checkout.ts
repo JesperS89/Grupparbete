@@ -5,9 +5,7 @@ import { productList } from "./models/productlist";
 let cart: CartItem[] = [];
 
 let sum: number = 0;
-let cartDiv: HTMLDivElement = document.getElementById(
-  "checkout__cartcontainer"
-) as HTMLDivElement;
+let cartDiv: HTMLDivElement = document.getElementById("cart") as HTMLDivElement;
 let cartContainer: HTMLDivElement = document.createElement("div");
 let cartTitle: HTMLHeadingElement = document.createElement("h3");
 let totalSum: HTMLHeadingElement = document.createElement("h4");
@@ -89,9 +87,7 @@ export function printCart(): void {
     });
   }
 }
-let checkoutForm: HTMLFormElement = document.getElementById(
-  "checkoutform"
-) as HTMLFormElement;
+
 let openCart: HTMLHeadingElement = document.getElementById(
   "showcart"
 ) as HTMLHeadingElement;
@@ -111,9 +107,6 @@ function saveToLs() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-checkoutForm.addEventListener("submit", (e: SubmitEvent) => {
-  e.preventDefault();
-});
 function getFromLs() {
   let cartFromLs: string = localStorage.getItem("cart") || "";
   let cartObject = JSON.parse(cartFromLs);
@@ -137,12 +130,6 @@ function getFromLs() {
   console.log(cart);
 }
 
-let formButton: HTMLButtonElement = document.getElementById(
-  "checkoutbutton"
-) as HTMLButtonElement;
-let formContainer: HTMLDivElement = document.getElementById(
-  "formcontainer"
-) as HTMLDivElement;
 // formButton.addEventListener("click", () => {
 //   printCardPay();
 // });
