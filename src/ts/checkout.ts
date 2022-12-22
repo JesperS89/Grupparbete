@@ -143,51 +143,51 @@ let formButton: HTMLButtonElement = document.getElementById(
 let formContainer: HTMLDivElement = document.getElementById(
   "formcontainer"
 ) as HTMLDivElement;
-formButton.addEventListener("click", () => {
-  printCardPay();
-});
+// formButton.addEventListener("click", () => {
+//   printCardPay();
+// });
 
-function printCardPay(): void {
-  formContainer.innerHTML = "";
-  formContainer.className = "checkout__payment";
+// function printCardPay(): void {
+//   formContainer.innerHTML = "";
+//   formContainer.className = "checkout__payment";
 
-  let title: HTMLParagraphElement = document.createElement("p");
-  title.innerHTML = "Betala med kort";
-  let paymentContainer: HTMLDivElement = document.createElement("div");
-  let bottomRowContainer: HTMLDivElement = document.createElement("div");
+//   let title: HTMLParagraphElement = document.createElement("p");
+//   title.innerHTML = "Betala med kort";
+//   let paymentContainer: HTMLDivElement = document.createElement("div");
+//   let bottomRowContainer: HTMLDivElement = document.createElement("div");
 
-  let cardNumberContainer: HTMLDivElement = document.createElement("div");
-  let expireContainer: HTMLDivElement = document.createElement("div");
-  let cvcContainer: HTMLDivElement = document.createElement("div");
+//   let cardNumberContainer: HTMLDivElement = document.createElement("div");
+//   let expireContainer: HTMLDivElement = document.createElement("div");
+//   let cvcContainer: HTMLDivElement = document.createElement("div");
 
-  let cardIconContainer: HTMLDivElement = document.createElement("div");
-  let calendarIconContainer: HTMLDivElement = document.createElement("div");
-  let lockIconContainer: HTMLDivElement = document.createElement("div");
+//   let cardIconContainer: HTMLDivElement = document.createElement("div");
+//   let calendarIconContainer: HTMLDivElement = document.createElement("div");
+//   let lockIconContainer: HTMLDivElement = document.createElement("div");
 
-  let cardNumberInput: HTMLInputElement = document.createElement("input");
-  let dateInput: HTMLInputElement = document.createElement("input");
-  let cvcNumberInput: HTMLInputElement = document.createElement("input");
+//   let cardNumberInput: HTMLInputElement = document.createElement("input");
+//   let dateInput: HTMLInputElement = document.createElement("input");
+//   let cvcNumberInput: HTMLInputElement = document.createElement("input");
 
-  paymentContainer.className = "checkout__paymentcontainer";
-  bottomRowContainer.className = "checkout__bottomrowcontainer";
-  cardNumberContainer.className = "checkout__cardnumbercontainer";
-  expireContainer.className = "checkout__expirecontainer";
-  cvcContainer.className = "checkout__cvccontainer";
+//   paymentContainer.className = "checkout__paymentcontainer";
+//   bottomRowContainer.className = "checkout__bottomrowcontainer";
+//   cardNumberContainer.className = "checkout__cardnumbercontainer";
+//   expireContainer.className = "checkout__expirecontainer";
+//   cvcContainer.className = "checkout__cvccontainer";
 
-  formContainer.appendChild(title);
-  formContainer.appendChild(paymentContainer);
-  formContainer.appendChild(bottomRowContainer);
-  paymentContainer.appendChild(cardNumberContainer);
-  paymentContainer.appendChild(expireContainer);
-  paymentContainer.appendChild(cvcContainer);
-  cardNumberContainer.appendChild(cardIconContainer);
-  cardNumberContainer.appendChild(cardNumberInput);
-  bottomRowContainer.appendChild(expireContainer);
-  bottomRowContainer.appendChild(cvcContainer);
-  expireContainer.appendChild(calendarIconContainer);
-  expireContainer.appendChild(dateInput);
-  cvcContainer.appendChild(lockIconContainer);
-  cvcContainer.appendChild(cvcNumberInput);
-}
+//   formContainer.appendChild(title);
+//   formContainer.appendChild(paymentContainer);
+//   formContainer.appendChild(bottomRowContainer);
+//   paymentContainer.appendChild(cardNumberContainer);
+//   paymentContainer.appendChild(expireContainer);
+//   paymentContainer.appendChild(cvcContainer);
+//   cardNumberContainer.appendChild(cardIconContainer);
+//   cardNumberContainer.appendChild(cardNumberInput);
+//   bottomRowContainer.appendChild(expireContainer);
+//   bottomRowContainer.appendChild(cvcContainer);
+//   expireContainer.appendChild(calendarIconContainer);
+//   expireContainer.appendChild(dateInput);
+//   cvcContainer.appendChild(lockIconContainer);
+//   cvcContainer.appendChild(cvcNumberInput);
+// }
 
 getFromLs();
