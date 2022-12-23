@@ -2,7 +2,7 @@
 
 footer {
     display: flex;
-    height: 40vh;
+    height: 30vh;
     width: 100%;
     background-color: m.$green;
     
@@ -38,7 +38,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 60px;
 
     @include m.desktop {
         flex-direction: row;
@@ -51,9 +51,10 @@ footer {
         list-style-type: none;
         font-size: 16px;
         padding: 5px 0;
+        line-height: 25px;
 
         @include m.desktop {
-            margin: 0 40px;
+            margin: 0 60px;
         }
     }
 
@@ -63,6 +64,7 @@ footer {
 }
 
 .social {
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
