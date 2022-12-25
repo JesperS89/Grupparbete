@@ -1,15 +1,20 @@
 import { categoryList } from "./models/categorylist";
 import { Product } from "./models/Product";
-import { headingList, productList } from "./models/productlist";
+import { productList } from "./models/productlist";
 import { CartItem } from "./models/cartItem";
-
+import { burger, burgerFunction } from "./services/burger";
+import { closeButton, cartButton, toggleCart } from "./services/cart";
 let menuContainer: HTMLDivElement = document.getElementById(
   "menu"
 ) as HTMLDivElement;
 let productContainer: HTMLDivElement = document.getElementById(
   "products"
 ) as HTMLDivElement;
+let main: any = document.getElementById("main");
 
+burger.addEventListener("click", burgerFunction);
+cartButton.addEventListener("click", toggleCart);
+closeButton.addEventListener("click", toggleCart);
 // Funktionen skriver ut menyn
 
 function printMenu(): void {
@@ -53,13 +58,38 @@ function printProducts(): void {
 
   headingContainer.className = "product__headingcontainer";
   heading.className = "product__heading";
+  let categoryMenuBackground: HTMLDivElement = document.createElement("div");
 
   heading.innerHTML = "Visa Kategorier";
-  productContainer.appendChild(headingContainer);
+  main.appendChild(headingContainer);
   headingContainer.appendChild(heading);
-  heading.addEventListener("click", () => {
+  heading.addEventListener("click", toggleCategoryMenu);
+  //   menuContainer.classList.toggle("active");
+
+  //   if (menuContainer.className === "main__menu active") {
+  //     categoryMenuBackground.className = "main__background";
+  //     productContainer.appendChild(categoryMenuBackground);
+  //     categoryMenuBackground.addEventListener("click", () => {
+  //       menuContainer.className = "main__menu";
+  //       productContainer.removeEventListener;
+  //       productContainer.removeChild(categoryMenuBackground);
+  //     });
+  //   } else {
+  //   }
+  // });
+
+  function toggleCategoryMenu() {
     menuContainer.classList.toggle("active");
-  });
+    if (menuContainer.className === "main__menu active") {
+      categoryMenuBackground.className = "main__background";
+      productContainer.appendChild(categoryMenuBackground);
+      categoryMenuBackground.addEventListener("click", toggleCategoryMenu);
+      productContainer.removeEventListener;
+    } else {
+      productContainer.removeEventListener;
+      productContainer.removeChild(categoryMenuBackground);
+    }
+  }
 
   let productInnerContainer: HTMLDivElement = document.createElement("div");
   productInnerContainer.className = "product__innercontainer";
@@ -137,14 +167,18 @@ let checkoutButton: HTMLButtonElement = document.createElement("button");
 checkoutContainer.appendChild(checkoutButton);
 checkoutButton.className = "header__shop__checkoutbutton";
 let sum: number = 0;
-let counter:number = 0;
+let counter: number = 0;
 
 checkoutButton.innerHTML = "Gå till kassan " + sum.toString() + " " + " kr";
 
 // Funktionen skriver ut varukorgen
 
-let cartContainer:HTMLDivElement = document.getElementById("header__shopcart") as HTMLDivElement;
-let cartCount:HTMLParagraphElement = document.createElement("p") as HTMLParagraphElement;
+let cartContainer: HTMLDivElement = document.getElementById(
+  "header__shopcart"
+) as HTMLDivElement;
+let cartCount: HTMLParagraphElement = document.createElement(
+  "p"
+) as HTMLParagraphElement;
 
 cartContainer.appendChild(cartCount);
 
@@ -158,9 +192,6 @@ export function printCart(): void {
   cartCount.innerHTML = "";
   sum = 0;
   counter = 0;
-  
-
-  
 
   for (let i = 0; i < cart.length; i++) {
     let productCard: HTMLDivElement = document.createElement("div");
@@ -171,7 +202,6 @@ export function printCart(): void {
     let minusButton: HTMLButtonElement = document.createElement("button");
     let amount: HTMLParagraphElement = document.createElement("p");
     let addButton: HTMLButtonElement = document.createElement("button");
-    
 
     productCard.className = "header__shop__card";
     productImage.className = "header__shop__image";
@@ -180,13 +210,11 @@ export function printCart(): void {
     minusButton.className = "header__btncontainer__minusButton";
     btnContainer.className = "header__btncontainer";
 
-
     productImage.src = cart[i].product.img;
     productName.innerHTML = cart[i].product.name;
     productPrice.innerHTML = cart[i].product.price.toString() + "kr";
     addButton.innerHTML = "<i class='fa fa-plus'</i>";
-    minusButton.innerHTML =
-      "<i class='fa fa-minus'</i>";
+    minusButton.innerHTML = "<i class='fa fa-minus'</i>";
     checkoutButton.innerHTML += cart[i].product.price.toString();
     amount.innerHTML = cart[i].amount.toString();
 
@@ -198,11 +226,9 @@ export function printCart(): void {
     btnContainer.appendChild(minusButton);
     btnContainer.appendChild(amount);
     btnContainer.appendChild(addButton);
-    
 
     counter += cart[i].amount;
     cartCount.innerHTML = " " + counter.toString();
-    
 
     sum += cart[i].product.price * cart[i].amount;
     checkoutButton.innerHTML = "Gå till kassan " + sum.toString() + " " + " kr";
@@ -221,18 +247,8 @@ export function printCart(): void {
         printCart();
       }
     });
-
   }
 }
-
-
-
-
-
-   
-
-
-
 
 printMenu();
 let modal: HTMLDialogElement = document.getElementById(

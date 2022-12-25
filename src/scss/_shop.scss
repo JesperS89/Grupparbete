@@ -5,17 +5,28 @@ a {
   color: black;
 }
 
+.body {
+  height: 100vh;
+  overflow: auto;
+}
 .main {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-
+  display: flex;
+  flex-direction: column-reverse;
   @include m.desktop {
     margin-top: 60px;
-
     grid-template-columns: 15% 85%;
     display: grid;
     max-width: 1024px;
     margin: auto;
-    overflow: auto;
+  }
+  &__background {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: 0.2;
+    top: 409px;
   }
   &__menu {
     margin: 0;
@@ -35,6 +46,7 @@ a {
     position: absolute;
     flex-direction: column;
     width: 100vw;
+    top: -1;
     align-items: center;
     background-color: #4a5240;
     margin-top: 60px;
@@ -248,5 +260,27 @@ a {
         cursor: pointer;
       }
     }
+  }
+}
+
+.burgerbackground {
+  position: absolute;
+  background-color: black;
+  height: 100%;
+  width: 100vw;
+  top: 350px;
+  opacity: 0.2;
+  transition: opacity 1s;
+}
+.cartbackground {
+  opacity: 0.2;
+  position: absolute;
+  background-color: black;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  right: 80%;
+  @include m.desktop {
+    right: 400px;
   }
 }
