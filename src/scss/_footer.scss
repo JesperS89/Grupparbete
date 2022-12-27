@@ -43,6 +43,7 @@ footer {
     @include m.desktop {
         flex-direction: row;
         text-align: left;
+        width: 100%;
        
     }
 
