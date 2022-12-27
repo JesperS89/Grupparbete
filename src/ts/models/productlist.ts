@@ -11,6 +11,7 @@ export const productList: Product[] = [
     "https://www.rgdaily.com/wp-content/uploads/2019/08/no-makeup-cosmetics-beauty-product-photography-rebecca-goddard-rgdaily-blog-15.jpg",
     1
   ),
+  
   new Product(
     "Beauty Oil",
     "No Make up",

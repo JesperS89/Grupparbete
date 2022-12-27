@@ -10,8 +10,7 @@ export const categoryList: Category[] = [
     new Category(202, "Fotkräm"),
   ]),
   new Category(3, "Solskydd", [
-    new Category(301, "-15"),
-    new Category(302, "15-30"),
-    new Category(303, "30+"),
+    new Category(301,"15-30"),
+    new Category(302,"50"),
   ]),
 ];
