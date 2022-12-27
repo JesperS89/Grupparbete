@@ -21,7 +21,7 @@ function printMenu(): void {
   for (let i = 0; i < categoryList.length; i++) {
     let category: HTMLAnchorElement = document.createElement("a");
     category.className = "main__menu__heading";
-    category.href = "/shop.html?a=category=" + categoryList[i].id;
+    category.href = "/shop.html?category=" + categoryList[i].id;
 
     category.innerHTML = categoryList[i].category;
 
@@ -32,7 +32,7 @@ function printMenu(): void {
 
       subCategories.className = "main__menu__item";
       subCategories.href =
-        "/shop.html?a=category=" +
+        "/shop.html?category=" +
         categoryList[i].id +
         "&subcategory=" +
         categoryList[i].subCategories[j].id;
@@ -41,6 +41,21 @@ function printMenu(): void {
 
       menuContainer.appendChild(subCategories);
     }
+  }
+}
+let categoryMenuBackground: HTMLDivElement = document.createElement("div");
+
+// Funktionen togglar menyn för kategorier i mobilläget
+function toggleCategoryMenu() {
+  menuContainer.classList.toggle("active");
+  if (menuContainer.className === "main__menu active") {
+    categoryMenuBackground.className = "main__background";
+    productContainer.appendChild(categoryMenuBackground);
+    categoryMenuBackground.addEventListener("click", toggleCategoryMenu);
+    productContainer.removeEventListener;
+  } else {
+    productContainer.removeEventListener;
+    productContainer.removeChild(categoryMenuBackground);
   }
 }
 
@@ -58,7 +73,6 @@ function printProducts(): void {
 
   headingContainer.className = "product__headingcontainer";
   heading.className = "product__heading";
-  let categoryMenuBackground: HTMLDivElement = document.createElement("div");
 
   heading.innerHTML = "Visa Kategorier";
   main.appendChild(headingContainer);
@@ -77,19 +91,6 @@ function printProducts(): void {
   //   } else {
   //   }
   // });
-
-  function toggleCategoryMenu() {
-    menuContainer.classList.toggle("active");
-    if (menuContainer.className === "main__menu active") {
-      categoryMenuBackground.className = "main__background";
-      productContainer.appendChild(categoryMenuBackground);
-      categoryMenuBackground.addEventListener("click", toggleCategoryMenu);
-      productContainer.removeEventListener;
-    } else {
-      productContainer.removeEventListener;
-      productContainer.removeChild(categoryMenuBackground);
-    }
-  }
 
   let productInnerContainer: HTMLDivElement = document.createElement("div");
   productInnerContainer.className = "product__innercontainer";
