@@ -128,7 +128,7 @@ export const productList: Product[] = [
     "The Ordinary",
     1,
     102,
-    " Detta serum återfuktar ända ner till cellnivå, lugnar huden och ger en optimal fuktbalans. Har du problem med hud som lätt blir irriterad och är svår att lugna ner? Känner du att din hud aldrig får tillräckligt med fukt? Då är det här serumet för dig. Om du ger din hud tillräckligt med fukt producerar den mindre olja vilket gör att till exempel makeup sitter bättre. Fungerar för alla hudtyper och särskilt för känslig hud.",
+    "Detta serum återfuktar ända ner till cellnivå, lugnar huden och ger en optimal fuktbalans. Har du problem med hud som lätt blir irriterad och är svår att lugna ner? Känner du att din hud aldrig får tillräckligt med fukt? Då är det här serumet för dig. Om du ger din hud tillräckligt med fukt producerar den mindre olja vilket gör att till exempel makeup sitter bättre. Fungerar för alla hudtyper och särskilt för känslig hud.",
     79,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fa1%2Fb4%2Fa1b4a6b0828f4fbd2fa6f43733f4e0b1da1e89ed.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     13
@@ -191,7 +191,7 @@ export const productList: Product[] = [
     "Pixi",
     1,
     102,
-    " Vitamin-C serum är utjämnande och fullt av antioxidanter. Det ger direkt lyster men även succesivt över tid. Formulan innehåller C-vitamin och ferulinsyra som motverkar fria radikaler och reducerar synligheten av pigmenteringar. Du får en jämnare hud och klarare hudton. Vegansk.",
+    "Vitamin-C serum är utjämnande och fullt av antioxidanter. Det ger direkt lyster men även succesivt över tid. Formulan innehåller C-vitamin och ferulinsyra som motverkar fria radikaler och reducerar synligheten av pigmenteringar. Du får en jämnare hud och klarare hudton. Vegansk.",
     389,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F7d%2F38%2F7d38b1bbdc106438ceda016672e9c5aaf2704b4f.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     18
@@ -257,7 +257,7 @@ export const productList: Product[] = [
     "Revolution",
     2,
     201,
-    " Skapa en övergripande lyster med denna fuktgivande lotion som ger mer. Den är framtagen med vitamin C- och grapefruktkomplex för att hjälpa till att ljusa upp huden och subtila skimmerpartiklar för att ge en omedelbar lysterboost. Perfekt för mjuk och len hud. Sheasmör hjälper till att mjukgöra medan glycerin drar in fukt i huden och låser in den.",
+    "Skapa en övergripande lyster med denna fuktgivande lotion som ger mer. Den är framtagen med vitamin C- och grapefruktkomplex för att hjälpa till att ljusa upp huden och subtila skimmerpartiklar för att ge en omedelbar lysterboost. Perfekt för mjuk och len hud. Sheasmör hjälper till att mjukgöra medan glycerin drar in fukt i huden och låser in den.",
     129,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F20%2F89%2F2089f3d520a1837a56cdda33cab6bbc9d9d4b93f.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]",
     24
@@ -290,7 +290,7 @@ export const productList: Product[] = [
     "Camilla Pihl",
     2,
     201,
-    " Närande body butter som tillför intensiv fukt till huden, samtidigt som det snabbt absorberas i huden. Berikad med mjukgörande jojobaolja och sheasmör för en mjuk och återfuktad hud. Med delikat doft.",
+    "Närande body butter som tillför intensiv fukt till huden, samtidigt som det snabbt absorberas i huden. Berikad med mjukgörande jojobaolja och sheasmör för en mjuk och återfuktad hud. Med delikat doft.",
     259,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F90%2F9e%2F909e34b51228b5e74bb73f681115fbe4ab333cc8.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     27
@@ -301,7 +301,7 @@ export const productList: Product[] = [
     "HAAN",
     2,
     201,
-    " EN kropps lotion som mjukgör din hud med probiotika och balanserar din mikrobiom. Tales Of Lotus, Kommer påminna dig om orientaliska skogar , Lotus blommor och toner av torkad frukt.97% naturliga ingredienser. Påfyllningsbar flaska",
+    "En kroppslotion som mjukgör din hud med probiotika och balanserar din mikrobiom. Tales Of Lotus, Kommer påminna dig om orientaliska skogar , Lotus blommor och toner av torkad frukt.97% naturliga ingredienser. Påfyllningsbar flaska",
     179,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fe9%2Fb5%2Fe9b57f92200320fa27a32d252292f11a495e00d3.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     28
@@ -312,7 +312,7 @@ export const productList: Product[] = [
     "Estelle & Thild",
     2,
     201,
-    " Silkeslen kroppslotion med lättabsorberad formula som förser huden med optimal fukt för en balanserad hud. Naturligt mjukgörande egenskaper från Sheasmör och Aloe Vera lämnar huden len och naturligt återfuktad.",
+    "Silkeslen kroppslotion med lättabsorberad formula som förser huden med optimal fukt för en balanserad hud. Naturligt mjukgörande egenskaper från Sheasmör och Aloe Vera lämnar huden len och naturligt återfuktad.",
     199,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fe4%2F72%2Fe472e224001d1c407e6bf07d9d263a619a12ac1e.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     29
@@ -323,7 +323,7 @@ export const productList: Product[] = [
     "Estelle & Thild",
     2,
     201,
-    " En rik kroppskräm med en lyxig formula som omedelbart tillför näring och återfuktar huden på djupet. Sheasmör har mjukgörande egenskaper och Jojobafröolja återfuktar och lämnar huden silkeslen.",
+    "En rik kroppskräm med en lyxig formula som omedelbart tillför näring och återfuktar huden på djupet. Sheasmör har mjukgörande egenskaper och Jojobafröolja återfuktar och lämnar huden silkeslen.",
     229,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F06%2Fd4%2F06d4aeecefc4a78372b20e83a86a65dd27a0d621.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     30
@@ -345,7 +345,7 @@ export const productList: Product[] = [
     "Camilla Pihl",
     2,
     201,
-    " Skin Camilla Pihl Body Lotion Niacinamide är en rik och närande fuktkräm som tillför djup fukt till huden. Berikad med Niacinamid som är en effektiv ingrediens som bidrar till mjukare hudstruktur och hudton. Dessutom hjälper det till att förebygga och förebygga torrhet, samt att föryngra huden.",
+    "Skin Camilla Pihl Body Lotion Niacinamide är en rik och närande fuktkräm som tillför djup fukt till huden. Berikad med Niacinamid som är en effektiv ingrediens som bidrar till mjukare hudstruktur och hudton. Dessutom hjälper det till att förebygga och förebygga torrhet, samt att föryngra huden.",
     239,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F72%2F1f%2F721fdea6a7ece7883cf257dba39119d09581b9ae.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     32
@@ -356,7 +356,7 @@ export const productList: Product[] = [
     "Oh K!",
     2,
     202,
-    " Fräscha upp dina fötter omedelbart med denna skonsamt exfolierande ananasfotmask. Ananas har blivit en populär ingrediens i hudvårdsspelet på grund av dess superfoodfördelar. Den är rik på antioxidanter och hjälper till att bekämpa skador på fria radikaler och enzymet bromelain som hjälper till att ljusna upp hyn.",
+    "Fräscha upp dina fötter omedelbart med denna skonsamt exfolierande ananasfotmask. Ananas har blivit en populär ingrediens i hudvårdsspelet på grund av dess superfoodfördelar. Den är rik på antioxidanter och hjälper till att bekämpa skador på fria radikaler och enzymet bromelain som hjälper till att ljusna upp hyn.",
     99,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fd5%2F51%2Fd5515fd313068d9aeda4ec4bc7d35671209ed115.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     33
@@ -367,7 +367,7 @@ export const productList: Product[] = [
     "Baby Foot",
     2,
     202,
-    " Fotpeeling för hemmabruk som ger mjuka och lena fötter. Förpackningen består av ett par engångssockor i plast (strl. 36-45) innehållande gel med naturliga extrakt och fruktsyror. Baby Foot är det enklaste sättet att få välskötta fötter. Baby Foot är en fotpeeling som tar bort döda hudceller på fötterna så att torr och hård hud på fötter och hälar försvinner utan att använda fil eller hyvel.",
+    "Fotpeeling för hemmabruk som ger mjuka och lena fötter. Förpackningen består av ett par engångssockor i plast (strl. 36-45) innehållande gel med naturliga extrakt och fruktsyror. Baby Foot är det enklaste sättet att få välskötta fötter. Baby Foot är en fotpeeling som tar bort döda hudceller på fötterna så att torr och hård hud på fötter och hälar försvinner utan att använda fil eller hyvel.",
     199,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F19%2Fb9%2F19b99dc60521d863af86f0536dca1423cc9645c4.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     34
@@ -378,7 +378,7 @@ export const productList: Product[] = [
     "Sunday Rain",
     2,
     202,
-    " Detta ultrauppfriskande fotbad gör att du kan skapa en lyxig spaupplevelse i bekvämligheten av ditt eget hem. Luta dig tillbaka och slappna av medan trötta fötter fräschas upp, svalnas och stärks för att sätta en fjäder tillbaka i steget.",
+    "Detta ultrauppfriskande fotbad gör att du kan skapa en lyxig spaupplevelse i bekvämligheten av ditt eget hem. Luta dig tillbaka och slappna av medan trötta fötter fräschas upp, svalnas och stärks för att sätta en fjäder tillbaka i steget.",
     49,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F39%2Fbe%2F39bee54fd32904129bc63a5e154c90415ce2118e.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     35
@@ -389,7 +389,7 @@ export const productList: Product[] = [
     "Hawaiian Tropic",
     3,
     301,
-    " En torr olja som snabbt tränger in i huden och som inte efterlämnar en oljig yta som traditionella oljor gör. Med sprayfunktion samt en utsökt formula som skyddar huden mot uttorkning och ger fukt. Oljan innehåller exotiska ingredienser som återfuktar och mjukgör huden. Med den klassiska tropiska doften som för tankarna till Hawaii. Rekommenderas av Skin Cancer Foundation. Hypoallergenisk. Alkoholfri.",
+    "En torr olja som snabbt tränger in i huden och som inte efterlämnar en oljig yta som traditionella oljor gör. Med sprayfunktion samt en utsökt formula som skyddar huden mot uttorkning och ger fukt. Oljan innehåller exotiska ingredienser som återfuktar och mjukgör huden. Med den klassiska tropiska doften som för tankarna till Hawaii. Rekommenderas av Skin Cancer Foundation. Hypoallergenisk. Alkoholfri.",
     139,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fc1%2F49%2Fc1491aca3b12faede176186cbfa2a7b2bd265af7.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     36
@@ -400,7 +400,7 @@ export const productList: Product[] = [
     "Hawaiian Tropic",
     3,
     301,
-    " En extremt fuktgivande kroppsolja i mist som skyddar mot solen och gör huden mjuk som silke. Den genomskinliga formulan ger huden en fantastisk lyster samtidigt som den snabbt absorberas av huden utan att kännas kladdig. En ultralätt solskyddsmist med en blandning av kokos, argan och druvkärnor som återfuktar på djupet. En återfuktande torrolja med UVA-/UVB-skydd.",
+    "En extremt fuktgivande kroppsolja i mist som skyddar mot solen och gör huden mjuk som silke. Den genomskinliga formulan ger huden en fantastisk lyster samtidigt som den snabbt absorberas av huden utan att kännas kladdig. En ultralätt solskyddsmist med en blandning av kokos, argan och druvkärnor som återfuktar på djupet. En återfuktande torrolja med UVA-/UVB-skydd.",
     179,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F87%2Fcd%2F87cdf7c39c907ac70167f47291e9508afec7b2da.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     37
@@ -411,7 +411,7 @@ export const productList: Product[] = [
     "Hawaiian Tropic",
     3,
     301,
-    " En torr olja som snabbt tränger in i huden och som inte efterlämnar en oljig yta som traditionella oljor gör. Med sprayfunktion samt en utsökt formula som skyddar huden mot uttorkning och ger fukt. Oljan innehåller exotiska ingredienser som återfuktar och mjukgör huden. Med den klassiska tropiska doften som för tankarna till Hawaii. Rekommenderas av Skin Cancer Foundation. Hypoallergenisk. Alkoholfri.",
+    "En torr olja som snabbt tränger in i huden och som inte efterlämnar en oljig yta som traditionella oljor gör. Med sprayfunktion samt en utsökt formula som skyddar huden mot uttorkning och ger fukt. Oljan innehåller exotiska ingredienser som återfuktar och mjukgör huden. Med den klassiska tropiska doften som för tankarna till Hawaii. Rekommenderas av Skin Cancer Foundation. Hypoallergenisk. Alkoholfri.",
     149,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F51%2Fcf%2F51cf2c0c8f2f708715c430215b2cc4914e9b5b83.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     38
@@ -433,7 +433,7 @@ export const productList: Product[] = [
     "Hawaiian Tropic",
     3,
     301,
-    " En torr olja som snabbt tränger in i huden och som inte efterlämnar en oljig yta som traditionella oljor gör. Med sprayfunktion för enklare applicering samt med en utsökt formula som skyddar huden mot uttorkning och ger fukt. Med UVA- och UVB-skydd. Rekommenderad av Skin Cancer Foundation.",
+    "En torr olja som snabbt tränger in i huden och som inte efterlämnar en oljig yta som traditionella oljor gör. Med sprayfunktion för enklare applicering samt med en utsökt formula som skyddar huden mot uttorkning och ger fukt. Med UVA- och UVB-skydd. Rekommenderad av Skin Cancer Foundation.",
     169,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F04%2Fd0%2F04d063f8c45c996d24fe6c07d2034c9d0f00e673.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     40
@@ -444,7 +444,7 @@ export const productList: Product[] = [
     "EVY TECHNOLOGY",
     3,
     301,
-    " Ett dagligt skydd mot sol och yttre föroreningar. En anti-age ansiktsmousse som förstärker hudens skyddsbarriär och förebygger tidiga ålderstecken. Produkten är berikad med bl.aC- och E vitamin, hyaluronsyra och kollagen samt flera vårdande ingredienser som hjälper till att förebygga pigmentfläckar och förtida åldrande orsakat av solen.",
+    "Ett dagligt skydd mot sol och yttre föroreningar. En anti-age ansiktsmousse som förstärker hudens skyddsbarriär och förebygger tidiga ålderstecken. Produkten är berikad med bl.aC- och E vitamin, hyaluronsyra och kollagen samt flera vårdande ingredienser som hjälper till att förebygga pigmentfläckar och förtida åldrande orsakat av solen.",
     199,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F4a%2Fcb%2F4acbeb8a3f9a7042e81da79d7addb475d85bebf6.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     41
@@ -455,7 +455,7 @@ export const productList: Product[] = [
     "EVY TECHNOLOGY",
     3,
     301,
-    " EVY är en svensk medicinteknisk uppfinning inom solskydd som är speciellt anpassad för känslig hud och överkänslig hud men passar för alla hudtyper. EVY lägger sig i hela det översta hudlagret istället för att lägga sig på ytan. EVY försvinner därför inte lika lätt vid bad, svett eller handdukstorkning och ger ett effektivt skydd mot UVA- och UVB-strålar.",
+    "EVY är en svensk medicinteknisk uppfinning inom solskydd som är speciellt anpassad för känslig hud och överkänslig hud men passar för alla hudtyper. EVY lägger sig i hela det översta hudlagret istället för att lägga sig på ytan. EVY försvinner därför inte lika lätt vid bad, svett eller handdukstorkning och ger ett effektivt skydd mot UVA- och UVB-strålar.",
     219,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F97%2F8a%2F978ac7667b2523594d878f16db2ccf2bb8d918ab.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     42
@@ -466,7 +466,7 @@ export const productList: Product[] = [
     "Hawaiian Tropic",
     3,
     301,
-    " En extremt fuktgivande kroppsolja i mist som skyddar mot solen och gör huden mjuk som silke. Den genomskinliga formulan ger huden en fantastisk lyster samtidigt som den snabbt absorberas av huden utan att kännas kladdig. En ultralätt solskyddsmist med en blandning av kokos, argan och druvkärnor som återfuktar på djupet.",
+    "En extremt fuktgivande kroppsolja i mist som skyddar mot solen och gör huden mjuk som silke. Den genomskinliga formulan ger huden en fantastisk lyster samtidigt som den snabbt absorberas av huden utan att kännas kladdig. En ultralätt solskyddsmist med en blandning av kokos, argan och druvkärnor som återfuktar på djupet.",
     179,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F10%2Fb5%2F10b52aaf3820921b774c87f9f4dcc95121732546.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     43
@@ -477,7 +477,7 @@ export const productList: Product[] = [
     "Hawaiian Tropic",
     3,
     301,
-    " Denna milda face lotion har en lätt, silkeslen formula som snabbt absorberas av huden. Den kan med fördel användas under makeup och täpper inte till porerna. Parfymen är särskilt anpassad för ansiktets tunna, mer känsliga hud. Förpackningen är kosmetisk för att förstärka kopplingen till kosmetik och ansiktsvård.",
+    "Denna milda face lotion har en lätt, silkeslen formula som snabbt absorberas av huden. Den kan med fördel användas under makeup och täpper inte till porerna. Parfymen är särskilt anpassad för ansiktets tunna, mer känsliga hud. Förpackningen är kosmetisk för att förstärka kopplingen till kosmetik och ansiktsvård.",
     149,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F58%2Fbb%2F58bb65bc73f29fd2c71707867d48a47e5b6eccf2.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     44
@@ -488,7 +488,7 @@ export const productList: Product[] = [
     "REN",
     3,
     301,
-    " Clean Screen Mineral Spf 30 Face Sunscreen är en vegansk solkräm med SPF30 som är formulerad med naturligt icke-nano zinkoxid. Ett omfattande UV-skydd som hjälper till att skydda huden mot för tidigt åldrande,förorsakat av solens strålar.",
+    "Clean Screen Mineral Spf 30 Face Sunscreen är en vegansk solkräm med SPF30 som är formulerad med naturligt icke-nano zinkoxid. Ett omfattande UV-skydd som hjälper till att skydda huden mot för tidigt åldrande,förorsakat av solens strålar.",
     425,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fda%2F5f%2Fda5fe6141ef6a8580e8fb5156e1ba1fa1f08ffbd.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     45
@@ -499,7 +499,7 @@ export const productList: Product[] = [
     "Garnier",
     3,
     302,
-    " För ansiktet och det känsliga området runt ögonen. Ultralätt och omedelbart absorberas av huden. Innehåller hyaluronsyra, återfuktar i 24 timmar. Avancerat filtersystem med mycket högt solskydd som skyddar huden mot UVB + UVA och långa UVA-strålar vilket hjälper till att motverka mörka fläckar och rynkor.",
+    "För ansiktet och det känsliga området runt ögonen. Ultralätt och omedelbart absorberas av huden. Innehåller hyaluronsyra, återfuktar i 24 timmar. Avancerat filtersystem med mycket högt solskydd som skyddar huden mot UVB + UVA och långa UVA-strålar vilket hjälper till att motverka mörka fläckar och rynkor.",
     139,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F0d%2F2d%2F0d2dd5018f45a6f5da123b0d6d473a679f97fe6a.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     46
