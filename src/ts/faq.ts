@@ -1,6 +1,8 @@
 import { faqList } from "./models/qa";
 import { burger, burgerFunction } from "./services/burger";
 import { closeButton, cartButton, toggleCart } from "./services/cart";
+import { saveToLs, getFromLs } from "./services/localstorage";
+
 
 cartButton.addEventListener("click", toggleCart);
 closeButton.addEventListener("click", toggleCart);
@@ -37,5 +39,5 @@ function printFAQ(): void {
     });
   }
 }
-
+getFromLs();
 printFAQ();
