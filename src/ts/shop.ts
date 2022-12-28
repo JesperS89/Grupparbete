@@ -80,7 +80,7 @@ function printProducts(): void {
   heading.innerHTML = "Visa Kategorier";
   main.appendChild(headingContainer);
   headingContainer.appendChild(heading);
-  heading.addEventListener("click", toggleCategoryMenu);
+  headingContainer.addEventListener("click", toggleCategoryMenu);
   //   menuContainer.classList.toggle("active");
 
   //   if (menuContainer.className === "main__menu active") {

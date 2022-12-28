@@ -78,6 +78,9 @@ export function printCart(): void {
   
       sum += cart[i].product.price * cart[i].amount;
       checkoutButton.innerHTML = "Gå till kassan " + sum.toString() + " " + " kr";
+      checkoutButton.addEventListener("click", () => {
+        location.href = "./checkout.html";
+    })
   
       addButton.addEventListener("click", () => {
         cart[i].amount++;
@@ -86,12 +89,14 @@ export function printCart(): void {
   
       minusButton.addEventListener("click", () => {
         if (cart[i].amount === 1) {
+          if (confirm('Är du säker på att du inte vill ha ' + cart[i].product.name + "?") === true) {
           cart.splice(i, 1);
           printCart();
-        } else {
+        }} 
+        else {
           cart[i].amount--;
           printCart();
         }
-      });
+    });
     }
   }

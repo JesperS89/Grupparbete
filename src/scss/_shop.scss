@@ -93,8 +93,10 @@ a {
     align-items: center;
     height: 60px;
     width: 100%;
-    border: 1px solid grey;
+    border-bottom: 1px solid grey;
     margin-bottom: 2px;
+    font-size: small;
+    cursor: pointer;
     @include m.desktop {
       display: none;
     }

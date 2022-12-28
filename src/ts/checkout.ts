@@ -22,7 +22,7 @@ let cartTitle: HTMLHeadingElement = document.createElement("h3");
 let totalSum: HTMLHeadingElement = document.createElement("h4");
 let titleContainer: HTMLDivElement = document.createElement("div");
 
-export function printCart(): void {
+export function printCheckoutCart(): void {
   saveToLs();
   totalSum.innerHTML = "";
   checkoutCartContainer.innerHTML = "";
@@ -84,16 +84,18 @@ export function printCart(): void {
 
     addButton.addEventListener("click", () => {
       cart[i].amount++;
-      printCart();
+      printCheckoutCart();
     });
 
     minusButton.addEventListener("click", () => {
       if (cart[i].amount === 1) {
+        if (confirm('Är du säker på att du inte vill ha ' + cart[i].product.name + "?") === true) {
         cart.splice(i, 1);
-        printCart();
-      } else {
+        printCheckoutCart();
+      }}
+       else {
         cart[i].amount--;
-        printCart();
+        printCheckoutCart();
       }
     });
   }
@@ -189,4 +191,4 @@ openCart.addEventListener("click", () => {
 // }
 
 getFromLs();
-// printCart();
+printCheckoutCart();
