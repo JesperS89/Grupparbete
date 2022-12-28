@@ -4,18 +4,20 @@ import { Product } from "./models/Product";
 import { burger, burgerFunction } from "./services/burger";
 
 import { closeButton, cartButton, toggleCart } from "./services/cart";
+import { saveToLs, getFromLs } from "./services/localstorage";
+import { cart } from "./services/localstorage";
 
 cartButton.addEventListener("click", toggleCart);
 closeButton.addEventListener("click", toggleCart);
 burger.addEventListener("click", burgerFunction);
 
-let cart: CartItem[] = [];
+// let cart: CartItem[] = [];
 
 let sum: number = 0;
 let cartDiv: HTMLDivElement = document.getElementById(
   "cartcontainer"
 ) as HTMLDivElement;
-let cartContainer: HTMLDivElement = document.createElement("div");
+let checkoutCartContainer: HTMLDivElement = document.createElement("div");
 let cartTitle: HTMLHeadingElement = document.createElement("h3");
 let totalSum: HTMLHeadingElement = document.createElement("h4");
 let titleContainer: HTMLDivElement = document.createElement("div");
@@ -23,16 +25,16 @@ let titleContainer: HTMLDivElement = document.createElement("div");
 export function printCart(): void {
   saveToLs();
   totalSum.innerHTML = "";
-  cartContainer.innerHTML = "";
+  checkoutCartContainer.innerHTML = "";
 
-  cartDiv.appendChild(cartContainer);
-  cartContainer.appendChild(titleContainer);
+  cartDiv.appendChild(checkoutCartContainer);
+  checkoutCartContainer.appendChild(titleContainer);
   titleContainer.appendChild(cartTitle);
   if (checked === true) {
-    cartContainer.className = "innercartcontainer active";
+    checkoutCartContainer.className = "innercartcontainer active";
   }
   if (checked === false) {
-    cartContainer.className = "innercartcontainer";
+    checkoutCartContainer.className = "innercartcontainer";
   }
 
   titleContainer.className = "titlecontainer";
@@ -67,11 +69,11 @@ export function printCart(): void {
     minusButton.innerHTML = "<i class='fa fa-minus'</i>";
     amount.innerHTML = cart[i].amount.toString();
 
-    cartContainer.appendChild(productCard);
+    checkoutCartContainer.appendChild(productCard);
     productCard.appendChild(productImage);
     productCard.appendChild(productName);
     productCard.appendChild(productPrice);
-    cartContainer.appendChild(totalSum);
+    checkoutCartContainer.appendChild(totalSum);
     productCard.appendChild(btnContainer);
     btnContainer.appendChild(minusButton);
     btnContainer.appendChild(amount);
@@ -103,7 +105,7 @@ let openCart: HTMLHeadingElement = document.getElementById(
 let checked = false;
 
 openCart.addEventListener("click", () => {
-  cartContainer.classList.toggle("active");
+  checkoutCartContainer.classList.toggle("active");
   checked = !checked;
   if (checked === false) {
     openCart.innerHTML = "Visa varukorg <i class='fa fa-chevron-down'></i>";
@@ -112,32 +114,32 @@ openCart.addEventListener("click", () => {
   }
 });
 
-function saveToLs() {
-  localStorage.setItem("cart", JSON.stringify(cart));
-}
+// function saveToLs() {
+//   localStorage.setItem("cart", JSON.stringify(cart));
+// }
 
-function getFromLs() {
-  let cartFromLs: string = localStorage.getItem("cart") || "";
-  let cartObject = JSON.parse(cartFromLs);
+// function getFromLs() {
+//   let cartFromLs: string = localStorage.getItem("cart") || "";
+//   let cartObject = JSON.parse(cartFromLs);
 
-  cart = cartObject.map((cart: CartItem) => {
-    return new CartItem(
-      new Product(
-        cart.product.name,
-        cart.product.brandName,
-        cart.product.category,
-        cart.product.subCategory,
-        cart.product.description,
-        cart.product.price,
-        cart.product.img,
-        cart.product.id
-      ),
-      cart.amount
-    );
-  });
-  printCart();
-  console.log(cart);
-}
+//   cart = cartObject.map((cart: CartItem) => {
+//     return new CartItem(
+//       new Product(
+//         cart.product.name,
+//         cart.product.brandName,
+//         cart.product.category,
+//         cart.product.subCategory,
+//         cart.product.description,
+//         cart.product.price,
+//         cart.product.img,
+//         cart.product.id
+//       ),
+//       cart.amount
+//     );
+//   });
+//   printCart();
+//   console.log(cart);
+// }
 
 // formButton.addEventListener("click", () => {
 //   printCardPay();
@@ -187,3 +189,4 @@ function getFromLs() {
 // }
 
 getFromLs();
+// printCart();
