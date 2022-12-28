@@ -10,23 +10,23 @@ a {
   overflow: auto;
 }
 .main {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column-reverse;
   @include m.desktop {
     margin-top: 60px;
-    grid-template-columns: 15% 85%;
+    grid-template-columns: 25% 75%;
     display: grid;
     max-width: 1024px;
     margin: auto;
   }
   &__background {
+    top: 0;
+    z-index: 0;
     height: 100vh;
     width: 100%;
     background-color: black;
     position: absolute;
     opacity: 0.2;
-    top: 409px;
   }
   &__menu {
     margin: 0;
@@ -34,7 +34,6 @@ a {
     @include m.desktop {
       margin-top: 120px;
       height: 80vh;
-      margin-left: auto;
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
@@ -46,10 +45,11 @@ a {
     position: absolute;
     flex-direction: column;
     width: 100vw;
-    top: -1;
+    top: 0;
+    z-index: 11;
     align-items: center;
     background-color: #4a5240;
-    margin-top: 60px;
+
     padding: 20 0 20 0;
   }
   &__menu__heading {
@@ -101,9 +101,10 @@ a {
   }
   &__innercontainer {
     display: grid;
-    gap: 10;
+    gap: 20;
     grid-template-columns: 1fr 1fr;
-
+    width: 100%;
+    justify-content: space-around;
     @include m.desktop {
       margin-top: 100px;
       grid-template-columns: 1fr 1fr 1fr;
@@ -119,21 +120,27 @@ a {
 }
 
 .card {
-  &__link {
-    display: flex;
-    flex-direction: column;
-    width: 170px;
-    @include m.desktop {
-      width: 220px;
-      margin: 20px 0;
+  font-size: 18px;
+
+  &__imgcontainer {
+    height: 70%;
+    img {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      &:hover {
+        opacity: 70%;
+        transition: 0.4s;
+        cursor: pointer;
+      }
     }
   }
-  &__image {
-    &:hover {
-      opacity: 70%;
-      transition: 0.4s;
-      cursor: pointer;
-    }
+  &__name {
+    height: 32px;
+    font-weight: bolder;
+  }
+  &__brand {
+    font-weight: 300;
   }
 
   &__button {
@@ -268,8 +275,9 @@ a {
   background-color: black;
   height: 100%;
   width: 100vw;
-  top: 350px;
   opacity: 0.2;
+  top: 0;
+  z-index: 1;
   transition: opacity 1s;
 }
 .cartbackground {
@@ -279,8 +287,5 @@ a {
   top: 0;
   height: 100%;
   width: 100%;
-  right: 80%;
-  @include m.desktop {
-    right: 400px;
-  }
+  z-index: 1;
 }

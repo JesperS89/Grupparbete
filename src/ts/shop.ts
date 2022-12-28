@@ -112,6 +112,7 @@ function printProducts(): void {
       let productPrice: HTMLHeadingElement = document.createElement("h5");
       let buyButton: HTMLButtonElement = document.createElement("button");
       let productLink: HTMLAnchorElement = document.createElement("a");
+      let imgContainer: HTMLDivElement = document.createElement("div");
 
       productCard.className = "card";
       productLink.className = "card__link";
@@ -120,6 +121,7 @@ function printProducts(): void {
       productBrand.className = "card__brand";
       productPrice.className = "card__price";
       buyButton.className = "card__button";
+      imgContainer.className = "card__imgcontainer";
 
       productImage.src = productList[i].img;
       productName.innerHTML = productList[i].name;
@@ -129,7 +131,8 @@ function printProducts(): void {
 
       productInnerContainer.appendChild(productCard);
       productCard.appendChild(productLink);
-      productLink.appendChild(productImage);
+      productLink.appendChild(imgContainer);
+      imgContainer.appendChild(productImage);
       productLink.appendChild(productName);
       productLink.appendChild(productBrand);
       productLink.appendChild(productPrice);
