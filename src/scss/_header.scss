@@ -132,7 +132,14 @@
     i {
       cursor: pointer;
     }
-
+    &__checkout {
+      display: flex;
+      width: 35%;
+      justify-content: flex-end;
+      padding: 10px;
+      margin-right: 10px;
+      opacity: 0;
+    }
     &__counter {
       position: absolute;
       color: white;
