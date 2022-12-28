@@ -172,28 +172,37 @@ a {
 }
 
 .modal {
-  height: 90vh;
-  width: 90vw;
-  border: 0;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #c1c1c174;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
   @include m.desktop {
-    width: 75vw;
-    height: 800px;
-    margin-left: 13%;
-    margin-top: 3%;
-    overflow: hidden;
+  }
+  &.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .productDisplay {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    width: 100%;
     display: flex;
+    background-color: white;
     flex-direction: column;
-
+    z-index: 2;
     @include m.desktop {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      height: 100%;
-      max-width: 100%;
-      max-height: 100%;
+      width: 80vw;
+      height: 60vh;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      max-width: 1024px;
     }
     &__closeButton {
       position: absolute;
@@ -206,67 +215,61 @@ a {
       cursor: pointer;
     }
     &__imageContainer {
-      height: 100%;
-      width: 100%;
+      height: 50%;
       display: flex;
-      align-items: center;
       justify-content: center;
-      padding-top: 40px;
+
       img {
-        max-height: 70%;
-        max-width: 70%;
+        height: 100%;
       }
       @include m.desktop {
-        padding: 0;
-        width: 100%;
         height: 100%;
+        width: 50%;
+        display: flex;
         justify-content: center;
-        align-items: center;
-        img {
-          max-height: 70%;
-          max-width: 70%;
-          box-shadow: 0 0 1em rgb(0 0 0 /0.3);
-        }
       }
     }
     &__infoContainer {
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
+      padding: 0 20 0 20;
+      justify-content: center;
+      // min-height: 100%;
+
       @include m.desktop {
-        text-align: start;
-        max-width: 100%;
         height: 100%;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin-top: 300px;
+        align-items: start;
       }
       .productDisplay__name {
-        font-size: 50px;
+        text-align: center;
+        font-size: 30px;
       }
       .productDisplay__brand {
-        font-size: 30px;
+        font-size: 20px;
+        margin-bottom: 10px;
       }
       .productDisplay__description {
         font-size: large;
-        margin: 20 0 20 0;
+        width: 90%;
       }
       .productDisplay__price {
         font-size: 30px;
+        margin-bottom: 10px;
       }
       .productDisplay__button {
         border: none;
         width: 60%;
-        height: 6%;
+        height: 50px;
         background-color: #4a5240;
         color: white;
-        padding: 10px;
-        margin-top: 5px;
         font-family: "DM Sans";
         font-size: 16px;
         cursor: pointer;
+        margin-bottom: 20px;
+        @include m.desktop {
+          margin-bottom: 10px;
+        }
       }
     }
   }

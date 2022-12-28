@@ -258,9 +258,7 @@ function printProducts(): void {
 // }
 
 printMenu();
-let modal: HTMLDialogElement = document.getElementById(
-  "modal"
-) as HTMLDialogElement;
+let modal: HTMLDivElement = document.getElementById("modal") as HTMLDivElement;
 // Funktion för att visa produkten du klickar på för extra beskrivning och information
 function productDisplay(): void {
   productContainer.innerHTML = "";
@@ -301,7 +299,6 @@ function productDisplay(): void {
       closeButton.innerHTML = "<i class='fa-sharp fa-solid fa-xmark'></i>";
 
       modal.appendChild(productDisplay);
-      modal.appendChild(closeButton);
       productDisplay.appendChild(imageContainer);
       productDisplay.appendChild(infoContainer);
       imageContainer.appendChild(productImage);
@@ -309,6 +306,8 @@ function productDisplay(): void {
       infoContainer.appendChild(productBrand);
       infoContainer.appendChild(productPrice);
       infoContainer.appendChild(buyButton);
+      productDisplay.appendChild(closeButton);
+
       infoContainer.appendChild(productDescription);
       document.title = productList[i].name;
       closeButton.addEventListener("click", () => {
@@ -319,6 +318,7 @@ function productDisplay(): void {
         let existingItem: CartItem | undefined = cart.find(
           (cart) => productList[i].id === cart.product.id
         );
+
         if (existingItem) {
           existingItem.amount++;
           printCart();
@@ -327,8 +327,7 @@ function productDisplay(): void {
           printCart();
         }
       });
-
-      modal.showModal();
+      modal.classList.toggle("active");
     }
   }
 }
