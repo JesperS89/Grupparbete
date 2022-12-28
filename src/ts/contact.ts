@@ -42,3 +42,5 @@ form.addEventListener("submit", (e: SubmitEvent) => {
 //         event.preventDefault();
 //     }
 // });
+
+getFromLs();
