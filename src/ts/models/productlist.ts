@@ -2,24 +2,24 @@ import { Heading, Product } from "./Product";
 
 export const productList: Product[] = [
   new Product(
-    "Natural Moisturiser",
-    "The Ordinary",
+    "Advanced Snail 92 All In One Cream",
+    "COSRX",
     1,
     101,
-    "L'Oréal Revitalift Classic Day Cream är en uppstramande anti-rynkdagkräm med en formula som är berikad med Pro-Retinol samt Fibrelastyl. Hjälper till att ge en slätare hy och förstärker hudens elasticitet. Huden återfuktas och känns spänstigare. Pannrynkor, nasolabialveck och kråksparkar reduceras.",
-    149,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F68%2F5d%2F685d192146ae0e9799f09ec869c31cd9cd4d2c49.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "Denna fuktkräm skyddar huden mot fuktförlust och förbättrar hudens elasticitet.Innehåller hela 92% snigelsekret som effektivt hjälper till att reparera och lugna röd, irriterad hud genom att fylla på huden med fukt. Den är djupt återfuktande och förebygger hudens åldrande genom att plumpa huden inifrån.",
+    339,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F3b%2F58%2F3b585186a478a4a363174df9ff6478ed2c34ceea.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     1
   ),
   
   new Product(
-    "Beauty Oil",
-    "No Make up",
+    "Full Fit Propolis Light Cream",
+    "COSRX",
     1,
     101,
-    "Varje dag utsätts huden för yttre påverkan som UV-strålar, stress och förorening. Dessa faktorer kan göra huden torr och bidra till att huden åldras i förtid. Triple Active Protecting Day Moisturising Care för torr och känslig hud tillför fukt, skyddar och ger en behaglig känsla.",
-    79,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fc5%2Fdd%2Fc5ddcbc77491a92aa9cb3a145a7639ebf52346ff.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "Detta är en fuktgivande kräm med hög andel black bee propolis komplex och antioxidanter.Innehåller hela 65,69% av svart bi-propoliskomplex som består av svarta bi-propolisextrakt, honungsextrakt och royal geléextrakt som alla är kända för dess antiinflammatoriska och antibakteriella egenskaper.",
+    499,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fe1%2F78%2Fe178533c5deed41a2d2b8b4f4862bfdcb129219f.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     2
   ),
   new Product(
@@ -34,13 +34,13 @@ export const productList: Product[] = [
   ),
 
   new Product(
-    "Cleansing oil",
-    "No Make Up",
+    "BioHydrate Moisture Day Lotion",
+    "Estelle & Thild",
     1,
     101,
-    "Innehåller niacinamid som reglerar oljighet, samt jämnar ut hudens färg och textur. Glycerin håller kvar fukten och förhindrar på så vis uttorkning, medan urea och allantoin hjälper till att lindra irritation. Skapar en perfekt bas för makeup, förebygger oljighet och ser till att huden är skyddad.",
-    145,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F25%2F3a%2F253ac77859f3511d81482046e0813dc7aaf4e612.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "En lätt dagkräm full med fukt och vitaminer som ger huden helt ny lyster och mjukhet. Hyaluronsyra har en unik förmåga att absorbera fukt och bygga upp hudens skyddsbarriär. Laddad med en närande blandning av rosa pomelo och lakritsextrakt för en återfuktad och fräsch hy.",
+    279,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F15%2F8a%2F158a0462685fd9936d8da7a3e204a4a7d0be4877.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     4
   ),
   new Product(
@@ -55,33 +55,33 @@ export const productList: Product[] = [
   ),
 
   new Product(
-    "Daily Hydra Cream",
-    "Woods Copenhagen",
+    "Zero Shine Hydrator",
+    "POP",
     1,
     101,
-    "Vill du boosta huden med fukt? Hyaluronic Aloe Cream fuktgivande ansiktskräm är berikad med ekologisk aloe vera av naturligt ursprung och hyaluronsyra. Krämen tillför huden fukt i 48 timmar för en skön fuktboost och intensiv näring. Instrumentellt test.",
-    89,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F13%2F2a%2F132ab9dce5ae2326772312751a9bc1ddbc9f4704.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "Skippa blotting papers och håll din hud återfuktad med Zero Shine Hydrator, en tunn oljefri ansiktskräm som innehåller bl a kokosvatten som återfuktar och kaktusextrakt som lugnar. Funkar även att använda som en primer. Vegansk.",
+    149,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fe5%2Fa2%2Fe5a2d9ed9799a9f6701ce823080ac5c091a2c705.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     6
   ),
   new Product(
-    "Holy Hydration Face Cream Spf 30",
-    "e.l.f.",
+    "Supreme C-Creme",
+    "POP",
     1,
     101,
-    "Fuktgivande och skyddande ansiktskräm med solfaktor 30. Formulan innehåller bland annat hyaluronsyra, niacinamid och peptider som lämnar huden enhetlig, mjuk och smidig.",
-    249,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fda%2F42%2Fda4218a439b4c7eab756aba77612ff546362f23c.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "Supreme C-Creme är den ultimata dagkrämen som återfuktar, piggar upp och återupplivar glåmig hud med vitamin-c. Innehåller bl a ceramider och squalene som djupt återfuktar och bibehåller hudens optimala fuktnivå. Vegansk.",
+    149,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F7f%2F3b%2F7f3bdce1564610817273c12873ddf6f1e446a128.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     7
   ),
   new Product(
-    "CP Boost Silky Day Cream",
-    "NUXE",
+    "Nordic-c Valo Day Cream Spf 15",
+    "Lumene",
     1,
     101,
-    "Prodigieuse Boost Silk Cream Dry är en multikorrigerande dagkräm för normal och torr hud som motverkar de första tecknen på åldrande - lämplig från 25års åldern. Denna silkeslena kräm med ett antioxidantkomplex av jasminblomma, bekämpar de negativa konsekvenserna av din livsstil, t.ex. stress, trötthet och föroreningar samtidigt som den respekterar din huds naturliga balans.",
-    389,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F28%2F67%2F2867d7ec318ec7d789e177747e4db3fec078e549.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "Nordic-C Day Cream SPF 15 är en lystergivande dagcreme som ger huden intensiv återfuktning och skyddar den från de skadliga effekterna av UVA- och UVB-strålning. Sammansättningen innehåller fröolja och fröextrakt från antioxidantrika nordiska hjortron, vitamin B5, C och E samt ljusreflekterande pigment.",
+    269,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F3c%2F0f%2F3c0feaa7d0d0f7124f99af908bb83d71728e90f3.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     8
   ),
   new Product(
@@ -95,33 +95,33 @@ export const productList: Product[] = [
     9
   ),
   new Product(
-    "Natural Moisturizing Factors + Ha",
+    "The No-brainer Set",
     "The Ordinary",
     1,
     101,
-    "Ansiktskräm som återfuktar hudytan.Naturliga fuktgivande faktorer (NMF) håller det yttre skiktet av huden skyddat och återfuktat. NMF består av flera aminosyror, fettsyror, triglycerider, urea, ceramider, fosfolipider, glycerin, sackarider, natrium-PCA, hyaluronsyra och många andra komponenter som finns naturligt i huden",
-    69,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F06%2F19%2F0619a7b991b4368751e800a6c7a4bed0a06f8be5.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "Med tre hjälteprodukter, är denna hudvårdsregim utformad för att rikta in sig på viktiga problem som uttorkning, matthet och tecken på åldrande. Buffet - Ett vattenbaserat serum som kombinerar ett omfattande utbud av studerade teknologier för att rikta in sig på flera tecken på åldrande samtidigt.",
+    369,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F69%2F67%2F69674db2c0946ae00627786ecdd6c35b1cf5ba7b.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     10
   ),
   new Product(
-    "Fresh And More",
-    "Huxley",
+    "Lait Creme Sensitive",
+    "Embryolisse",
     1,
     101,
-    "Huxley Cream; Fresh and More är en lätt, uppfräschande gelkräm som låser in fukt för att ge fukt hela dagen även i extremt torra miljöer. Den här krämen mjukgör och slätar ut huden utan att kladda. Innehåller antioxiderande fröolja från kaktusfikon, kaktusextrakt, hyaluronsyra och keramider som mjukgör huden och håller kvar fukten i huden.",
-    359,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fdc%2Fde%2Fdcde429f9e75b004445d824f448375e3de459447.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "Lait Créme Sensitive är en ny Lait-Créme för känslig och ömtålig hud. Alla fördelarna från Lait-Créme Concentré i en ny formula: utan parfymer och allergivänlig med sina 98% naturliga ingredienser. Har en härligt, krämig konsistens som gör huden behaglig, återfuktad och silkeslen - utan att kladda. Särskilt lämplig för känslig och ömtålig hud. Kan även användas till bebisar och barn.",
+    285,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fc4%2F9d%2Fc49dc7e06f8f093f6c48caee824b93d1611d540b.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     11
   ),
   new Product(
-    "Bakuchiol Firming Boost Cream",
-    "Revolution",
+    "Smooth Radiant Complexion",
+    "Embryolisse",
     1,
     101,
-    "Firming Boost Cream med Bakuchiol. Bakuchiol är det växtbaserade, veganska alternativet till Retinol som har samma åldersbestridande fördelar utan den irritation eller torrhet som vissa människor upplever med Retinol.",
-    125,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fe4%2F16%2Fe416c13b72aac2fc72232fb2e97094c007a01106.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "Smooth Radiant Complexion är en uppfriskande och lätt lotion som direkt motverkar trötthet i huden, så att huden känns både fylligare och slätare. Hyaluronsyra återfuktar på djupet, och naturligt, utvunnet socker från havre lägger en hinna över huden så att den ser slät och mer frisk ut, fina linjer reduceras samtidigt som pärlemorspigment ger en naturlig lyster och förstärker hudens utstrålning.",
+    319,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F3d%2Ff3%2F3df35e0f8787b711da0816a9732d065c5bc1f6e6.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     12
   ),
   new Product(
@@ -156,34 +156,34 @@ export const productList: Product[] = [
     15
   ),
   new Product(
-    "Buffet + Copper Peptides 1 %",
-    "The Ordinary",
+    "Advanced Snail 96 Mucin Essence",
+    "COSRX",
     1,
     102,
-    "Bli kvitt ärr, mörka fläckar och pigmentering.Ibland kan finnar sätta spår, men det finns ett sätt att bli av med dem. Motverka pigmentering, ytliga ärr och mörka fläckar samtidigt som du jämnar ut hudtonen med det här uppljusande, klargörande och utslätande serumet med tranexaminsyra och L-askorbinsyra (även känd som C-vitamin).",
-    159,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F55%2Fdf%2F55df2245f50124ccaeac484f0108ba824e40fb53.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "Med hela 96,3% snigelsekret skyddar denne essence huden mot fuktförlust samtidigt som den förbättrar hudens elasticitet. Den hjälper till att reparera och lugna röd och känslig hud efter acneutbrott eller andra hudskador genom att effektivt fylla på med fukt. ",
+    299,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F43%2Fc3%2F43c3c2e6c22ec63f51a23db266795ee68942c0b0.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     16
   ),
   new Product(
-    "Acids, Glow Giver",
-    "Glow Hub",
+    "Full Fit Propolis Light Ampoule",
+    "COSRX",
     1,
     102,
-    "Jag är räddningen förlivlös hy i behov av lyster. Ser huden trist och livlös ut?Möt en intensivt lystergivande produkt med AHA. Utjämnande, uppljusande och utslätande glykolsyra bidrar till att korrigera en ojämn hudton och löser upp döda hudceller för en fräsch lyster.",
-    159,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F38%2F0d%2F380d4f8988a8469c361aff2f4a4c55c70a7b8f14.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "En intensivt, lystergivande ampull som bistår med hälsosam näring och passar året om.Innehåller 83 % av Black Bee Propolis Extract som verkar för att ge din hud glow.Denna produkt har en kort ingredienslista med endast 11 ingredienser, där alla onödiga ingredienser uteslutits, för att säkerställa bästa effekt.",
+    439,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F73%2Fd5%2F73d5db7edf89426cccfc1f543d443083fb86a1cb.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     8
   ),
 
   new Product(
-    "Purify & brighten super serum",
-    "Glow Hub",
+    "Glow Tonic Serum",
+    "Pixi",
     1,
     102,
-    "Lätt och uppljusande för huden, balanserar, rengör och tar bort orenheter. Berikad med svart teextrakt för att avgifta, balanserad med antioxidantrika blåbär, salicylsyra och vit pilbark, exfolierar försiktigt och hjälper till att avlägsna tilltäppta porer och minska uppkomsten av finnar.",
-    149,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Ff5%2F07%2Ff5078338cf3e86b80d58c282cb3ad6211a1c3746.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "Glow Tonic Serum exfolierar huden samtidigt som den återfuktar, mjukgör och vårdar huden. Du får en jämn och balanserad hud med strålande lyster. Vegansk.",
+    389,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F77%2F3a%2F773aa824804add549c8457f077d911277a4afe54.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     17
   ),
 
@@ -199,68 +199,68 @@ export const productList: Product[] = [
   ),
 
   new Product(
-    "2% Hyaluronic Acid Serum",
-    "Revolution",
+    "BioHydrate Thirst Relief Serum",
+    "Estelle & Thild",
     1,
     102,
-    "Hyaluronsyra, den ultimata ingrediensen för uttorkad hud, drar till sig fukt, samt mjukar upp och jämnar ut huden. Denna lätta, oljefria och lättabsorberande lösning är perfekt att applicera under en foundation. Produkten ger långverkande återfuktning till uttorkad hud, vilket får den att kännas silkeslen och se friskare ut.",
-    79,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fac%2Ffc%2Facfc02ee1fcc7306d0de5119e5fdfccd51b96fdb.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "Ett vitaminrikt serum som mjukgör, balanserar och ger huden en helt ny lyster. Hyaluronsyra tillför huden optimalt med fukt medan ekologiskt. Lakritsextrakt ger huden ny energi.",
+    349,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fe0%2F4d%2Fe04df084b7bec6ba5c93bd0d7e6917490b41afac.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     19
   ),
 
   new Product(
-    "Multi Acid Peeling Solution",
-    "Revolution",
+    "Extra Aqua Shot",
+    "POP",
     1,
     102,
-    "Denna högpresterande peelinglösning innehåller 30 % AHA och 1,5 % BHA. AHA-blandningen består av mjölksyra, glykolsyra och fruktsyror från blåbär, superlönn, apelsin och citron. Dessa ingredienser avlägsnar döda och matta hudceller, för att ge plats åt en ny fräsch hud med jämnare färgton och struktur. BHA är salicylsyra.",
-    145,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fa7%2Fe2%2Fa7e2452d042455212631d302b875cbeea6654281.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "Extra Aqua Shot är ett fuktserum som innehåller återfuktande kokosvatten, kaktusextrakt som lugnar, ceramider som mjukgör och tång som verkar anti-inflammatoriskt. Vegansk.",
+    179,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fc2%2Fcd%2Fc2cd1eadb9dfb2da05f2b40b4acfd79be118026d.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     20
   ),
 
   new Product(
-    "Salicylic Acid Serum",
-    "Revolution",
+    "Extra Zing-C Shot",
+    "POP",
     1,
     102,
-    "Innehåller en effektiv blandning av hudvänliga ingredienser, trollhassel (som lugnar huden och avlägsnar överflödig olja), samt 2-procentig salicylsyra (en betahydroxisyra som motverkar finnar, förstorade porer och pormaskar). Detta tunna, oljefria serum är skonsamt nog att användas varje dag och kan appliceras i ett tunt lager under foundation och concealer för att verka under dagen.",
-    129,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fc2%2F58%2Fc2584a0646631330d8f504d80efa9f59c727516f.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bbeauty_skincare_moisturizersserums_serum%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "Extra Zing-C Shot är POPs antioxidantrika vitamin-c serum som ljusar upp och återupplivar trött hud. Innehåller bl a havtornsolja som motverkar rodnad och solrosfrön som bibehåller hudens fuktnivå. Vegansk.",
+    179,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F07%2F0d%2F070d44ef94c7ccd1c1ae0e86e900ae5d1d7b6762.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     21
   ),
 
   new Product(
-    "15% Niacinamide Super Serum",
-    "Revolution",
+    "Extra LIT-B Shot",
+    "POP",
     1,
     102,
-    "Denna silkeslena, fuktgivande produkt innehåller 15 % niacinamid och passar alla hudtyper. Perfekt för att minska uppkomsten av finnar och stora porer. Niacinamid är en form av vitamin B3. När ämnet appliceras på huden kan det hjälpa till att bygga upp keratin, ett ämne som håller huden stram och frisk",
-    145,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F0c%2F95%2F0c95122b3af8d4617483d9422c56b5752eef8df5.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "Extra Lit-B Shot är ett supereffektivt exfolierande serum som innehåller AHA-syra, kokosvatten och panthenol som verkar anti-inflammatoriskt och ger en klarare hy. Vegansk.",
+    179,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F80%2Fdb%2F80db7ea371181285abc5ce0ddf4d0c50041717cf.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     22
   ),
 
   new Product(
-    "10% Glycolic Acid Glow Serum",
-    "Revolution",
+    "Granactive Retinoid 5% In Squalane",
+    "The Ordinary",
     1,
     102,
-    "Något för glykolentusiaster: detta potenta serum innehåller 10 % glykolsyra för att främja slätare hud och strålande hy. Detta kraftfulla serum innehåller även en blandning av niacinamid (som förbättra hudtonen och minskar porerna) och allantoin (ett lugnande ämne som verkar anti-irriterande och håller huden återfuktad).",
-    145,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F39%2F2b%2F392bf6947e229771ead01289c74dfc0a3fe286d3.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "En lösning med 5% Granactive Retinoid. Stabil, vattenfri lösning med 0.5% esteravA-Vitaminsyra. Denna vattenfria lösning innehåller en koncentration av 5% av ett avancerat retinoid aktivt komplex kallat Granactive Retinoid som har visat sig ge bättre resultat mot flera ålderstecken utan att orsaka den irritation som ibland kan uppstå med retinol .",
+    189,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F8c%2F28%2F8c28fc953f37f0e76b1ef8d14eb0e67593731a22.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     23
   ),
 
   new Product(
-    "Vitamin C Glow Shimmer Lotion",
-    "Revolution",
+    "Vitalizing Body Serum",
+    "IDA WARG",
     2,
     201,
-    "Skapa en övergripande lyster med denna fuktgivande lotion som ger mer. Den är framtagen med vitamin C- och grapefruktkomplex för att hjälpa till att ljusa upp huden och subtila skimmerpartiklar för att ge en omedelbar lysterboost. Perfekt för mjuk och len hud. Sheasmör hjälper till att mjukgöra medan glycerin drar in fukt i huden och låser in den.",
-    139,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F20%2F89%2F2089f3d520a1837a56cdda33cab6bbc9d9d4b93f.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]",
+    "Ett lätt serum för hela kroppen med vitaliserande kråkbärsextrakt. Ger huden extra mycket fukt med hjälp av hyaluronsyra, glycerin, xylitol och glucosider Går utmärkt att använda ensamt eller som bas under en vanlig body lotion.",
+    199,
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fff%2F37%2Fff377dbe365dd8072bed08bff943db4696db38bc.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     24
   ),
 
@@ -298,13 +298,13 @@ export const productList: Product[] = [
   ),
 
   new Product(
-    "Tales Of Lotus Body Lotion",
-    "HAAN",
+    "Biocare Baby Comforting Body Oil",
+    "Estelle & Thild",
     2,
     201,
-    "En kroppslotion som mjukgör din hud med probiotika och balanserar din mikrobiom. Tales Of Lotus, Kommer påminna dig om orientaliska skogar , Lotus blommor och toner av torkad frukt.97% naturliga ingredienser. Påfyllningsbar flaska",
+    "En lugnande och vårdande babyolja är baserad på ekologiska oljor av högsta kvalitet. Ringblomma och Havreolja lugnar och vårdar känslig babyhud medan Jojoba och Mandelolja tillför naturliga vitaminer och essentiella fettsyror som återfuktar, skyddar och håller huden mjuk och smidig. Fri från konserveringsmedel.",
     169,
-    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fe9%2Fb5%2Fe9b57f92200320fa27a32d252292f11a495e00d3.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
+    "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F40%2F52%2F405217aa25d09c9e04c20b4c513602b2d100fdf3.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     28
   ),
 
