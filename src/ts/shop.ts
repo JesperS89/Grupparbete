@@ -1,5 +1,4 @@
 import { categoryList } from "./models/categorylist";
-// import { Product } from "./models/Product";
 import { productList } from "./models/productlist";
 import { CartItem } from "./models/cartItem";
 import { burger, burgerFunction } from "./services/burger";
