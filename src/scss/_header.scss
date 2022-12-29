@@ -10,7 +10,7 @@
   top: 0;
   right: 0;
   left: 0;
-  background-color: #4a5240;
+  background-color: m.$green;
   color: white;
   max-width: 100vw;
 
@@ -29,7 +29,7 @@
     height: 40vh;
     display: flex;
     top: 50px;
-    background-color: #4a5240;
+    background-color: m.$green;
     flex-direction: column;
     width: 100vw;
     align-items: center;
@@ -144,7 +144,7 @@
   &__shop {
     width: 80vw;
     display: none;
-    background-color: #f4f3ee;
+    background-color: m.$background;
     position: absolute;
     right: 0;
     top: 0;

@@ -238,16 +238,21 @@ a {
         font-size: 30px;
       }
       .productDisplay__button {
-        border: none;
-        width: 60%;
-        height: 6%;
-        background-color: #4a5240;
-        color: white;
+
+        @include m.button;
         padding: 10px;
+        width: 60%;
         margin-top: 5px;
-        font-family: "DM Sans";
-        font-size: 16px;
-        cursor: pointer;
+        // border: none;
+        // width: 60%;
+        // height: 6%;
+        // background-color: #4a5240;
+        // color: white;
+        // padding: 10px;
+        // margin-top: 5px;
+        // font-family: "DM Sans";
+        // font-size: 16px;
+        // cursor: pointer;
       }
     }
   }

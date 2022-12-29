@@ -40,21 +40,11 @@
     }
 
     &__button {
+        @include m.button;
         width: 30%;
         padding: 10px 0;
         font-size: 16px;
-        font-family: 'DM Sans';
-        text-decoration: none;
-        border: none;
-        background-color: m.$green;
-        color: white;
-        transition-duration: 0.4s;
-
-        &:hover {
-            background-color: transparent;
-            color: #4A5240;
-            border: 2px solid #4A5240;
-        }
+        
     }
 }
 
