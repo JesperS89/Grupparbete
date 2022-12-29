@@ -116,6 +116,7 @@ openCart.addEventListener("click", () => {
   }
 });
 
+
 // function saveToLs() {
 //   localStorage.setItem("cart", JSON.stringify(cart));
 // }
