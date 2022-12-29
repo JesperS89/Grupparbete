@@ -15,16 +15,6 @@ submitbutton.addEventListener("click", () => {
   form.reset();
 })
 
-
-// (document.getElementById("form") as HTMLFormElement).addEventListener(
-//   "submit",
-//   (e: SubmitEvent) => {
-//     e.preventDefault();
-
-//     console.log("Wohoo!");
-//   }
-// );
-
 form.addEventListener("submit", (e: SubmitEvent) => {
   e.preventDefault();
   console.log("hej");
