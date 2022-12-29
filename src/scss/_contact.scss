@@ -43,13 +43,14 @@
 
   &__message {
     text-align: initial;
-    max-width: 51%;
+    margin-top: 5px;
+    width: 100%;
     min-height: 50%;
     padding: 10px;
     border: 1px solid m.$border;
     border-radius: 10px;
     @include m.desktop {
-      width: 500px;
+      width: 450px;
     }
   }
   &__submitbutton {
