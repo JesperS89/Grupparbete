@@ -3,10 +3,12 @@
 * {
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
 }
 
 .header {
-  position: absolute;
+  z-index: 10;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -88,14 +90,20 @@
   }
 
   &__burger.active {
-    .line1 {
-      transform: rotate(-45deg) translate(1px, 5px);
+    height: 29px;
+
+    div:first-child {
+      transform: rotate(-225deg);
+      position: absolute;
+      top: 40%;
     }
-    .line2 {
-      display: none;
+    div:nth-child(2) {
+      opacity: 0;
     }
-    .line3 {
-      transform: rotate(45deg) translate(-1px, -7px);
+    div:last-child {
+      transform: rotate(225deg);
+      position: absolute;
+      top: 40%;
     }
   }
   &__burger {
@@ -110,6 +118,7 @@
       border-radius: 4px;
       background-color: white;
       margin: 5px;
+      transition: transform 0.5s ease-in-out;
     }
 
     @include m.desktop {
@@ -152,23 +161,26 @@
     }
   }
   &__shop {
-    width: 80vw;
-    display: none;
+    // width: 80vw;
+    box-sizing: border-box;
     background-color: #f4f3ee;
     position: absolute;
     right: 0;
+    transform: translatex(100%);
     top: 0;
+    transition: transform 0.4s;
     height: 100vh;
     @include m.desktop {
-      width: 400px;
-      transition: transform 0.5s ease-in;
     }
   }
   &__shop.active {
     display: flex;
-    // transform: translateX(0%);
-    transition: transform 0.5s ease-in;
+    transform: translatex(0%);
+    width: 400px;
     z-index: 2;
+    @include m.desktop {
+      width: 400px;
+    }
   }
   &__shopcontainer {
     margin-top: 90px;
