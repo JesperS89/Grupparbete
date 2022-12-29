@@ -3,7 +3,7 @@ import { productList } from "./models/productlist";
 import { CartItem } from "./models/cartItem";
 import { burger, burgerFunction } from "./services/burger";
 import { closeButton, cartButton, toggleCart } from "./services/cart";
-import { saveToLs, getFromLs } from "./services/localstorage";
+import { getFromLs } from "./services/localstorage";
 import { cart } from "./services/localstorage";
 import { printCart } from "./services/printCart";
 
@@ -13,6 +13,7 @@ let menuContainer: HTMLDivElement = document.getElementById(
 let productContainer: HTMLDivElement = document.getElementById(
   "products"
 ) as HTMLDivElement;
+// Main har ingen datatyp?
 let main: any = document.getElementById("main");
 
 burger.addEventListener("click", burgerFunction);

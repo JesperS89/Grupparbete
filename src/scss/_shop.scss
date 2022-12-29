@@ -172,7 +172,6 @@ a {
   &__h5,
   h6 {
     padding: 5px 0;
-    font-family: "DM Sans";
     font-size: 12px;
   }
 }
@@ -181,6 +180,7 @@ a {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: 0 5px 0 5px;
 }
 
 .modal {
@@ -283,23 +283,4 @@ a {
       }
     }
   }
-}
-
-.burgerbackground {
-  position: fixed;
-  background-color: black;
-  height: 100%;
-  width: 100vw;
-  opacity: 0.2;
-  top: 0;
-  z-index: 1;
-}
-.cartbackground {
-  opacity: 0.2;
-  position: fixed;
-  background-color: black;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
 }

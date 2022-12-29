@@ -38,7 +38,7 @@ export function printCart(): void {
     cartCount.innerHTML = "";
     sum = 0;
     counter = 0;
-  
+    checkoutButton.innerHTML = "Gå till kassan " + sum.toString() + " " + " kr";
     for (let i = 0; i < cart.length; i++) {
       let productCard: HTMLDivElement = document.createElement("div");
       let productImage: HTMLImageElement = document.createElement("img");

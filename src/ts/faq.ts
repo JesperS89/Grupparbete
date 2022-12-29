@@ -1,14 +1,16 @@
 import { faqList } from "./models/qa";
 import { burger, burgerFunction } from "./services/burger";
 import { closeButton, cartButton, toggleCart } from "./services/cart";
-import { saveToLs, getFromLs } from "./services/localstorage";
+import { getFromLs } from "./services/localstorage";
 
 
 cartButton.addEventListener("click", toggleCart);
 closeButton.addEventListener("click", toggleCart);
 burger.addEventListener("click", burgerFunction);
 
-let faq = document.getElementById("faq");
+//Main har ingen datatyp?
+let faq: any = document.getElementById("faq");
+
 function printFAQ(): void {
   for (let i = 0; i < faqList.length; i++) {
     let faqContainer: HTMLDivElement = document.createElement("div");
@@ -23,7 +25,7 @@ function printFAQ(): void {
       faqList[i].question + "<i class='fa-solid fa-angle-down'></i>";
     answerLine.innerHTML = faqList[i].answer;
 
-    faq?.appendChild(faqContainer);
+    faq.appendChild(faqContainer);
     faqContainer.appendChild(questionLine);
     faqContainer.appendChild(answerLine);
 

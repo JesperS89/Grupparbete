@@ -1,6 +1,3 @@
-import { CartItem } from "./models/cartItem";
-import { Product } from "./models/Product";
-
 import { burger, burgerFunction } from "./services/burger";
 
 import { closeButton, cartButton, toggleCart } from "./services/cart";
@@ -21,6 +18,7 @@ let checkoutCartContainer: HTMLDivElement = document.createElement("div");
 let cartTitle: HTMLHeadingElement = document.createElement("h3");
 let totalSum: HTMLHeadingElement = document.createElement("h4");
 let titleContainer: HTMLDivElement = document.createElement("div");
+let mainCheckout: HTMLDivElement = document.getElementById("main__checkout") as HTMLDivElement;
 
 export function printCheckoutCart(): void {
   saveToLs();
@@ -127,6 +125,8 @@ form.addEventListener("submit", (e) => {
   cart.length = 0;
   saveToLs();
   printCheckoutCart();
+  mainCheckout.innerHTML = '<img src="https://www.walley.se/globalassets/privat/betala-med-appen/block-app-simple_se.png">'
+  mainCheckout.className = "checkout__buy";
 });
 
 getFromLs();

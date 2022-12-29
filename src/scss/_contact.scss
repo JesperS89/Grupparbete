@@ -50,10 +50,7 @@
     }
   }
   &__submitbutton {
-    border: none;
-    cursor: pointer;
-    background: m.$green;
-    color: white;
+    @include m.button;
     padding: 20 40 20 40px;
     border-radius: 10px;
     @include m.desktop {

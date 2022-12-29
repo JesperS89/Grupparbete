@@ -11,6 +11,19 @@
     grid-template-columns: 60% 40%;
   }
 
+  &__buy {
+    img {
+      width: 100%;
+    }
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    @include m.desktop {
+      img {
+        max-width: 1024px;
+      }
+    }
+  }
   &__container {
     margin-top: 7px;
     display: flex;
@@ -173,10 +186,8 @@
     justify-content: space-between;
 
     button {
-      border: none;
+      @include m.button;
       font-size: 12px;
-      background-color: m.$green;
-      color: white;
       padding: 3px 5px;
       border-radius: 50%;
     }
