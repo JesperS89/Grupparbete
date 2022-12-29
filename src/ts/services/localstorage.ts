@@ -28,5 +28,4 @@ export function getFromLs() {
     );
   });
   printCart();
-  console.log(cart);
 }
