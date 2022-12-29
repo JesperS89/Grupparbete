@@ -1,9 +1,6 @@
 import { Product } from "../models/Product";
-// import { cart } from "./cartlist";
 import { CartItem } from "../models/cartItem";
 import { printCart } from "./printCart";
-
-// import { CartItem } from "../models/cartItem";
 
 export let cart: CartItem[] = [];
 

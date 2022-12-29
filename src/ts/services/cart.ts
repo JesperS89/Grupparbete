@@ -12,14 +12,6 @@ export let cartBackground: HTMLDivElement = document.createElement("div");
 
 cartBackground.className = "cartbackground";
 
-// cart.addEventListener("click", () => {
-//     shop.classList.toggle("active");
-//   });
-
-//   closebutton.addEventListener("click", () => {
-//     shop.classList.remove("active");
-//   });
-
 export function toggleCart() {
   shop.classList.toggle("active");
 
