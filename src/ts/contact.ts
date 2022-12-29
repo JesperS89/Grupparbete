@@ -7,11 +7,14 @@ cartButton.addEventListener("click", toggleCart);
 closeButton.addEventListener("click", toggleCart);
 burger.addEventListener("click", burgerFunction);
 
-let submitbutton: HTMLButtonElement = document.getElementById(
-  "submitbutton"
-) as HTMLButtonElement;
-
+let submitbutton: HTMLButtonElement = document.getElementById("submitbutton") as HTMLButtonElement;
 let form: HTMLFormElement = document.getElementById("form") as HTMLFormElement;
+
+
+submitbutton.addEventListener("click", () => {
+  form.reset();
+})
+
 
 // (document.getElementById("form") as HTMLFormElement).addEventListener(
 //   "submit",
