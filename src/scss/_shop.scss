@@ -48,7 +48,7 @@ a {
     top: 0;
     z-index: 11;
     align-items: center;
-    background-color: #4a5240;
+    background-color: m.$green;
 
     padding: 20 0 20 0;
   }
@@ -146,15 +146,9 @@ a {
   }
 
   &__button {
-    border: none;
-    background-color: #4a5240;
-    color: white;
-    padding: 10px;
+    @include m.button;
     margin-top: 5px;
-    font-family: "DM Sans";
-    font-size: 16px;
     width: 100%;
-    cursor: pointer;
   }
 
   &__h5,
@@ -258,15 +252,11 @@ a {
         margin-bottom: 10px;
       }
       .productDisplay__button {
-        border: none;
+        @include m.button;
         width: 60%;
         height: 50px;
-        background-color: #4a5240;
-        color: white;
-        font-family: "DM Sans";
-        font-size: 16px;
-        cursor: pointer;
         margin-bottom: 20px;
+
         @include m.desktop {
           margin-bottom: 10px;
         }

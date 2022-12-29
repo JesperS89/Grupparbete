@@ -2,11 +2,20 @@
 
 $green: #4a5240;
 $background: #f4f2f2;
+$border: #ccc;
 
 // Font
 
 // Button
-
+@mixin button {
+  border: none;
+  padding: 10px;
+  font-family: "DM Sans";
+  font-size: 16px;
+  background-color: $green;
+  color: white;
+  cursor: pointer;
+}
 // Breakpoints
 
 @mixin desktop {
