@@ -43,7 +43,10 @@
 
   &__message {
     text-align: initial;
-    height: 70%;
+    max-width: 51%;
+    min-height: 50%;
+    padding: 10px;
+    border: 1px solid m.$border;
     border-radius: 10px;
     @include m.desktop {
       width: 500px;
@@ -56,6 +59,7 @@
     color: white;
     padding: 20 40 20 40px;
     border-radius: 10px;
+    margin-top: 10px;
     @include m.desktop {
       padding: 20 60 20 60;
     }

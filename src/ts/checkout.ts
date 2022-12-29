@@ -120,6 +120,7 @@ openCart.addEventListener("click", () => {
   }
 });
 
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let inputs = document.querySelectorAll("input");
