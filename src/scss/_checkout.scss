@@ -98,7 +98,7 @@
 }
 
 .titlecontainer {
-  width: 100%;
+  // width: 100%;
   display: flex;
   justify-content: center;
 
@@ -114,7 +114,7 @@
 
 .cartcontainer {
   display: flex;
-  padding: 20px;
+  padding: 20 0 20 0px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;

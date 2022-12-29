@@ -29,15 +29,33 @@ a {
     opacity: 0.2;
   }
   &__menu {
-    margin: 0;
-    display: none;
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    top: 0;
+    z-index: 11;
+    align-items: center;
+
+    background-color: #4a5240;
+
+    padding: 20 0 20 0;
+    transform: translateY(-100%);
+    transition: transform 0.4s;
     @include m.desktop {
-      margin-top: 120px;
+      width: auto;
+      position: sticky;
+      margin-top: 100px;
       height: 80vh;
+      top: 70;
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
       align-items: flex-start;
+      transform: translateY(0%);
+      background-color: initial;
+      padding: 0;
     }
   }
   &__menu.active {
@@ -49,7 +67,7 @@ a {
     z-index: 11;
     align-items: center;
     background-color: m.$green;
-
+    transform: translateY(0%);
     padding: 20 0 20 0;
   }
   &__menu__heading {
@@ -168,12 +186,14 @@ a {
 .modal {
   position: absolute;
   height: 100%;
+  max-height: 100vh;
   width: 100%;
   background-color: #c1c1c174;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  top: 0;
+  z-index: 12;
   display: none;
   @include m.desktop {
   }
@@ -183,19 +203,19 @@ a {
     align-items: center;
   }
   .productDisplay {
+    position: relative;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 80%;
+    overflow: auto;
     display: flex;
     background-color: white;
     flex-direction: column;
-    z-index: 2;
     @include m.desktop {
       width: 80vw;
       height: 60vh;
       display: flex;
       flex-direction: row;
-      position: relative;
       max-width: 1024px;
     }
     &__closeButton {
@@ -266,18 +286,17 @@ a {
 }
 
 .burgerbackground {
-  position: absolute;
+  position: fixed;
   background-color: black;
   height: 100%;
   width: 100vw;
   opacity: 0.2;
   top: 0;
   z-index: 1;
-  transition: opacity 1s;
 }
 .cartbackground {
   opacity: 0.2;
-  position: absolute;
+  position: fixed;
   background-color: black;
   top: 0;
   height: 100%;

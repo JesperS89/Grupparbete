@@ -11,7 +11,7 @@ cartButton.addEventListener("click", toggleCart);
 closeButton.addEventListener("click", toggleCart);
 burger.addEventListener("click", burgerFunction);
 
-// let cart: CartItem[] = [];
+let form: HTMLFormElement = document.getElementById("form") as HTMLFormElement;
 
 let sum: number = 0;
 let cartDiv: HTMLDivElement = document.getElementById(
@@ -89,11 +89,15 @@ export function printCheckoutCart(): void {
 
     minusButton.addEventListener("click", () => {
       if (cart[i].amount === 1) {
-        if (confirm('Är du säker på att du inte vill ha ' + cart[i].product.name + "?") === true) {
-        cart.splice(i, 1);
-        printCheckoutCart();
-      }}
-       else {
+        if (
+          confirm(
+            "Är du säker på att du inte vill ha " + cart[i].product.name + "?"
+          ) === true
+        ) {
+          cart.splice(i, 1);
+          printCheckoutCart();
+        }
+      } else {
         cart[i].amount--;
         printCheckoutCart();
       }
@@ -116,79 +120,14 @@ openCart.addEventListener("click", () => {
   }
 });
 
-// function saveToLs() {
-//   localStorage.setItem("cart", JSON.stringify(cart));
-// }
-
-// function getFromLs() {
-//   let cartFromLs: string = localStorage.getItem("cart") || "";
-//   let cartObject = JSON.parse(cartFromLs);
-
-//   cart = cartObject.map((cart: CartItem) => {
-//     return new CartItem(
-//       new Product(
-//         cart.product.name,
-//         cart.product.brandName,
-//         cart.product.category,
-//         cart.product.subCategory,
-//         cart.product.description,
-//         cart.product.price,
-//         cart.product.img,
-//         cart.product.id
-//       ),
-//       cart.amount
-//     );
-//   });
-//   printCart();
-//   console.log(cart);
-// }
-
-// formButton.addEventListener("click", () => {
-//   printCardPay();
-// });
-
-// function printCardPay(): void {
-//   formContainer.innerHTML = "";
-//   formContainer.className = "checkout__payment";
-
-//   let title: HTMLParagraphElement = document.createElement("p");
-//   title.innerHTML = "Betala med kort";
-//   let paymentContainer: HTMLDivElement = document.createElement("div");
-//   let bottomRowContainer: HTMLDivElement = document.createElement("div");
-
-//   let cardNumberContainer: HTMLDivElement = document.createElement("div");
-//   let expireContainer: HTMLDivElement = document.createElement("div");
-//   let cvcContainer: HTMLDivElement = document.createElement("div");
-
-//   let cardIconContainer: HTMLDivElement = document.createElement("div");
-//   let calendarIconContainer: HTMLDivElement = document.createElement("div");
-//   let lockIconContainer: HTMLDivElement = document.createElement("div");
-
-//   let cardNumberInput: HTMLInputElement = document.createElement("input");
-//   let dateInput: HTMLInputElement = document.createElement("input");
-//   let cvcNumberInput: HTMLInputElement = document.createElement("input");
-
-//   paymentContainer.className = "checkout__paymentcontainer";
-//   bottomRowContainer.className = "checkout__bottomrowcontainer";
-//   cardNumberContainer.className = "checkout__cardnumbercontainer";
-//   expireContainer.className = "checkout__expirecontainer";
-//   cvcContainer.className = "checkout__cvccontainer";
-
-//   formContainer.appendChild(title);
-//   formContainer.appendChild(paymentContainer);
-//   formContainer.appendChild(bottomRowContainer);
-//   paymentContainer.appendChild(cardNumberContainer);
-//   paymentContainer.appendChild(expireContainer);
-//   paymentContainer.appendChild(cvcContainer);
-//   cardNumberContainer.appendChild(cardIconContainer);
-//   cardNumberContainer.appendChild(cardNumberInput);
-//   bottomRowContainer.appendChild(expireContainer);
-//   bottomRowContainer.appendChild(cvcContainer);
-//   expireContainer.appendChild(calendarIconContainer);
-//   expireContainer.appendChild(dateInput);
-//   cvcContainer.appendChild(lockIconContainer);
-//   cvcContainer.appendChild(cvcNumberInput);
-// }
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let inputs = document.querySelectorAll("input");
+  inputs.forEach((input) => (input.value = ""));
+  cart.length = 0;
+  saveToLs();
+  printCheckoutCart();
+});
 
 getFromLs();
 printCheckoutCart();
