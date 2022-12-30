@@ -11,7 +11,7 @@ export const productList: Product[] = [
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F3b%2F58%2F3b585186a478a4a363174df9ff6478ed2c34ceea.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     1
   ),
-  
+
   new Product(
     "Full Fit Propolis Light Cream",
     "COSRX",
@@ -173,7 +173,7 @@ export const productList: Product[] = [
     "En intensivt, lystergivande ampull som bistår med hälsosam näring och passar året om.Innehåller 83 % av Black Bee Propolis Extract som verkar för att ge din hud glow.Denna produkt har en kort ingredienslista med endast 11 ingredienser, där alla onödiga ingredienser uteslutits, för att säkerställa bästa effekt.",
     439,
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F73%2Fd5%2F73d5db7edf89426cccfc1f543d443083fb86a1cb.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
-    8
+    49
   ),
 
   new Product(
@@ -505,18 +505,4 @@ export const productList: Product[] = [
     "https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F0d%2F2d%2F0d2dd5018f45a6f5da123b0d6d473a679f97fe6a.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]",
     46
   ),
-];
-
-export const headingList: Heading[] = [
-  new Heading(
-    "Ansiktsvård",
-    "Surfa bland våra premiuprodukter inom ansiktsvård",
-    1
-  ),
-  new Heading(
-    "Kroppsvård",
-    "Surfa bland våra premiuprodukter för kroppsvård",
-    2
-  ),
-  new Heading("Solskydd", "Surfa bland våra premiuprodukter inom solskydd", 3),
 ];

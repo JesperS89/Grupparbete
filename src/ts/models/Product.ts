@@ -18,4 +18,3 @@ export class Heading {
     public category: number
   ) {}
 }
-// Produktnamn som string, Varumärke som string, Kategori som nummer (ev. ändra till string senare), Beskrivning av produkten, Pris, Img-url (länk till assets-mapp?)

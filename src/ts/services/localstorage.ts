@@ -10,7 +10,7 @@ export function saveToLs() {
 
 export function getFromLs() {
   let cartFromLs: string = localStorage.getItem("cart") || "";
-  let cartObject = JSON.parse(cartFromLs);
+  let cartObject: CartItem[] = JSON.parse(cartFromLs);
 
   cart = cartObject.map((cart: CartItem) => {
     return new CartItem(
