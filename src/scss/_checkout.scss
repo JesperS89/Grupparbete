@@ -15,10 +15,12 @@
   &__buy {
     img {
       width: 100%;
+      height: 100%;
     }
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    margin-bottom: 25vh;
     @include m.desktop {
       img {
         max-width: 1024px;
