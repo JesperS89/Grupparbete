@@ -48,7 +48,7 @@ a {
       position: sticky;
       margin-top: 100px;
       height: 80vh;
-      top: 70;
+      top: 100;
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
@@ -126,7 +126,7 @@ a {
     width: 100%;
     justify-content: space-around;
     @include m.desktop {
-      margin-top: 100px;
+      margin-top: 105px;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 20;
     }
@@ -156,7 +156,7 @@ a {
     }
   }
   &__name {
-    height: 32px;
+    height: 35px;
     font-weight: bolder;
   }
   &__brand {
@@ -249,7 +249,6 @@ a {
       align-items: center;
       padding: 0 20 0 20;
       justify-content: center;
-      // min-height: 100%;
 
       @include m.desktop {
         height: 100%;
