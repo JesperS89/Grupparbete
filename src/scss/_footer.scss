@@ -3,7 +3,6 @@
 footer {
     display: flex;
     height: 30vh;
-    width: 100%;
     background-color: m.$green;
     
     @include m.desktop {
