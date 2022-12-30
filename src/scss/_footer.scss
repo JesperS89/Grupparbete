@@ -5,6 +5,7 @@ footer {
     height: 40vh;
     width: 100%;
     background-color: m.$green;
+    margin-top: 40px;
     
     @include m.desktop {
         flex-direction: row;
