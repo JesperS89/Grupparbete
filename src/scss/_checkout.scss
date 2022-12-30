@@ -5,6 +5,7 @@
   display: flex;
   margin: auto;
   margin-top: 60px;
+  margin-bottom: 100px;
   flex-direction: column-reverse;
   @include m.desktop {
     display: grid;
